@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import {  DM_Serif_Display, Geist_Mono, Inter } from "next/font/google";
+import {  DM_Serif_Display, Geist_Mono, Inter, Geist } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${dmSerifDisplay.variable}  h-full antialiased`}
+      className={cn("h-full", "antialiased", inter.variable, dmSerifDisplay.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
