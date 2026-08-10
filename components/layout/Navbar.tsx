@@ -29,7 +29,7 @@ export default function Navbar() {
             <nav className="mx-auto flex container items-center justify-between px-6 py-4">
                 {/* Logo */}
                 <a href="#home" className="flex items-center gap-2">
-                    <span className="flex size-8 text-2xl items-center font-mono justify-center rounded-md bg-linear-to-br from-pink-400 to-orange-300 font-semibold text-white">
+                    <span className="flex size-6 text-2xl items-center font-mono justify-center rounded-md bg-linear-to-br from-pink-400 to-orange-300 font-semibold text-white">
                         S
                     </span>
                     <span className="font-serif text-xl font-medium text-[#372D38]">

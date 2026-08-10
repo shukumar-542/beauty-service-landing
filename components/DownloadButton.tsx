@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function DownloadButton() {
   return (
-    <div className="relative inline-flex overflow-hidden rounded-full p-px">
+    <div className="relative inline-flex overflow-hidden rounded-full p-0.5">
       <span
         className="absolute inset-[-300%] animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_55%,#f472b6_70%,#fdba74_85%,transparent_100%)]"
         style={{ animationDuration: "4s" }}
