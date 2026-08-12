@@ -127,14 +127,7 @@ export default function ArtistSection() {
                       Verified
                     </span>
 
-                    {/* Favorite */}
-                    <button
-                      type="button"
-                      aria-label="Save artist"
-                      className="absolute right-3 top-3 flex size-8 items-center justify-center rounded-full bg-white/90 text-[#3D2E38] backdrop-blur transition-colors hover:text-[#E0669B]"
-                    >
-                      <Heart className="size-4" />
-                    </button>
+                    
                   </div>
 
                   {/* Name + rating */}
