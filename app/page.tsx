@@ -1,8 +1,10 @@
+import ArtistSection from "@/components/ArtistSection/ArtistSection";
 import DownloadAppSection from "@/components/DownloadApp/DownloadApp";
 import DownloadButton from "@/components/DownloadButton";
 import FaqSection from "@/components/FaqSection/FaqSection";
 import HeroText from "@/components/HeroText/HeroText";
 import Navbar from "@/components/layout/Navbar";
+import StepSection from "@/components/StepSection/StepSection";
 
 
 export default function Home() {
@@ -14,15 +16,17 @@ export default function Home() {
         {/* Soft pink glow - top left */}
         <div className="absolute top-20 -left-20 h-44 w-96 rounded-full bg-[#FFCEF0] opacity-60 blur-3xl" />
 
-        <div className="container relative mx-auto px-6">
+        <div className="relative">
           {/* <HeroText /> */}
           <h1 className="font-serif text-5xl bg-size-[200%_auto] bg-linear-to-r from-[#372D38] via-[#6b5a6d] to-[#372D38] bg-clip-text text-transparent animate-[wave_4s_ease-in-out_infinite]">
             We make good taste easy to find.
           </h1>
           <p className="font-sans">Body text (Inter)</p>
           <div>
-           <FaqSection/>
+            <ArtistSection/>
+            <StepSection/>
            <DownloadAppSection/>
+           <FaqSection/>
           </div>
         </div>
       </div>

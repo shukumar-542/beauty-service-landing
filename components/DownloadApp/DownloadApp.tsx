@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function DownloadAppSection() {
     return (
-        <section className="mt-10">
+        <section className="mt-10 container mx-auto px-6">
             <div className="relative overflow-hidden rounded-[2.5rem] bg-linear-to-br from-[#FFD9EE] via-[#FFDCE8] to-[#FFE3C7] py-6 lg:py-2 shadow-xl ">
                 <div className="grid grid-cols-1 items-center gap-10 px-4  sm:px-12 lg:grid-cols-2">
                     {/* Left: copy */}
@@ -68,7 +68,7 @@ export default function DownloadAppSection() {
                     </div>
 
                     {/* Right: mobile mockup image */}
-                    <div className="relative mx-auto  w-full lg:max-w-120 ">
+                    <div className=" w-full lg:max-w-120 ">
                         <Image src={mobile} alt="Mobile App" className="h-auto w-full" />
                     </div>
                 </div>

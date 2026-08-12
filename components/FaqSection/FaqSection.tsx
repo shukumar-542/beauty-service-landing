@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Plus, Minus } from "lucide-react";
+import { useState } from "react";
+import { Plus, Minus, ArrowUpRight } from "lucide-react";
 
 const FAQS = [
   {
@@ -32,20 +27,83 @@ const FAQS = [
 ];
 
 export default function FaqSection() {
+  const [openIndex, setOpenIndex] = useState(0);
+
   return (
-  <Accordion multiple={false} defaultValue={["item-0"]} className="w-full font-sans">
-  {FAQS.map((faq, i) => (
-    <AccordionItem key={i} value={`item-${i}`} className="border-border/60">
-      <AccordionTrigger className="group py-5 text-[14px] text-left font-semibold text-[#533F4E] hover:no-underline ">
-        {faq.question}
-        <Plus className="ml-auto size-4 shrink-0 text-pink-400 transition-transform duration-200 block! group-data-panel-open:hidden!" />
-        <Minus className="ml-auto hidden size-4 shrink-0 text-pink-400 transition-transform duration-200 group-data-panel-open:block!" />
-      </AccordionTrigger>
-      <AccordionContent className="pb-5 text-sm leading-relaxed text-[#887986]">
-        {faq.answer}
-      </AccordionContent>
-    </AccordionItem>
-  ))}
-</Accordion>
+    <section className="w-full container mx-auto px-6 py-24  xl:mt-20">
+      
+
+      <div className="mx-auto grid grid-cols-1 gap-16 lg:grid-cols-[minmax(0,500px)_1fr] lg:gap-24">
+        {/* Left column */}
+        <div>
+          <div className="mb-6 flex items-center gap-2">
+            <span className="size-1.5 rounded-full bg-[#E0669B]" />
+            <span className="faq-body text-[11px] font-semibold tracking-[0.18em] text-[#B77593]">
+              GOOD TO KNOW
+            </span>
+          </div>
+
+          <h2 className="font-serif text-[42px] xl:text-[55px] font-medium leading-[1.08] text-[#3D2E38] ">
+            Your questions,
+            <br />
+            <span className="italic text-[#E0669B]">answered.</span>
+          </h2>
+
+          <p className=" mt-6 max-w-75 text-[15px] leading-relaxed text-[#8B7A85]">
+            Still curious? Our friendly support team is only a message away.
+          </p>
+
+          <a
+            href="#"
+            className=" group mt-8 inline-flex items-center gap-1.5 border-b border-[#3D2E38]/70 pb-1 text-[13px] font-semibold text-[#3D2E38] transition-colors hover:border-[#E0669B] hover:text-[#E0669B]"
+          >
+            Visit help center
+            <ArrowUpRight className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+        </div>
+
+        {/* Right column: accordion */}
+        <div className="faq-body border-t border-[#3D2E38]/10">
+          {FAQS.map((faq, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div key={i} className="border-b border-[#3D2E38]/10">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? -1 : i)}
+                  className="flex w-full items-center justify-between gap-6 py-6 text-left"
+                  aria-expanded={isOpen}
+                >
+                  <span className="text-[15px] font-semibold text-[#3D2E38]">
+                    {faq.question}
+                  </span>
+                  <span className="shrink-0 text-[#E0669B]">
+                    {isOpen ? (
+                      <Minus className="size-4" />
+                    ) : (
+                      <Plus className="size-4" />
+                    )}
+                  </span>
+                </button>
+
+                <div
+                  className="grid overflow-hidden transition-all duration-300 ease-out"
+                  style={{
+                    gridTemplateRows: isOpen ? "1fr" : "0fr",
+                    opacity: isOpen ? 1 : 0,
+                  }}
+                >
+                  <div className="min-h-0">
+                    <p className="max-w-150 pb-6 text-[14px] leading-relaxed text-[#8B7A85]">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 }
