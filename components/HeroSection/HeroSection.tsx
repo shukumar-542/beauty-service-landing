@@ -31,7 +31,7 @@ export default function HeroSection() {
             />
 
             {/* White Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-white/10" />
+            <div className="absolute inset-0 bg-linear-to-r from-white/80 via-white/60 to-white/10" />
 
             <div className="relative flex min-h-180 container mx-auto items-center px-6 lg:px-8">
                 {/* Left Content */}
