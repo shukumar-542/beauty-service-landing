@@ -56,7 +56,7 @@ export default function BeautyInspiration() {
             </div>
             <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
               Beauty, in{" "}
-              <em className="bg-gradient-to-r from-pink-500 to-fuchsia-500 bg-clip-text italic text-transparent">
+              <em className="bg-linear-to-r from-pink-500 to-fuchsia-500 bg-clip-text italic text-transparent">
                 full
               </em>{" "}
               color.

@@ -3,33 +3,35 @@ import { ShieldCheck, ToggleRight, Star, CheckCheck, Clock, Heart } from "lucide
 const features = [
   {
     icon: ShieldCheck,
+    iconColor : "#1A5A52",
     title: "Verified professionals",
-    description: "Every artist is reviewed for craft, care, and credentials.",
+    description: "Every professional on our platform is carefully selected based on quality, skill and professionalism.",
   },
   {
     icon: ToggleRight,
-    title: "Secure booking",
-    description: "Your time, details, and payment are always protected.",
+    title: "Real-time booking",
+
+    description: "See real-time availability and lock in exact time slots instantly.",
   },
   {
     icon: Star,
     title: "Real reviews",
-    description: "Honest notes from people with beauty standards like yours.",
+    description: "Authentic ratings from real clients and before-and-after pictures",
   },
   {
     icon: CheckCheck,
     title: "Instant confirmation",
-    description: "Know exactly when your appointment is set.",
+    description: "No time wasted waiting for price quotes or back-and-forth messaging.", 
   },
   {
     icon: Clock,
-    title: "Flexible scheduling",
-    description: "Make room for beauty, on your own time.",
+    title: " Dedicated support",
+    description: "Friendly, fast assistance whenever you need help with a booking.",
   },
   {
     icon: Heart,
     title: "Safe payments",
-    description: "Transparent pricing with no unexpected extras.",
+    description: "Your payments are secure. Transparent pricing with no unexpected surprises.",
   },
 ];
 
@@ -40,19 +42,18 @@ export default function StunnerStandard() {
         {/* Left column */}
         <div>
           <div className="mb-5 flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-rose-400" />
-            <span className="text-xs font-semibold tracking-widest text-rose-400">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#FFA3FF]" />
+            <span className="text-xs font-semibold tracking-widest text-[#9A768E]">
               THE STUNNER STANDARD
             </span>
           </div>
 
           <h2 className="font-serif text-4xl leading-[1.15] text-neutral-900 sm:text-5xl">
-            We make <em className="italic">good taste</em> easy to find.
+            A premium app designed to make  booking Australia's best professionals easier than ever.
           </h2>
 
-          <p className="mt-6 max-w-md text-[15px] leading-relaxed text-neutral-500">
-            From your first search to the mirror moment after, Stunner makes
-            booking beauty feel considered, calm, and completely yours.
+          <p className="mt-6  text-[15px] leading-relaxed text-[#766975]">
+            Booking beauty and photography used to mean endless messages, hidden pricing and uncertainty. Stunner Alert brings Australia's finest talent together onto one seamless platform. Built on transparency, strict screening, and instant booking, we give you total confidence that you'll look and feel like a Stunner every single time.
           </p>
         </div>
 

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
+import DownloadButton from "../DownloadButton";
 
 const heroImage = "/images/herobg.png";
 
@@ -41,30 +42,42 @@ export default function HeroSection() {
                     </span>
 
                     <h1 className="text-5xl font-black leading-[1.05] text-[#342A39] lg:text-7xl">
-                        Beauty,{" "}
+                        Services,{" "}
                         <span className="font-serif italic text-[#FF9CB0]">
-                            booked
-                        </span>
+                            seamlessly.
+                        </span> 
                         <br />
                         beautifully.
                     </h1>
 
                     <p className="mt-6 max-w-md text-lg leading-8 text-gray-500">
-                        Discover brilliant beauty professionals, book instantly, and
-                        arrive feeling entirely taken care of.
+                        Discover brilliant beauty professionals, book instantly, and arrive feeling entirely taken care of.
                     </p>
 
                     {/* Buttons */}
                     <div className="mt-10 flex flex-wrap gap-4">
-                        <button className="flex items-center gap-2 rounded-full bg-linear-to-r from-pink-400 to-orange-300 px-7 py-4 font-medium text-white shadow-lg transition hover:scale-105">
+                        {/* <button className="flex items-center gap-2 rounded-full bg-linear-to-r from-pink-400 to-orange-300 px-7 py-4 font-medium text-white shadow-lg transition hover:scale-105">
                             Download app
                             <Download size={18} />
-                        </button>
+                        </button> */}
 
-                        <button className="flex items-center gap-2 rounded-full border bg-white px-7 py-4 font-medium text-gray-700 shadow transition hover:bg-gray-50">
-                            Explore artists
-                            <ArrowRight size={18} />
-                        </button>
+                        <DownloadButton name="Download App" className="py-7 px-7" icon={Download} gradient="from-pink-400 to-orange-300" rotateIcon={false} />
+                        {/* <DownloadButton name="Explore artists" className="py-6 " icon={ArrowRight} rotateIcon={false} /> */}
+
+
+
+                        <div className="relative inline-flex overflow-hidden rounded-full p-0.5">
+                            <span
+                                className="absolute inset-[-300%] animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_55%,#71717a_70%,#a1a1aa_85%,transparent_100%)]"
+                                style={{ animationDuration: "8s" }}
+                            />
+
+                            <button className="relative flex items-center gap-2 rounded-full cursor-pointer bg-white px-7 py-4 font-medium text-gray-700 shadow transition hover:shadow-lg">
+                                Explore artists
+                                <ArrowRight size={18} />
+                            </button>
+                        </div>
+
                     </div>
 
                     {/* Users */}
