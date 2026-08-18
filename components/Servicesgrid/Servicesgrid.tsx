@@ -21,6 +21,7 @@ import img6 from "@/public/images/img6.png";
 import AnimatedContent from "../ui/AnimatedContent";
 import StaggerGrid, { StaggerItem } from "../ui/StaggerGrid";
 import GradientText from "../ui/Gradienttext";
+import ExploreButton from "../ui/ExploreButton";
 
 const services = [
     {
@@ -69,10 +70,10 @@ export default function ServicesGrid() {
                 {/* Header */}
                 <AnimatedContent
                     direction="up"
-                    delay={0.1}
+                    delay={0.2}
                     duration={0.6}
                     distance={30}
-                    once={true}
+                    once={false}
                 >
                     <div className="mb-8 flex flex-col gap-6 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
 
@@ -99,20 +100,13 @@ export default function ServicesGrid() {
                         </div>
 
                         {/* Explore link */}
-                        <a
-                            href="#"
-                            className="inline-flex w-fit items-center gap-1.5 border-b border-neutral-400 pb-1 text-sm font-medium text-[#7E506C] transition-colors hover:border-neutral-800"
-                        >
-                            Explore all services
-
-                            <ArrowUpRight className="h-3.5 w-3.5" />
-                        </a>
+                        <ExploreButton text={"Explore all services"} />
                     </div>
                 </AnimatedContent>
 
                 {/* Services Grid */}
                 <StaggerGrid
-                    staggerDelay={0.1}
+                    staggerDelay={0.2}
                     once={false}
                     className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5"
                 >
