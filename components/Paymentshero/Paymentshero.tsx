@@ -1,18 +1,19 @@
 "use client";
 
 import { CircleDot } from "lucide-react";
-
+import gpay from "@/public/images/gpay.png"
+import Image from "next/image";
 export default function PaymentsHero() {
   return (
-    <section className="bg-gradient-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 py-16 sm:py-24">
+    <section className="bg-linear-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 py-16 sm:py-24">
       <div className="mx-auto grid container grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-10">
         {/* Left: copy */}
         <div>
-          <h1 className="bg-gradient-to-r from-fuchsia-500 via-pink-400 to-orange-300 bg-clip-text text-5xl font-extrabold text-transparent sm:text-6xl">
+          <h1 className="text-5xl text-black font-extrabold  sm:text-6xl">
             Stripe
           </h1>
 
-          <h2 className="mt-4 text-3xl font-extrabold leading-tight text-neutral-900 sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#372D38] sm:text-4xl">
             Payments
             <br />
             Infrastructure
@@ -20,20 +21,17 @@ export default function PaymentsHero() {
 
           <div className="mt-4 h-0.5 w-10 bg-rose-300" />
 
-          <p className="mt-5 text-lg font-medium text-neutral-700">
-            for the internet
-          </p>
+         
 
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-neutral-500">
-            Stripe makes it easy to pay securely online, using your preferred
-            payment method. Fast, simple, and secure
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#533F4E]">
+            Stripe makes it easy to pay securely online, using your preferred payment method. Fast, simple, and secure
           </p>
         </div>
 
         {/* Right: payment card mockup */}
         <div className="relative mx-auto w-full max-w-sm">
           {/* Floating status pill */}
-          <div className="absolute -top-5 right-2 z-10 flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-medium text-neutral-600 shadow-md">
+          <div className="absolute top-16 -right-16 z-10 flex items-center gap-1.5 rounded-full bg-white/30 px-3 py-1.5 text-xs font-medium text-neutral-600 shadow-md">
             <CircleDot className="h-3 w-3 text-orange-400" />
             Live payments active
           </div>
@@ -44,7 +42,7 @@ export default function PaymentsHero() {
               <span className="text-xs font-semibold tracking-wide text-neutral-400">
                 PAYMENT METHOD
               </span>
-              <span className="rounded-full bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-500">
+              <span className="rounded-full bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-[#C060C0]">
                 SUCCESS
               </span>
             </div>
@@ -81,12 +79,12 @@ export default function PaymentsHero() {
                 </p>
               </div>
               <span className="text-xs font-semibold text-neutral-600">
-                G Pay
+                <Image src={gpay} alt="gpay" className="h-10 w-10 object-contain" />
               </span>
             </div>
 
             {/* Gradient card visual */}
-            <div className="mt-6 flex items-center justify-between rounded-xl bg-gradient-to-r from-pink-400 via-rose-400 to-orange-300 px-5 py-6 text-white shadow-inner">
+            <div className="mt-6 flex items-center justify-between rounded-xl bg-linear-to-r from-[#FFA3FF]  to-[#FFB172] px-5 py-6 text-white shadow-inner">
               <span className="text-sm font-medium tracking-widest">
                 •••• •••• •••• 4242
               </span>

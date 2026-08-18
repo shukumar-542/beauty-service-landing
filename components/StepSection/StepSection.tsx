@@ -28,13 +28,10 @@ const STEPS = [
 ];
 
 export default function StepsSection() {
+
+  
   return (
     <section className="w-full container mx-auto  px-6 py-24 ">
-
-
-      <div className="">
-      
-
         {/* Headline */}
         <div>
           <TagText text="MEET THE ARTISTS" />
@@ -43,7 +40,7 @@ export default function StepsSection() {
           </h2>
           <div className="flex flex-col xl:flex-row gap-4">
             <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">booked in seconds with</h2>
-            <GradientText text={"Stunner Alert"} />
+            <GradientText text={"Stunner Alert"} className="text-6xl" />
           </div>
         </div>
 
@@ -75,7 +72,6 @@ export default function StepsSection() {
             </div>
           ))}
         </div>
-      </div>
     </section>
   );
 }

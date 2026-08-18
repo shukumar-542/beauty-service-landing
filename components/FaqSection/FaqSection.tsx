@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Plus, Minus, ArrowUpRight } from "lucide-react";
+import TagText from "../ui/TagText";
 
 const FAQS = [
   {
@@ -36,17 +37,12 @@ export default function FaqSection() {
       <div className="mx-auto grid grid-cols-1 gap-16 lg:grid-cols-[minmax(0,500px)_1fr] lg:gap-24">
         {/* Left column */}
         <div>
-          <div className="mb-6 flex items-center gap-2">
-            <span className="size-1.5 rounded-full bg-[#E0669B]" />
-            <span className="faq-body text-[11px] font-semibold tracking-[0.18em] text-[#B77593]">
-              GOOD TO KNOW
-            </span>
-          </div>
+          <TagText text="GOOD TO KNOW" />
 
           <h2 className="font-serif text-[42px] xl:text-[55px] font-medium leading-[1.08] text-[#3D2E38] ">
             Your questions,
             <br />
-            <span className="italic text-[#E0669B]">answered.</span>
+            <span className="italic ">answered.</span>
           </h2>
 
           <p className=" mt-6 max-w-75 text-[15px] leading-relaxed text-[#8B7A85]">

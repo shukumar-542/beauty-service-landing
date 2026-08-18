@@ -95,7 +95,7 @@ export default function ServicesGrid() {
                                 <h2 className="font-serif text-4xl xl:text-6xl text-[#372D38]">
                                     booked in seconds  on
                                 </h2>
-                                <GradientText />
+                                <GradientText className="text-6xl" />
                             </div>
                         </div>
 

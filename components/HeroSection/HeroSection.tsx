@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
 import DownloadButton from "../DownloadButton";
+import TagText from "../ui/TagText";
+import GradientText from "../ui/Gradienttext";
 
 const heroImage = "/images/herobg.png";
 
@@ -24,12 +26,11 @@ export default function HeroSection() {
                 className="
                 object-cover
                 object-[78%_center]
-
                 sm:object-[72%_center]
                 md:object-[68%_center]
                 lg:object-center
                 "
-             />
+            />
 
             {/* White Gradient Overlay */}
             <div className="absolute inset-0 bg-linear-to-r from-white/80 via-white/60 to-white/10" />
@@ -37,22 +38,21 @@ export default function HeroSection() {
             <div className="relative flex min-h-180 container mx-auto items-center px-6 lg:px-8">
                 {/* Left Content */}
                 <div className="">
-                    <span className="mb-5 inline-block text-xs font-semibold uppercase tracking-[0.25em] text-[#D47B8C]">
-                        ● THE BEAUTY APPOINTMENT, REIMAGINED
-                    </span>
+                    <div>
+                        <TagText text="THE EVENT PREP, REIMAGINED" />
 
-                    <h1 className="text-5xl font-black leading-[1.05] text-[#342A39] lg:text-7xl">
-                        Services,{" "}
-                        <span className="font-serif italic text-[#FF9CB0]">
-                            seamlessly.
-                        </span>
-                        <br />
-                        beautifully.
-                    </h1>
+                        <div className="flex flex-col xl:flex-row gap-4">
+                            <h2 className="font-serif text-6xl  text-neutral-900 xl:text-7xl">Services</h2>
+                            <GradientText text={"booked"} className="text-7xl" />
+                        </div>
+                        <h2 className="font-serif text-7xl  text-neutral-900 sm:text-7xl">
+                            seamlessly.{" "}
+                        </h2>
+                    </div>
 
-                    <p className="mt-6 max-w-md text-lg leading-8 text-gray-500">
-                        Discover brilliant beauty professionals, book instantly, and arrive feeling entirely taken care of.
-                    </p>
+
+
+
 
                     {/* Buttons */}
                     <div className="mt-10 flex flex-wrap gap-4">

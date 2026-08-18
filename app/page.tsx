@@ -21,10 +21,7 @@ export default function Home() {
       <Navbar />
 
       <div className="relative overflow-hidden ">
-        {/* Soft pink glow - top left */}
-
         <div className="relative">
-          {/* <HeroText /> */}
          <HeroSection/>
           <div>
             <TrustedBy/>

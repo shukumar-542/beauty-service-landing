@@ -102,7 +102,7 @@ export default function ArtistSection() {
             </h2>
             <div className="flex flex-col xl:flex-row gap-4">
               <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">to making you look & feel like a</h2>
-              <GradientText text={"Stunner"}  />
+              <GradientText text={"Stunner"} className="text-6xl" />
             </div>
           </div>
 
@@ -126,65 +126,65 @@ export default function ArtistSection() {
                   style={{ x }}
                   className="rounded-2xl border border-[#3D2E38]/8 bg-white/60 p-3 shadow-[0_2px_20px_rgba(61,46,56,0.04)]"
                 >
-                    {/* Image */}
-                    <div className="relative aspect-2/2 w-full overflow-hidden rounded-xl">
-                      <Image
-                        src={artist.image}
-                        alt={artist.name}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover"
-                      />
+                  {/* Image */}
+                  <div className="relative aspect-2/2 w-full overflow-hidden rounded-xl">
+                    <Image
+                      src={artist.image}
+                      alt={artist.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
 
-                      {/* Verified badge */}
-                      <span className="artists-body absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-[#7B5370] backdrop-blur">
-                        <ShieldCheck className="size-3.5  text-[#1A5A52]" />
-                        Verified
+                    {/* Verified badge */}
+                    <span className="artists-body absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-[#7B5370] backdrop-blur">
+                      <ShieldCheck className="size-3.5  text-[#1A5A52]" />
+                      Verified
+                    </span>
+                  </div>
+
+                  {/* Name + rating */}
+                  <div className="mt-4 flex items-start justify-between px-1">
+                    <div>
+                      <h3 className="artists-body text-[15px] font-semibold text-[#3D2E38]">
+                        {artist.name}
+                      </h3>
+                      <p className="artists-body mt-0.5 text-[13px] text-[#8B7A85]">
+                        {artist.specialty}
+                      </p>
+                    </div>
+                    <div className="artists-body flex items-center gap-1 text-[13px] font-semibold text-[#3D2E38]">
+                      <Star className="size-3.5 fill-[#E0669B] text-[#E0669B]" />
+                      {artist.rating}
+                    </div>
+                  </div>
+
+                  {/* Footer */}
+                  <div className="mt-4 flex flex-col items-center justify-between gap-2 border-t border-[#3D2E38]/8 px-1 pt-4 xl:flex-row">
+                    <div className=" text-[12px] text-[#8B7A85]">
+                      {artist.bookings}{" "}
+                      <span className="font-semibold text-[#3D2E38]">
+                        From {artist.price}
                       </span>
                     </div>
 
-                    {/* Name + rating */}
-                    <div className="mt-4 flex items-start justify-between px-1">
-                      <div>
-                        <h3 className="artists-body text-[15px] font-semibold text-[#3D2E38]">
-                          {artist.name}
-                        </h3>
-                        <p className="artists-body mt-0.5 text-[13px] text-[#8B7A85]">
-                          {artist.specialty}
-                        </p>
-                      </div>
-                      <div className="artists-body flex items-center gap-1 text-[13px] font-semibold text-[#3D2E38]">
-                        <Star className="size-3.5 fill-[#E0669B] text-[#E0669B]" />
-                        {artist.rating}
-                      </div>
-                    </div>
+                    <button
+                      type="button"
+                      className=" group inline-flex w-full items-center justify-center gap-1 rounded-full bg-linear-to-r from-[#E0669B] to-[#F0A868] px-4 py-2 text-[12px] font-semibold text-white transition-transform hover:scale-[1.03] xl:w-auto"
+                    >
+                      Book now
+                      <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
+                    </button>
+                  </div>
+                </motion.div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
 
-                    {/* Footer */}
-                    <div className="mt-4 flex items-center justify-between border-t border-[#3D2E38]/8 px-1 pt-4">
-                      <div className="artists-body text-[12px] text-[#8B7A85]">
-                        {artist.bookings}{" "}
-                        <span className="font-semibold text-[#3D2E38]">
-                          From {artist.price}
-                        </span>
-                      </div>
-
-                      <button
-                        type="button"
-                        className="artists-body group inline-flex items-center gap-1 rounded-full bg-linear-to-r from-[#E0669B] to-[#F0A868] px-4 py-2 text-[12px] font-semibold text-white transition-transform hover:scale-[1.03]"
-                      >
-                        Book now
-                        <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
-                      </button>
-                    </div>
-                  </motion.div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-
-            <div className="mt-8 flex items-center justify-end gap-3">
-              <CarouselPrevious className="static translate-y-0 border-[#3D2E38]/15 text-[#3D2E38] hover:bg-[#E0669B] hover:text-white" />
-              <CarouselNext className="static translate-y-0 border-[#3D2E38]/15 text-[#3D2E38] hover:bg-[#E0669B] hover:text-white" />
-            </div>
+          <div className="mt-8 flex items-center justify-end gap-3">
+            <CarouselPrevious className="static translate-y-0 border-[#3D2E38]/15 text-[#3D2E38] hover:bg-[#E0669B] hover:text-white" />
+            <CarouselNext className="static translate-y-0 border-[#3D2E38]/15 text-[#3D2E38] hover:bg-[#E0669B] hover:text-white" />
+          </div>
         </Carousel>
       </div>
     </section>
