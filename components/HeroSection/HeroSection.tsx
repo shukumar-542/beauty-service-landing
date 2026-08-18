@@ -22,14 +22,14 @@ export default function HeroSection() {
                 fill
                 priority
                 className="
-    object-cover
-    object-[78%_center]
+                object-cover
+                object-[78%_center]
 
-    sm:object-[72%_center]
-    md:object-[68%_center]
-    lg:object-center
-  "
-            />
+                sm:object-[72%_center]
+                md:object-[68%_center]
+                lg:object-center
+                "
+             />
 
             {/* White Gradient Overlay */}
             <div className="absolute inset-0 bg-linear-to-r from-white/80 via-white/60 to-white/10" />
@@ -45,7 +45,7 @@ export default function HeroSection() {
                         Services,{" "}
                         <span className="font-serif italic text-[#FF9CB0]">
                             seamlessly.
-                        </span> 
+                        </span>
                         <br />
                         beautifully.
                     </h1>
@@ -72,7 +72,7 @@ export default function HeroSection() {
                                 style={{ animationDuration: "8s" }}
                             />
 
-                            <button className="relative flex items-center gap-2 rounded-full cursor-pointer bg-white px-7 py-4 font-medium text-gray-700 shadow transition hover:shadow-lg">
+                            <button className="relative flex items-center gap-2 rounded-full cursor-pointer hover:bg-neutral-50 bg-white px-7 py-4 font-medium text-gray-700 shadow transition hover:shadow-lg">
                                 Explore artists
                                 <ArrowRight size={18} />
                             </button>

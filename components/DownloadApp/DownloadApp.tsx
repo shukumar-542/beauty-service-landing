@@ -19,12 +19,9 @@ export default function DownloadAppSection() {
                         </div>
 
                         <h2 className="font-serif text-4xl leading-[1.15] text-[#372D38] sm:text-5xl">
-                            Your beauty life,
+                            Your next glow-up,
                             <br />
-                            <span className="bg-linear-to-r from-pink-400 to-orange-300 bg-clip-text italic text-transparent">
-                                beautifully
-                            </span>{" "}
-                            organized.
+                            
                         </h2>
 
                         <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-[#7a6b76]">

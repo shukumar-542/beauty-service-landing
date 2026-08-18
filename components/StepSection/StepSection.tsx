@@ -1,17 +1,19 @@
 "use client";
 
 import { Sparkle } from "lucide-react";
+import TagText from "../ui/TagText";
+import GradientText from "../ui/Gradienttext";
 
 const STEPS = [
   {
     number: "01",
     title: "Download the app",
-    description: "Your personal beauty world, ready when you are.",
+    description: "Your personal style and studio team, ready whenever you are.",
   },
   {
     number: "02",
-    title: "Choose your artist",
-    description: "Browse portfolios, specialties, reviews, and availability.",
+    title: "Choose your Pro",
+    description: "Browse portfolios, specialties, reviews, and availability. ",
   },
   {
     number: "03",
@@ -21,50 +23,45 @@ const STEPS = [
   {
     number: "04",
     title: "Love the result",
-    description: "Show up, switch off, and leave feeling like yourself.",
+    description: "Feel confident and ready to stun the world",
   },
 ];
 
 export default function StepsSection() {
   return (
     <section className="w-full container mx-auto  px-6 py-24 ">
-     
+
 
       <div className="">
-        {/* Eyebrow */}
-        <div className="mb-6 flex items-center gap-2">
-          <span className="size-1.5 rounded-full bg-[#E0669B]" />
-          <span className="steps-body text-[11px] font-semibold tracking-[0.18em] text-[#B77593]">
-            AS EASY AS IT FEELS
-          </span>
-        </div>
+      
 
         {/* Headline */}
-        <h2 className="steps-display max-w-3xl text-[36px] font-medium leading-[1.15] text-[#3D2E38] sm:text-[44px]">
-          Your next beauty moment,{" "}
-          <span className="italic">
-            made simple with{" "}
-            <span className="bg-linear-to-r from-[#E0669B] to-[#F0A868] bg-clip-text text-transparent">
-              STUNNER
-            </span>
-          </span>
-        </h2>
+        <div>
+          <TagText text="MEET THE ARTISTS" />
+          <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
+            Your next glow-up,{" "}
+          </h2>
+          <div className="flex flex-col xl:flex-row gap-4">
+            <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">booked in seconds with</h2>
+            <GradientText text={"Stunner Alert"} />
+          </div>
+        </div>
 
         {/* Steps */}
         <div className="mt-20 grid grid-cols-1 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step, i) => (
             <div key={i} className="relative ">
               {/* Number */}
-              <span className="steps-body text-[12px]  mb-5 font-semibold tracking-wide text-[#E0669B]">
-                {step.number}
+              <span className=" text-[12px]  font-semibold tracking-wide text-[#CF94B0] ml-2 ">
+                {"0" + (i + 1)}
               </span>
 
               {/* Divider line with icon node */}
               <div
-                className="relative mt-3 mb-6 h-0 border-t border-dotted border-[#3D2E38]/25"
+                className="relative mt-6 mb-6 h-0 border-t  border-dotted border-[#3D2E38]/25"
               >
                 <span className="absolute left-0 top-1/2 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#E0669B]/40 bg-[#FCF1EE]">
-                  <Sparkle className="size-3.5 fill-[#E0669B] text-[#E0669B]" />
+                  <Sparkle className="size-3.5 fill-[#DC86B2] text-[#DC86B2]" />
                 </span>
               </div>
 

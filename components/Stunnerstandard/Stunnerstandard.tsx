@@ -1,6 +1,7 @@
 import { ShieldCheck, ToggleRight, Star, CheckCheck, Clock, Heart } from "lucide-react";
 import StaggerGrid, { StaggerItem } from "../ui/StaggerGrid";
 import AnimatedContent from "../ui/AnimatedContent";
+import TagText from "../ui/TagText";
 
 const features = [
   {
@@ -53,12 +54,7 @@ export default function StunnerStandard() {
           distance={30}
           once={false}
         >
-          <div className="mb-5 flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#FFA3FF]" />
-            <span className="text-xs font-semibold tracking-widest text-[#9A768E]">
-              THE STUNNER STANDARD
-            </span>
-          </div>
+          <TagText text={"THE STUNNER STANDARD"} />
 
           <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
             A premium app designed to make  booking Australia's best professionals easier than ever.

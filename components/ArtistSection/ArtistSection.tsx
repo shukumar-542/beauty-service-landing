@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
-import { Heart, Star, ArrowUpRight, ArrowRight, BadgeCheck, ShieldCheck } from "lucide-react";
+import { Heart, Star, ArrowUpRight, ArrowRight, BadgeCheck, ShieldCheck, Tag } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -17,6 +17,7 @@ import artist2 from "@/public/images/artist2.png";
 import artist3 from "@/public/images/artist3.png";
 import GradientText from "../ui/Gradienttext";
 import ExploreButton from "../ui/ExploreButton";
+import TagText from "../ui/TagText";
 
 const ARTISTS = [
   {
@@ -95,12 +96,7 @@ export default function ArtistSection() {
         {/* Header row */}
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <div className="mb-6 flex items-center gap-2">
-              <span className="size-1.5 rounded-full bg-[#E0669B]" />
-              <span className="artists-body text-[11px] font-semibold tracking-[0.18em] text-[#B77593]">
-                MEET THE ARTISTS
-              </span>
-            </div>
+            <TagText text="MEET THE ARTISTS" />
             <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
               Handpicked creators dedicated{" "}
             </h2>

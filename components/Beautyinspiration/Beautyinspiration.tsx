@@ -8,9 +8,13 @@ import beauty2 from "../../public/images/Beauty2.png";
 import Beauty3 from "../../public/images/Beauty3.png";
 import beauty4 from "../../public/images/Beauty4.png";
 import beauty5 from "../../public/images/Beauty5.png";
+import TagText from "../ui/TagText";
+import GradientText from "../ui/Gradienttext";
+import AnimatedContent from "../ui/AnimatedContent";
+import StaggerGrid, { StaggerItem } from "../ui/StaggerGrid";
 
 const filters = ["All", "Wedding", "Natural", "Luxury glam", "Party", "Editorial"];
- 
+
 const images = [
   {
     src: beauty1,
@@ -38,78 +42,84 @@ const images = [
     className: "aspect-square sm:aspect-auto col-span-2 sm:col-span-2 sm:row-span-1",
   },
 ];
- 
+
 export default function BeautyInspiration() {
   const [active, setActive] = useState("All");
- 
+
   return (
-    <section className="bg-gradient-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 py-16 sm:py-20">
+    <section className="bg-linear-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 py-16 sm:py-20">
       <div className="mx-auto container">
-        {/* Header */}
-        <div className="mb-8 flex flex-col gap-6 lg:mb-10 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <div className="mb-4 flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-rose-400" />
-              <span className="text-xs font-semibold tracking-widest text-rose-400">
-                SAVE WHAT YOU LOVE
-              </span>
+        {/* Header Section*/}
+        <AnimatedContent
+          direction="up"
+          delay={0.2}
+          duration={0.6}
+          distance={20}
+          once={false}
+        >
+          <div className="mb-8 flex flex-col gap-6 lg:mb-10 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <TagText text="BEAUTY INSPIRATION" />
+              <div className="flex flex-col xl:flex-row gap-4">
+                <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">What's your</h2>
+                <GradientText text={"Vibe"} />
+                <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">toady ?</h2>
+              </div>
             </div>
-            <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
-              Beauty, in{" "}
-              <em className="bg-linear-to-r from-pink-500 to-fuchsia-500 bg-clip-text italic text-transparent">
-                full
-              </em>{" "}
-              color.
-            </h2>
-          </div>
- 
-          {/* Filter pills */}
-          <div className="flex flex-wrap gap-2 lg:justify-end">
-            {filters.map((filter) => {
-              const isActive = filter === active;
-              return (
-                <button
-                  key={filter}
-                  onClick={() => setActive(filter)}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                    isActive
-                      ? "bg-gradient-to-r from-pink-500 to-fuchsia-400 text-white shadow-sm"
+
+            {/* Filter pills */}
+            <div className="flex flex-wrap gap-2 lg:justify-end">
+              {filters.map((filter) => {
+                const isActive = filter === active;
+                return (
+                  <button
+                    key={filter}
+                    onClick={() => setActive(filter)}
+                    className={`rounded-full cursor-pointer px-4 py-2 text-sm font-medium transition-colors ${isActive
+                      ? "bg-linear-to-r from-[#FFA3FF] to-[#FFB172] text-white shadow-sm"
                       : "bg-white/80 text-neutral-600 hover:bg-white"
-                  }`}
-                >
-                  {filter}
-                </button>
-              );
-            })}
-          </div>
-        </div>
- 
-        {/* Image grid */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:grid-rows-2 sm:gap-4 sm:h-[420px]">
-          {images.map((img, i) => (
-            <div
-              key={i}
-              className={`relative overflow-hidden rounded-2xl bg-neutral-200 ${img.className}`}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                sizes="(max-width: 640px) 50vw, 25vw"
-                className="object-cover"
-              />
+                      }`}
+                  >
+                    {filter}
+                  </button>
+                );
+              })}
             </div>
+          </div>
+        </AnimatedContent>
+
+        {/* Image grid */}
+        <StaggerGrid
+          staggerDelay={0.2}
+          once={false} className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:grid-rows-2 sm:gap-4 sm:h-105 ">
+          {images.map((img, i) => (
+            <StaggerItem
+              key={i}
+              distance={30}
+              duration={0.6}
+               className={`relative overflow-hidden rounded-2xl bg-neutral-200 group ${img.className}`}
+            >
+             
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105 "
+                />
+            </StaggerItem>
           ))}
-        </div>
- 
+        </StaggerGrid>
+
         {/* CTA */}
         <div className="mt-10 flex justify-center">
+          
           <button className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 py-3 text-sm font-medium text-neutral-800 shadow-sm transition-colors hover:bg-neutral-50">
             View all inspiration
             <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
           </button>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
