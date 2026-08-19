@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import {
@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/carousel";
 import avatar from "@/public/images/artist1.png";
 import avatar2 from "@/public/images/artist2.png";
+import TagText from "../ui/TagText";
+import Autoplay from "embla-carousel-autoplay";
 const testimonials = [
   {
     name: "Kaya Williams",
@@ -47,6 +49,10 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+
+  const autoplay = useRef(
+      Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+    );
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -59,30 +65,24 @@ export default function TestimonialsSection() {
   }, [api]);
 
   return (
-    <section className="bg-gradient-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5]  py-16 sm:py-20">
+    <section className="bg-linear-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5]  py-16 sm:py-20">
       <div className="mx-auto grid container px-6 grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
         {/* Left: static quote */}
         <div>
-          <div className="mb-5 flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-rose-400" />
-            <span className="text-xs font-semibold tracking-widest text-rose-400">
-              THEIR WORDS, NOT OURS
-            </span>
-          </div>
+          <TagText text="AS EASY AS IT FEELS" />
 
-          <h2 className="font-serif text-3xl leading-[1.25] text-neutral-900 sm:text-4xl">
-            &ldquo;It feels like having a beauty <em className="italic">editor</em>{" "}
-            in your pocket.&rdquo;
+          <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
+            &ldquo;It feels like having your personal creative team in your pocket.&rdquo;
           </h2>
         </div>
 
         {/* Right: testimonial carousel */}
         <div>
-          <Carousel setApi={setApi} className="w-full">
+          <Carousel  plugins={[autoplay.current]} setApi={setApi} className="w-full">
             <CarouselContent className="items-stretch">
               {testimonials.map((t, i) => (
                 <CarouselItem key={i} className="h-auto">
-                  <div className="flex h-full min-h-[300px] flex-col justify-between rounded-2xl border border-black/[0.03] bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)] sm:min-h-[280px] sm:p-7">
+                  <div className="flex h-full min-h-75 flex-col justify-between rounded-2xl border border-black/3 bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)] sm:min-h-70 sm:p-7">
                     <div>
                       <div className="flex items-start justify-between">
                         <div className="flex items-center gap-3">
@@ -96,10 +96,10 @@ export default function TestimonialsSection() {
                             />
                           </div>
                           <div>
-                            <p className="text-sm font-semibold text-neutral-900">
+                            <p className="text-sm font-semibold text-[#372D38]">
                               {t.name}
                             </p>
-                            <p className="text-xs text-neutral-400">
+                            <p className="text-xs text-[#93838E]">
                               {t.location}
                             </p>
                           </div>
@@ -109,14 +109,14 @@ export default function TestimonialsSection() {
                           {Array.from({ length: t.rating }).map((_, si) => (
                             <Star
                               key={si}
-                              className="h-3.5 w-3.5 fill-rose-400 text-rose-400"
+                              className="h-3.5 w-3.5 fill-[#D875A9] text-[#D875A9]"
                             />
                           ))}
                         </div>
                       </div>
 
-                      <p className="mt-6 text-[15px] leading-relaxed text-neutral-700">
-                        &ldquo;{t.review}&rdquo;
+                      <p className="mt-6 text-[15px] leading-relaxed text-[#513A4C]">
+                        &ldquo; {t.review} &rdquo;
                       </p>
                     </div>
 

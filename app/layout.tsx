@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {  DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import CursorDot from "@/components/CursorDot";
 
 
 const inter = Inter({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={cn("h-full", "antialiased", inter.variable, dmSerifDisplay.variable, "font-sans")}
     >
       <body className="min-h-full flex flex-col"suppressHydrationWarning>
+        <CursorDot/>
         {children}
       </body>
     </html>

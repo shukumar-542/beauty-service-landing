@@ -22,23 +22,23 @@ export default function Home() {
 
       <div className="relative overflow-hidden ">
         <div className="relative">
-         <HeroSection/>
+          <HeroSection />
           <div>
-            <TrustedBy/>
-            <ServicesGrid/>
-            <BeautyInspiration/>
-            <StunnerStandard/>
-            <ArtistSection/>
-            <StepSection/>
-            <TestimonialsSection/>
-           <DownloadAppSection/>
-           <FaqSection/>
-           <PaymentsHero/>
+            <TrustedBy />
+            <ServicesGrid />
+            <BeautyInspiration />
+            <StunnerStandard />
+            <ArtistSection />
+            <StepSection />
+            <TestimonialsSection />
+            <DownloadAppSection />
+            <FaqSection />
+            <PaymentsHero />
           </div>
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
 
     </>
   );

@@ -1,12 +1,16 @@
-"use client";
-
 import { CircleDot } from "lucide-react";
 import gpay from "@/public/images/gpay.png"
 import Image from "next/image";
+import AnimatedContent from "../ui/AnimatedContent";
 export default function PaymentsHero() {
   return (
     <section className="bg-linear-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 py-16 sm:py-24">
-      <div className="mx-auto grid container grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-10">
+      <AnimatedContent
+        direction="up"
+        delay={0.2}
+        duration={0.6}
+        distance={30}
+        once={false} className="mx-auto grid container grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-10">
         {/* Left: copy */}
         <div>
           <h1 className="text-5xl text-black font-extrabold  sm:text-6xl">
@@ -21,9 +25,9 @@ export default function PaymentsHero() {
 
           <div className="mt-4 h-0.5 w-10 bg-rose-300" />
 
-         
 
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#533F4E]">
+
+          <p className="mt-3  text-sm leading-relaxed text-[#533F4E]">
             Stripe makes it easy to pay securely online, using your preferred payment method. Fast, simple, and secure
           </p>
         </div>
@@ -31,7 +35,7 @@ export default function PaymentsHero() {
         {/* Right: payment card mockup */}
         <div className="relative mx-auto w-full max-w-sm">
           {/* Floating status pill */}
-          <div className="absolute top-16 -right-16 z-10 flex items-center gap-1.5 rounded-full bg-white/30 px-3 py-1.5 text-xs font-medium text-neutral-600 shadow-md">
+          <div className="absolute top-16  -right-6 xl:-right-16 z-10 flex items-center gap-1.5 rounded-full bg-white/30 px-3 py-1.5 text-xs font-medium text-neutral-600 shadow-md">
             <CircleDot className="h-3 w-3 text-orange-400" />
             Live payments active
           </div>
@@ -92,7 +96,7 @@ export default function PaymentsHero() {
             </div>
           </div>
         </div>
-      </div>
+      </AnimatedContent>
     </section>
   );
 }

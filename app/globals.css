@@ -172,3 +172,9 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #ffa3ff #fff7fb;
 }
+
+/* @media (min-width: 768px) {
+    body {
+        cursor: none;
+    }
+} */
