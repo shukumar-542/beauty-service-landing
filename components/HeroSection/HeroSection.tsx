@@ -22,7 +22,7 @@ export default function HeroSection() {
                 src={heroImage}
                 alt="Hero Background"
                 fill
-                sizes="100vw"
+                sizes="(max-width: 768px) 150vw, 100vw"
                 quality={90}
                 priority
                 className="
