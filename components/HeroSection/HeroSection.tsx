@@ -6,7 +6,7 @@ import DownloadButton from "../DownloadButton";
 import TagText from "../ui/TagText";
 import GradientText from "../ui/Gradienttext";
 
-const heroImage = "/images/herobg.png";
+const heroImage = "/images/herobg-mobile.webp";
 
 const AVATARS = [
     "/images/artist1.png",
@@ -22,6 +22,8 @@ export default function HeroSection() {
                 src={heroImage}
                 alt="Hero Background"
                 fill
+                sizes="100vw"
+                quality={90}
                 priority
                 className="
                 object-cover
@@ -41,11 +43,11 @@ export default function HeroSection() {
                     <div>
                         <TagText text="THE EVENT PREP, REIMAGINED" />
 
-                        <div className="flex flex-col xl:flex-row gap-4">
-                            <h2 className="font-serif text-6xl  text-neutral-900 xl:text-7xl">Services</h2>
-                            <GradientText text={"booked"} className="text-7xl" />
+                        <div className="flex flex-col xl:flex-row xl:gap-4">
+                            <h2 className="font-serif text-5xl  text-neutral-900 xl:text-7xl">Services</h2>
+                            <GradientText text={"booked"} className="text-5xl xl:text-7xl" />
                         </div>
-                        <h2 className="font-serif text-7xl  text-neutral-900 sm:text-7xl">
+                        <h2 className="font-serif text-5xl  text-neutral-900 sm:text-7xl">
                             seamlessly.{" "}
                         </h2>
                     </div>
