@@ -15,7 +15,7 @@ const partners: { src: StaticImageData; alt: string }[] = [
 
 export default function TrustedBy() {
   return (
-    <section className="bg-gradient-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 py-12 sm:py-14">
+    <section className="bg-linear-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 py-12 sm:py-14">
       <div className="mx-auto container border-t border-neutral-200/70 pt-10">
         <p className="text-center text-xs font-semibold tracking-widest text-neutral-400">
           LOVED BY BEAUTY INSIDERS AT

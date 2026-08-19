@@ -50,7 +50,7 @@ export default function Navbar() {
                     : "bg-transparent border-b border-transparent py-4"
             }`}
         >
-            <nav className="mx-auto flex container items-center justify-between px-6 transition-all duration-300">
+            <nav className="mx-auto flex container items-center justify-between px-2 xl:px-0 transition-all duration-300">
 
                 {/* Logo */}
                 <a href="#home" className="flex items-center gap-2.5">

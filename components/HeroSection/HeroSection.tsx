@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
 import DownloadButton from "../DownloadButton";
@@ -14,10 +14,33 @@ const AVATARS = [
     "/images/artist3.png",
 ];
 
+// Parent container — children stagger
+const containerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.10,
+        },
+    },
+};
+
+// Drop Evey line from top
+const dropVariants = {
+    hidden: { opacity: 0, y: -60 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "spring" as const,
+            damping: 5,
+            stiffness: 250,
+        },
+    },
+};
+
 export default function HeroSection() {
     return (
         <section className="relative overflow-hidden bg-[#FFF9FA]">
-            {/* Background Image */}
             <Image
                 src={heroImage}
                 alt="Hero Background"
@@ -34,49 +57,69 @@ export default function HeroSection() {
                 "
             />
 
-            {/* White Gradient Overlay */}
             <div className="absolute inset-0 bg-linear-to-r from-white/80 via-white/60 to-white/10" />
 
             <div className="relative flex min-h-180 container mx-auto items-center px-6 lg:px-8">
-                {/* Left Content */}
-                <div className="">
-                    <div>
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    {/* Heading block */}
+                    <motion.div variants={dropVariants} className="overflow-hidden">
                         <TagText text="THE EVENT PREP, REIMAGINED" />
+                    </motion.div>
 
-                        <div className="flex flex-col xl:flex-row xl:gap-4">
-                            <h2 className="font-serif text-5xl  text-neutral-900 xl:text-7xl">Services</h2>
+                    <div className="flex flex-col xl:flex-row xl:gap-4 overflow-hidden">
+                        <motion.h2
+                            variants={dropVariants}
+                            className="font-serif text-5xl text-neutral-900 xl:text-7xl"
+                        >
+                            Services
+                        </motion.h2>
+                        <motion.div variants={dropVariants}>
                             <GradientText text={"booked"} className="text-5xl xl:text-7xl" />
-                        </div>
-                        <h2 className="font-serif text-5xl  text-neutral-900 sm:text-7xl">
-                            seamlessly.{" "}
-                        </h2>
+                        </motion.div>
                     </div>
 
-
-
-
+                    <div className="">
+                        <motion.h2
+                            variants={dropVariants}
+                            className="font-serif text-5xl text-neutral-900 sm:text-7xl"
+                        >
+                            seamlessly.{" "}
+                        </motion.h2>
+                    </div>
 
                     {/* Buttons */}
-                    <div className="mt-10 flex flex-wrap gap-4">
-
-
-                        <DownloadButton name="Download App" className="py-7 px-9" icon={Download} gradient="from-pink-400 to-orange-300" rotateIcon={false} />
+                    <motion.div
+                        variants={dropVariants}
+                        className="mt-10 flex flex-wrap gap-4 overflow-hidden"
+                    >
+                        <DownloadButton
+                            name="Download App"
+                            className="py-7 px-9"
+                            icon={Download}
+                            gradient="from-pink-400 to-orange-300"
+                            rotateIcon={false}
+                        />
                         <div className="relative inline-flex overflow-hidden rounded-full p-0.5">
                             <span
                                 className="absolute inset-[-300%] animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_55%,#71717a_70%,#a1a1aa_85%,transparent_100%)]"
                                 style={{ animationDuration: "8s" }}
                             />
-
                             <button className="relative flex items-center gap-2 rounded-full cursor-pointer hover:bg-neutral-50 bg-white px-7 py-4 font-medium text-gray-700 shadow transition hover:shadow-lg">
                                 Explore artists
                                 <ArrowRight size={18} />
                             </button>
                         </div>
-
-                    </div>
+                    </motion.div>
 
                     {/* Users */}
-                    <div className="mt-10 flex items-center gap-4">
+                    <motion.div
+                        variants={dropVariants}
+                        className="mt-10 flex items-center gap-4 overflow-hidden"
+                    >
                         <div className="flex -space-x-3">
                             {AVATARS.map((avatar, index) => (
                                 <div
@@ -96,12 +139,10 @@ export default function HeroSection() {
 
                         <div>
                             <h4 className="font-bold text-[#342A39]">20,000+</h4>
-                            <p className="text-sm text-gray-500">
-                                beauty lovers and counting
-                            </p>
+                            <p className="text-sm text-gray-500">beauty lovers and counting</p>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );
