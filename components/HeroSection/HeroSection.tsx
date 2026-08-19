@@ -22,7 +22,7 @@ export default function HeroSection() {
                 src={heroImage}
                 alt="Hero Background"
                 fill
-                sizes="(max-width: 768px) 150vw, 100vw"
+                sizes="(max-width: 768px) 200vw, 100vw"
                 quality={90}
                 priority
                 className="
@@ -58,16 +58,9 @@ export default function HeroSection() {
 
                     {/* Buttons */}
                     <div className="mt-10 flex flex-wrap gap-4">
-                        {/* <button className="flex items-center gap-2 rounded-full bg-linear-to-r from-pink-400 to-orange-300 px-7 py-4 font-medium text-white shadow-lg transition hover:scale-105">
-                            Download app
-                            <Download size={18} />
-                        </button> */}
+
 
                         <DownloadButton name="Download App" className="py-7 px-7" icon={Download} gradient="from-pink-400 to-orange-300" rotateIcon={false} />
-                        {/* <DownloadButton name="Explore artists" className="py-6 " icon={ArrowRight} rotateIcon={false} /> */}
-
-
-
                         <div className="relative inline-flex overflow-hidden rounded-full p-0.5">
                             <span
                                 className="absolute inset-[-300%] animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_55%,#71717a_70%,#a1a1aa_85%,transparent_100%)]"
