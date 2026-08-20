@@ -6,7 +6,7 @@ import DownloadButton from "../DownloadButton";
 import TagText from "../ui/TagText";
 import GradientText from "../ui/Gradienttext";
 
-const heroImage = "/images/herobg-mobile.webp";
+const heroImage = "/images/herobg-mobile1.png";
 
 const AVATARS = [
     "/images/artist1.png",
@@ -19,7 +19,7 @@ const containerVariants = {
     hidden: {},
     visible: {
         transition: {
-            staggerChildren: 0.10,
+            staggerChildren: 0.35,
         },
     },
 };
@@ -33,7 +33,7 @@ const dropVariants = {
         transition: {
             type: "spring" as const,
             damping: 5,
-            stiffness: 250,
+            stiffness: 100,
         },
     },
 };
@@ -53,13 +53,13 @@ export default function HeroSection() {
                 object-[78%_center]
                 sm:object-[72%_center]
                 md:object-[68%_center]
-                lg:object-center
+                lg:object-bottom
                 "
             />
 
-            <div className="absolute inset-0 bg-linear-to-r from-white/80 via-white/60 to-white/10" />
+            <div className="absolute inset-0 bg-linear-to-r from-white/55 via-white/60 to-white/5" />
 
-            <div className="relative flex min-h-180 container mx-auto items-center px-6 lg:px-8">
+            <div className="relative flex min-h-180 xl:min-h-190 container mx-auto items-center px-6 lg:px-8">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -100,7 +100,7 @@ export default function HeroSection() {
                             name="Download App"
                             className="py-7 px-9"
                             icon={Download}
-                            gradient="from-pink-400 to-orange-300"
+                            // gradient="from-[#FFA3FF] to-[#FFB172]"
                             rotateIcon={false}
                         />
                         <div className="relative inline-flex overflow-hidden rounded-full p-0.5">

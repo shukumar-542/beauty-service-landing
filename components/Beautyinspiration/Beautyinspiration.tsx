@@ -60,9 +60,9 @@ export default function BeautyInspiration() {
           <div className="mb-8 flex flex-col gap-6 lg:mb-10 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <TagText text="BEAUTY INSPIRATION" />
-              <div className="flex flex-col xl:flex-row xl:gap-4">
+              <div className="flex flex-col xl:flex-row items-center xl:gap-4">
                 <h2 className="font-serif text-5xl leading-tight text-neutral-900 sm:text-6xl">What's your</h2>
-                <GradientText text={"Vibe"} className="text-5xl" />
+                <GradientText text={"Vibe"} className="text-6xl" />
                 <h2 className="font-serif text-5xl leading-tight text-neutral-900 sm:text-5xl">toady ?</h2>
               </div>
             </div>

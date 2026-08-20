@@ -2,13 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, type LucideIcon } from "lucide-react";
-import { type ComponentProps } from "react";
+import type { ComponentProps } from "react";
 import { twMerge } from "tailwind-merge";
 import clsx, { type ClassValue } from "clsx";
 
-function cx(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 type ButtonVariant = ComponentProps<typeof Button>["variant"];
 type ButtonSize = ComponentProps<typeof Button>["size"];
@@ -24,12 +22,6 @@ interface DownloadButtonProps {
   glowClassName?: string;
   glowDuration?: string;
   rotateIcon?: boolean;
-  /**
-   * Tailwind gradient stop classes, e.g. "from-pink-400 to-orange-300".
-   * When passed, the button gets a gradient background + white text.
-   * When omitted, the button stays white with dark text.
-   */
-  gradient?: string;
   onClick?: () => void;
 }
 
@@ -37,22 +29,22 @@ export default function DownloadButton({
   name = "Download App",
   icon: Icon = ArrowUpRight,
   iconClassName,
-  variant = "gradient",
   size = "lg",
   className,
   glow = true,
   glowClassName,
   glowDuration = "8s",
   rotateIcon = true,
-  gradient,
   onClick,
 }: DownloadButtonProps) {
   return (
     <div className="relative inline-flex overflow-hidden rounded-full p-0.5">
       {glow && (
         <span
-          className={cx(
-            "absolute inset-[-300%] animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_55%,#f472b6_70%,#fdba74_85%,transparent_100%)]",
+          aria-hidden="true"
+          className={cn(
+            "absolute inset-[-300%] animate-spin",
+            "bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_55%,#f472b6_70%,#fdba74_85%,transparent_100%)]",
             glowClassName
           )}
           style={{ animationDuration: glowDuration }}
@@ -60,20 +52,24 @@ export default function DownloadButton({
       )}
 
       <Button
+        type="button"
         onClick={onClick}
-        variant={gradient ? "ghost" : variant}
+        variant="ghost"
         size={size}
-        className={cx(
-          "group relative rounded-full px-6 py-5 cursor-pointer",
-          gradient
-            ? `bg-linear-to-r ${gradient} hover:opacity-90`
-            : "border border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50",
+        className={cn(
+          "group relative cursor-pointer rounded-full px-6 py-5",
+          "text-white! hover:opacity-90!",
           className
         )}
+        style={{
+          background: "linear-gradient(70deg, #FFA3FF 0%, #FFB172 100%)",
+        }}
       >
-        {name}
+        <span>{name}</span>
+
         <Icon
-          className={cx(
+          aria-hidden="true"
+          className={cn(
             "h-4 w-4 transition-transform duration-300",
             rotateIcon && "group-hover:rotate-45",
             iconClassName

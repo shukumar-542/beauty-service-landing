@@ -1,12 +1,11 @@
-"use client"
-import { Apple, ArrowRight, PlayCircle } from "lucide-react";
 import mobile from "@/public/images/app.png";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import TagText from "../ui/TagText";
-import { motion } from "framer-motion";
 import appStore from "@/public/images/apple.png"
 import googleplay from "@/public/images/google.png"
+import InspiratinText from "../ui/InspiratinText";
+import { Astroid } from "lucide-react";
 
 export default function DownloadAppSection() {
     return (
@@ -76,25 +75,51 @@ export default function DownloadAppSection() {
 
 
 
+                    <div className="relative mx-auto w-full max-w-125">
+                        <Image
+                            src={mobile}
+                            alt="Mobile App"
+                            className="h-auto w-full"
+                        />
 
-                    <div className="flex w-full justify-center lg:justify-end  ">
-                        <motion.div
-                            animate={{
-                                x: [-18, 18, -18],
-                            }}
-                            transition={{
-                                duration: 4,
-                                repeat: Infinity,
-                                ease: "easeInOut",
-                            }}
-                        >
-                            <Image
-                                src={mobile}
-                                alt="Mobile App"
-                                className="h-auto w-125"
+                        <div className="absolute left-[-12] xl:left-[-10%] top-[5%]">
+                            <InspiratinText
+                                text="Booked"
+                                icon="astroid"
+                                delay={0}
                             />
-                        </motion.div>
+                        </div>
+
+                        <div className="absolute left-[-4%] top-[40%]">
+                            <InspiratinText
+                                text="Top Rated"
+                                icon="sparkles"
+                                delay={1}
+                            />
+                        </div>
+                        <div className="absolute left-[-4%] xl:left-[-10%] top-[90%] xl:top-[80%]">
+                            <InspiratinText
+                                text="Appointment confirmed"
+                                // icon="sparkles"
+                                delay={1}
+                            />
+                        </div>
+                        <div className="absolute right-[-5%]  xl:right-[-10%] top-[90%] xl:top-[80%]">
+                            <InspiratinText
+                                text="Beauty near you"
+                                // icon="sparkles"
+                                delay={1}
+                            />
+                        </div>
+                        <div className="absolute right-[-5%]  xl:right-[-10%] top-[-5%] xl:top-[10%]">
+                            <InspiratinText
+                                text="Available today"
+                                // icon="sparkles"
+                                delay={1}
+                            />
+                        </div>
                     </div>
+
                 </div>
             </div>
 
