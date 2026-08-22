@@ -40,7 +40,7 @@ const dropVariants = {
 };
 
 export default function HeroSection() {
-    const rotatingWords = ["Beautifully.", "Effortlessly." , "Seamlessly"];
+    const rotatingWords = ["Beautifully.", "Elegantly." , "Effortlesssly"];
 
     const [currentWord, setCurrentWord] = useState(0);
 
@@ -91,7 +91,7 @@ export default function HeroSection() {
                             Services
                         </motion.h2>
                         <motion.div variants={dropVariants}>
-                            <GradientText text={"booked"} className="text-5xl xl:text-7xl" />
+                            <GradientText text={"Booked"} className="text-5xl xl:text-7xl" />
                         </motion.div>
                     </div>
 

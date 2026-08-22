@@ -89,7 +89,7 @@ export default function PaymentsHero() {
 
             {/* Gradient card visual */}
             <div className="mt-6 flex items-center justify-between rounded-xl bg-linear-to-r from-[#FFA3FF]  to-[#FFB172] px-5 py-6 text-white shadow-inner">
-              <span className="text-sm font-medium tracking-widest">
+              <span className="text-sm font-medium ">
                 •••• •••• •••• 4242
               </span>
               <span className="text-sm font-bold italic">VISA</span>
