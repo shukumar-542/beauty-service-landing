@@ -109,7 +109,7 @@ export default function Navbar() {
 
                 {/* CTA button */}
                 <div className="hidden md:block">
-                    <DownloadButton gradient="from-pink-400 to-orange-300" name="Download App" />
+                    <DownloadButton  name="Download App" />
                 </div>
 
                 {/* Mobile menu */}

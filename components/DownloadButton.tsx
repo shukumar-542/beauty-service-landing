@@ -54,16 +54,13 @@ export default function DownloadButton({
       <Button
         type="button"
         onClick={onClick}
-        variant="ghost"
         size={size}
+        variant="gradient"
         className={cn(
           "group relative cursor-pointer rounded-full px-6 py-5",
-          "text-white! hover:opacity-90!",
+          
           className
         )}
-        style={{
-          background: "linear-gradient(70deg, #FFA3FF 0%, #FFB172 100%)",
-        }}
       >
         <span>{name}</span>
 
