@@ -10,17 +10,16 @@ import {
 import { ArrowUpRight, Menu } from "lucide-react";
 import DownloadButton from "../DownloadButton";
 import { motion } from "motion/react";
-import logo from "@/public/images/logo.png";
+import logo from "@/public/images/icon.png";
 import Image from "next/image";
 
 const NAV_LINKS = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
     { label: "Inspiration", href: "#inspiration" },
+    { label: "Why Stunner", href: "#stunner" },
     { label: "Artists", href: "#artists" },
-    { label: "Stories", href: "#stories" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {
@@ -42,38 +41,63 @@ export default function Navbar() {
         };
     }, []);
 
+    useEffect(() => {
+  const sections = NAV_LINKS.map((link) =>
+    document.querySelector(link.href)
+  ).filter(Boolean);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleSection = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visibleSection) {
+        const activeLink = NAV_LINKS.find(
+          (link) => link.href === `#${visibleSection.target.id}`
+        );
+
+        if (activeLink) {
+          setActive(activeLink.label);
+        }
+      }
+    },
+    {
+      threshold: 0.3,
+      rootMargin: "-80px 0px -40% 0px",
+    }
+  );
+
+  sections.forEach((section) => {
+    if (section) observer.observe(section);
+  });
+
+  return () => observer.disconnect();
+}, []);
+
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
-                isScrolled
-                    ? "bg-background/90 backdrop-blur-md border-b border-border/50 shadow-sm py-2"
-                    : "bg-transparent border-b border-transparent py-4"
-            }`}
+            className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${isScrolled
+                ? "bg-background/90 backdrop-blur-md border-b border-border/50 shadow-sm py-2"
+                : "bg-transparent border-b border-transparent py-4"
+                }`}
         >
             <nav className="mx-auto flex container items-center justify-between px-2 xl:px-0 transition-all duration-300">
 
                 {/* Logo */}
-                <a href="#home" className="flex items-center gap-2.5">
+                <a href="#home" className="relative flex items-center">
                     <div
-                        className={`relative shrink-0 transition-all duration-300 ${
-                            isScrolled
-                                ? "h-10 w-10"
-                                : "h-12 w-12"
-                        }`}
+                        className={`relative shrink-0 transition-all duration-300 ${isScrolled ? "h-10 w-40" : "h-16 w-44"
+                            }`}
                     >
                         <Image
                             src={logo}
                             alt="Stunner logo"
                             fill
-                            sizes="70px"
                             priority
                             className="object-contain"
                         />
                     </div>
-
-                    <span className="font-serif text-xl font-medium text-[#372D38]">
-                        Stunner
-                    </span>
                 </a>
 
                 {/* Desktop nav links */}
@@ -83,11 +107,10 @@ export default function Navbar() {
                             <a
                                 href={link.href}
                                 onClick={() => setActive(link.label)}
-                                className={`relative pb-1 text-sm font-medium transition-colors ${
-                                    active === link.label
-                                        ? "text-foreground"
-                                        : "text-muted-foreground hover:text-foreground"
-                                }`}
+                                className={`relative pb-1 text-sm font-medium transition-colors ${active === link.label
+                                    ? "text-foreground"
+                                    : "text-muted-foreground hover:text-foreground"
+                                    }`}
                             >
                                 {link.label}
 
@@ -109,7 +132,7 @@ export default function Navbar() {
 
                 {/* CTA button */}
                 <div className="hidden md:block">
-                    <DownloadButton  name="Download App" />
+                    <DownloadButton name="Download App" />
                 </div>
 
                 {/* Mobile menu */}
@@ -141,11 +164,10 @@ export default function Navbar() {
                                         onClick={() =>
                                             setActive(link.label)
                                         }
-                                        className={`text-sm font-medium ${
-                                            active === link.label
-                                                ? "text-foreground"
-                                                : "text-muted-foreground"
-                                        }`}
+                                        className={`text-sm font-medium ${active === link.label
+                                            ? "text-foreground"
+                                            : "text-muted-foreground"
+                                            }`}
                                     >
                                         {link.label}
                                     </a>

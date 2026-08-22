@@ -1,4 +1,6 @@
 import { Play, Heart } from "lucide-react";
+import logo from "@/public/images/icon.png";
+import Image from "next/image";
 
 type IconProps = { className?: string; strokeWidth?: number };
 
@@ -59,18 +61,19 @@ const socials = [XIcon, InstagramIcon, FacebookIcon, Play, LinkedinIcon];
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 pt-16">
+    <footer className="bg-linear-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 pt-16">
       <div className="mx-auto container">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {/* Brand column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-pink-400 to-fuchsia-400 text-sm font-bold text-white">
-                S
-              </div>
-              <span className="text-lg font-bold text-neutral-900">
-                Stunner Alert
-              </span>
+              {/* <Image
+                src={logo}
+                alt="Stunner logo"
+                fill
+                priority
+                className="object-contain"
+              /> */}
             </div>
 
             <p className="mt-4 text-sm text-neutral-500">
