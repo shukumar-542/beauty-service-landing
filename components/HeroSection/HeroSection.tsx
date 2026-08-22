@@ -1,10 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
 import DownloadButton from "../DownloadButton";
 import TagText from "../ui/TagText";
 import GradientText from "../ui/Gradienttext";
+import { useEffect, useState } from "react";
 
 const heroImage = "/images/herobg-mobile1.png";
 
@@ -39,6 +40,18 @@ const dropVariants = {
 };
 
 export default function HeroSection() {
+    const rotatingWords = ["Beautifully.", "Effortlessly." , "Seamlessly"];
+
+    const [currentWord, setCurrentWord] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentWord((prev) => (prev + 1) % rotatingWords.length);
+        }, 3500);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section className="relative overflow-hidden bg-[#FFF9FA]">
             <Image
@@ -59,7 +72,7 @@ export default function HeroSection() {
 
             <div className="absolute inset-0 bg-linear-to-r from-white/55 via-white/60 to-white/5" />
 
-            <div className="relative flex min-h-180 xl:min-h-190 container mx-auto items-center px-6 lg:px-8">
+            <div className="relative flex min-h-180 xl:min-h-190 container mx-auto items-center px-4 xl:px-0">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -83,12 +96,42 @@ export default function HeroSection() {
                     </div>
 
                     <div className="">
-                        <motion.h2
+                        <motion.div
                             variants={dropVariants}
-                            className="font-serif text-5xl text-neutral-900 sm:text-7xl"
+                            className="flex  font-serif text-5xl text-neutral-900 sm:text-7xl"
                         >
-                            seamlessly.{" "}
-                        </motion.h2>
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={rotatingWords[currentWord]}
+                                    className="flex"
+                                >
+                                    {rotatingWords[currentWord].split("").map((char, index) => (
+                                        <motion.span
+                                            key={`${char}-${index}`}
+                                            initial={{
+                                                opacity: 0,
+                                                y: -40,
+                                            }}
+                                            animate={{
+                                                opacity: 1,
+                                                y: 0,
+                                            }}
+                                            exit={{
+                                                opacity: 0,
+                                                y: 40,
+                                            }}
+                                            transition={{
+                                                duration: 0.35,
+                                                delay: index * 0.05,
+                                                ease: "easeOut",
+                                            }}
+                                        >
+                                            {char === " " ? "\u00A0" : char}
+                                        </motion.span>
+                                    ))}
+                                </motion.div>
+                            </AnimatePresence>
+                        </motion.div>
                     </div>
 
                     {/* Buttons */}
