@@ -177,7 +177,6 @@ export default function Navbar() {
 
                         <div className="mt-8 px-4">
                             <Button
-                                variant="gradient"
                                 className="group h-10 w-full"
                             >
                                 Download app

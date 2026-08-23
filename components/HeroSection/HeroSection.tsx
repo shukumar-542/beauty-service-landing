@@ -143,7 +143,6 @@ export default function HeroSection() {
                             name="Download App"
                             className="py-7 px-9"
                             icon={Download}
-                            // gradient="from-[#FFA3FF] to-[#FFB172]"
                             rotateIcon={false}
                         />
                         <div className="relative inline-flex overflow-hidden rounded-full p-0.5">

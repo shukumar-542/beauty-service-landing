@@ -1,12 +1,8 @@
 import ArtistSection from "@/components/ArtistSection/ArtistSection";
 import BeautyInspiration from "@/components/Beautyinspiration/Beautyinspiration";
 import DownloadAppSection from "@/components/DownloadApp/DownloadApp";
-import DownloadButton from "@/components/DownloadButton";
 import FaqSection from "@/components/FaqSection/FaqSection";
 import HeroSection from "@/components/HeroSection/HeroSection";
-import HeroText from "@/components/HeroText/HeroText";
-import Footer from "@/components/layout/Footer";
-import Navbar from "@/components/layout/Navbar";
 import PaymentsHero from "@/components/Paymentshero/Paymentshero";
 import ServicesGrid from "@/components/Servicesgrid/Servicesgrid";
 import StepSection from "@/components/StepSection/StepSection";
@@ -18,7 +14,6 @@ import TrustedBy from "@/components/Trustedby/Trustedby";
 export default function Home() {
   return (
     <>
-      <Navbar />
 
       <div className="relative overflow-hidden ">
         <div className="relative">
@@ -30,20 +25,22 @@ export default function Home() {
             <section id="services">
               <ServicesGrid />
             </section>
-            <section id="inspiration">
+            <section id="inspiration" className="scroll-mt-24">
               <BeautyInspiration />
             </section>
             <section id="stunner">
               <StunnerStandard />
             </section>
             <section id="artists">
-            <ArtistSection />
+              <ArtistSection />
             </section>
             <StepSection />
-            <TestimonialsSection />
+            <section id="customer" className="scroll-mt-24">
+              <TestimonialsSection />
+            </section>
             <DownloadAppSection />
-            <section id="faq">
-            <FaqSection />
+            <section id="faq" className="scroll-mt-24">
+              <FaqSection />
             </section>
 
             <PaymentsHero />
@@ -51,7 +48,6 @@ export default function Home() {
         </div>
       </div>
 
-      <Footer />
 
     </>
   );
