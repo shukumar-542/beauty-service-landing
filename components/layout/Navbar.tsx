@@ -1,11 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import Image from "next/image";
+
 import { motion } from "motion/react";
+
 import { ArrowUpRight, Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+
 import {
   Sheet,
   SheetContent,
@@ -29,6 +33,9 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [active, setActive] = useState("Home");
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Mobile menu state
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // =========================
   // Navbar Scroll Effect
@@ -66,7 +73,8 @@ export default function Navbar() {
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
           .sort(
-            (a, b) => b.intersectionRatio - a.intersectionRatio
+            (a, b) =>
+              b.intersectionRatio - a.intersectionRatio
           );
 
         const visibleSection = visibleSections[0];
@@ -94,6 +102,15 @@ export default function Navbar() {
 
     return () => observer.disconnect();
   }, []);
+
+  // =========================
+  // Mobile Nav Click
+  // =========================
+
+  const handleMobileNavClick = (label: string) => {
+    setActive(label);
+    setIsMenuOpen(false);
+  };
 
   return (
     <header
@@ -124,13 +141,15 @@ export default function Navbar() {
         <a
           href="#home"
           className="relative flex shrink-0 items-center"
-          onClick={() => setActive("Home")}
+          onClick={() => {
+            setActive("Home");
+            setIsMenuOpen(false);
+          }}
         >
           <div
             className={`
               relative shrink-0
               transition-all duration-300
-
               ${
                 isScrolled
                   ? "h-9 w-32 sm:h-10 sm:w-36"
@@ -175,7 +194,6 @@ export default function Navbar() {
                   text-sm
                   font-medium
                   transition-colors
-
                   ${
                     active === link.label
                       ? "text-foreground"
@@ -221,7 +239,10 @@ export default function Navbar() {
             Mobile / Tablet Menu
         ========================== */}
 
-        <Sheet>
+        <Sheet
+          open={isMenuOpen}
+          onOpenChange={setIsMenuOpen}
+        >
           <SheetTrigger
             render={
               <button
@@ -253,13 +274,18 @@ export default function Navbar() {
               px-0
             "
           >
-            {/* Mobile Logo */}
+            {/* =========================
+                Mobile Logo
+            ========================== */}
 
             <div className="border-b border-border/50 px-6 pb-5 pt-4">
               <a
                 href="#home"
                 className="inline-flex"
-                onClick={() => setActive("Home")}
+                onClick={() => {
+                  setActive("Home");
+                  setIsMenuOpen(false);
+                }}
               >
                 <div className="relative h-12 w-36">
                   <Image
@@ -273,14 +299,18 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* Mobile Links */}
+            {/* =========================
+                Mobile Links
+            ========================== */}
 
             <ul className="mt-6 flex flex-col gap-2 px-6">
               {NAV_LINKS.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    onClick={() => setActive(link.label)}
+                    onClick={() =>
+                      handleMobileNavClick(link.label)
+                    }
                     className={`
                       flex
                       w-full
@@ -291,7 +321,6 @@ export default function Navbar() {
                       text-sm
                       font-medium
                       transition-colors
-
                       ${
                         active === link.label
                           ? "bg-muted text-foreground"
@@ -305,15 +334,28 @@ export default function Navbar() {
               ))}
             </ul>
 
-            {/* Mobile CTA */}
+            {/* =========================
+                Mobile CTA
+            ========================== */}
 
-            <div className="mt-8 px-6">
+            <div className="mt-5 px-6">
               <Button
                 className="
                   group
                   h-11
                   w-full
                   rounded-full
+                  border-0
+                  bg-linear-to-r
+                  from-[#FFA3FF]
+                  to-[#FFB172]
+                  text-white
+                  shadow-none
+                  transition-transform
+                  hover:scale-[1.02]
+                  hover:bg-linear-to-r
+                  hover:from-[#FFA3FF]
+                  hover:to-[#FFB172]
                 "
               >
                 Download App

@@ -53,7 +53,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative overflow-hidden bg-[#FFF9FA] px-6">
+        <section className="relative overflow-hidden bg-[#FFF9FA] md:px-6">
             <Image
                 src={heroImage}
                 alt="Hero Background"
@@ -132,7 +132,7 @@ export default function HeroSection() {
                                 </motion.div>
                             </AnimatePresence>
                         </motion.div>
-                        <p className="mt-5 text-[#746873] max-w-125">Discover brilliant beauty professionals, book instantly, and arrive feeling entirely taken care of.</p>
+                        <p className="mt-5 text-[#746873] text-xs md:text-sm max-w-54.75 md:max-w-125">Discover brilliant beauty professionals, book instantly, and arrive feeling entirely taken care of.</p>
                     </div>
 
                     {/* Buttons */}

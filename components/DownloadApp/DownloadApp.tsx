@@ -16,7 +16,7 @@ export default function DownloadAppSection() {
                     <div className="relative z-10  ">
                         <TagText text="THE STUNNER ALERT APP" />
 
-                        <h2 className="font-serif text-4xl leading-[1.15] text-[#372D38] sm:text-5xl">
+                        <h2 className="font-serif  leading-[1.15] text-[#372D38] text-2xl md:text-4xl xl:text-6xl">
                             Ready to stun the world?
                         </h2>
 

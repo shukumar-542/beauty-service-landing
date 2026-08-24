@@ -39,10 +39,10 @@ export default function FaqSection() {
         <div>
           <TagText text="GOOD TO KNOW" />
 
-          <h2 className="font-serif text-[42px] xl:text-[55px] font-medium leading-[1.08] text-[#3D2E38] ">
+          <h2 className="font-serif  text-3xl md:text-4xl xl:text-6xl text-[#3D2E38] ">
             Your questions,
             <br />
-            <span className="italic ">answered.</span>
+            <span >answered.</span>
           </h2>
 
           <p className=" mt-6 max-w-75 text-[15px] leading-relaxed text-[#8B7A85]">

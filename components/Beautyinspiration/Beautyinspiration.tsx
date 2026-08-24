@@ -19,27 +19,32 @@ const images = [
   {
     src: beauty1,
     alt: "Makeup palette and beauty products flat lay",
-    className: "aspect-square sm:aspect-auto sm:col-span-1 sm:row-span-2",
+    className:
+      "col-span-2 aspect-square sm:aspect-auto sm:col-span-1 sm:row-span-2",
   },
   {
     src: beauty2,
     alt: "Denim and casual outfit flat lay",
-    className: "aspect-square sm:aspect-auto sm:col-span-1 sm:row-span-1",
+    className:
+      "col-span-1 aspect-square sm:aspect-auto sm:col-span-1 sm:row-span-1",
   },
   {
     src: Beauty3,
     alt: "Woman in sunglasses holding shopping bags",
-    className: "aspect-square sm:aspect-auto sm:col-span-1 sm:row-span-1",
+    className:
+      "col-span-1 aspect-square sm:aspect-auto sm:col-span-1 sm:row-span-1",
   },
   {
     src: beauty5,
     alt: "Woman in a dark coat walking on a city street",
-    className: "aspect-square sm:aspect-auto sm:col-span-1 sm:row-span-2",
+    className:
+      "col-span-1 aspect-square sm:aspect-auto sm:col-span-1 sm:row-span-2",
   },
   {
     src: beauty4,
     alt: "Woman in a flowing white dress",
-    className: "aspect-square sm:aspect-auto col-span-2 sm:col-span-2 sm:row-span-1",
+    className:
+      "col-span-1 aspect-square sm:aspect-auto sm:col-span-2 sm:row-span-1",
   },
 ];
 
@@ -60,10 +65,10 @@ export default function BeautyInspiration() {
           <div className="mb-8 flex flex-col gap-6 lg:mb-10 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <TagText text="BEAUTY INSPIRATION" />
-              <div className="flex flex-col xl:flex-row items-center xl:gap-4">
-                <h2 className="font-serif text-5xl leading-tight text-neutral-900 sm:text-6xl">What's your</h2>
-                <GradientText text={"Vibe"} className="text-5xl sm:text-6xl" />
-                <h2 className="font-serif text-5xl leading-tight text-neutral-900 sm:text-6xl">today ?</h2>
+              <div className="flex flex-row xl:flex-row xl:items-center gap-2 xl:gap-4">
+                <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl leading-tight text-neutral-900 ">What's your</h2>
+                <GradientText text={"Vibe"} className="text-2xl md:text-4xl xl:text-6xl" />
+                <h2 className="font-serif  leading-tight text-neutral-900 text-2xl md:text-4xl xl:text-6xl">today ?</h2>
               </div>
             </div>
 

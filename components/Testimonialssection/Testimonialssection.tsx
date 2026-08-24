@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
         <div>
           <TagText text="AS EASY AS IT FEELS" />
 
-          <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
+          <h2 className="font-serif  text-neutral-900 text-2xl md:text-4xl xl:text-6xl">
             &ldquo;It feels like having your personal creative team in your pocket.&rdquo;
           </h2>
         </div>

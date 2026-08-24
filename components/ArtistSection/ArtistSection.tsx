@@ -95,19 +95,19 @@ export default function ArtistSection() {
           <div>
             <TagText text="MEET THE ARTISTS" />
 
-            <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
+            <h2 className="font-serif  leading-tight text-neutral-900 text-2xl md:text-4xl xl:text-6xl">
               Handpicked creators dedicated
             </h2>
 
-            <div className="flex flex-col gap-4 xl:flex-row">
-              <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
-                to making you look & feel like a
+            <div className="flex  xl:gap-4 gap-2 flex-row items-center">
+              <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl leading-tight text-neutral-900 ">
+                to making you look & feel like a  <GradientText
+                text="Stunner"
+                className="text-2xl md:text-4xl xl:text-6xl"
+              />
               </h2>
 
-              <GradientText
-                text="Stunner"
-                className="text-6xl"
-              />
+             
             </div>
           </div>
 

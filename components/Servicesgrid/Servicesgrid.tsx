@@ -22,6 +22,7 @@ import AnimatedContent from "../ui/AnimatedContent";
 import StaggerGrid, { StaggerItem } from "../ui/StaggerGrid";
 import GradientText from "../ui/Gradienttext";
 import ExploreButton from "../ui/ExploreButton";
+import TagText from "../ui/TagText";
 
 const services = [
     {
@@ -79,23 +80,17 @@ export default function ServicesGrid() {
 
                         {/* Heading */}
                         <div>
-                            <div className="mb-4 flex items-center gap-2">
-                                <span className="h-1.5 w-1.5 rounded-full bg-[#FFA3FF]" />
-
-                                <span className="text-xs font-semibold tracking-widest text-[#9A768E]">
-                                    FIND YOUR MOMENT
-                                </span>
-                            </div>
+                           <TagText text="FIND YOUR MOMENT" />
 
                             {/* Heading Title */}
-                                <h2 className="font-serif text-4xl xl:text-6xl text-[#372D38]">
+                                <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl text-[#372D38]">
                                     Your ultimate glow-up
                                 </h2>
-                            <div className="flex flex-col xl:flex-row gap-4 mt-2">
-                                <h2 className="font-serif text-4xl xl:text-6xl text-[#372D38]">
+                            <div className="flex flex-col xl:flex-row md:gap-4 md:mt-2">
+                                <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl text-[#372D38]">
                                     booked in seconds  on
                                 </h2>
-                                <GradientText className="text-6xl" />
+                                <GradientText className="text-2xl md:text-4xl xl:text-6xl" />
                             </div>
                         </div>
 
