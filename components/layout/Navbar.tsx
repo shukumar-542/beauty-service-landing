@@ -22,7 +22,7 @@ const NAV_LINKS = [
   { label: "Inspiration", href: "#inspiration" },
   { label: "Why Stunner", href: "#stunner" },
   { label: "Artists", href: "#artists" },
-  { label: "Sneak Peek", href: "#SneakPeak" },
+  { label: "Sneak Peak", href: "#SneakPeak" },
   { label: "FAQ", href: "#faq" },
 ];
 

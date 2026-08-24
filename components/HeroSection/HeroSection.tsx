@@ -72,7 +72,7 @@ export default function HeroSection() {
 
             <div className="absolute inset-0 bg-linear-to-r from-white/55 via-white/60 to-white/5" />
 
-            <div className="relative flex min-h-180 xl:min-h-190 container mx-auto items-center px-4 xl:px-0">
+            <div className="relative flex min-h-180 md:min-h-195 container mx-auto items-center px-4 xl:px-0">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"

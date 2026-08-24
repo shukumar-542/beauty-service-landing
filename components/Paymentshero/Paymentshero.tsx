@@ -2,6 +2,7 @@ import { CircleDot } from "lucide-react";
 import gpay from "@/public/images/gpay.png"
 import Image from "next/image";
 import AnimatedContent from "../ui/AnimatedContent";
+import stripe from "@/public/images/stripe.png"
 export default function PaymentsHero() {
   return (
     <section className="bg-linear-to-br from-[#fdf1ef] via-[#fdf3f1] to-[#fef8f5] px-6 py-16 sm:py-24">
@@ -13,11 +14,9 @@ export default function PaymentsHero() {
         once={false} className="mx-auto grid container grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-10">
         {/* Left: copy */}
         <div>
-          <h1 className="text-5xl text-black font-extrabold  sm:text-6xl">
-            Stripe
-          </h1>
+          <Image src={stripe} alt="stripe" quality={200} />
 
-          <h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#372D38] sm:text-4xl">
+          <h2 className=" text-3xl font-extrabold leading-tight text-[#372D38] sm:text-4xl">
             Payments
             <br />
             Infrastructure
