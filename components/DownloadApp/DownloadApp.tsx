@@ -17,12 +17,11 @@ export default function DownloadAppSection() {
                         <TagText text="THE STUNNER ALERT APP" />
 
                         <h2 className="font-serif text-4xl leading-[1.15] text-[#372D38] sm:text-5xl">
-                            Your next glow-up,
+                            Ready to stun the world?
                         </h2>
 
                         <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-[#7a6b76]">
-                            Find your people. Keep your appointments. Save the looks that
-                            make you feel most like you.
+                            Find your squad. Save your favorites. Book Securely. Exprience it yourself.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-3">

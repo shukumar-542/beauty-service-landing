@@ -63,7 +63,7 @@ export default function BeautyInspiration() {
               <div className="flex flex-col xl:flex-row items-center xl:gap-4">
                 <h2 className="font-serif text-5xl leading-tight text-neutral-900 sm:text-6xl">What's your</h2>
                 <GradientText text={"Vibe"} className="text-5xl sm:text-6xl" />
-                <h2 className="font-serif text-5xl leading-tight text-neutral-900 sm:text-6xl">toady ?</h2>
+                <h2 className="font-serif text-5xl leading-tight text-neutral-900 sm:text-6xl">today ?</h2>
               </div>
             </div>
 

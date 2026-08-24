@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <>
 
-      <div className="relative overflow-hidden ">
+      <div className="relative overflow-hidden">
         <div className="relative">
           <section id="home">
             <HeroSection />
           </section>
           <div>
-            <TrustedBy />
+            {/* <TrustedBy /> */}
             <section id="services">
               <ServicesGrid />
             </section>
@@ -38,7 +38,10 @@ export default function Home() {
             <section id="customer" className="scroll-mt-24">
               <TestimonialsSection />
             </section>
-            <DownloadAppSection />
+            <section id="SneakPeak" className="scroll-mt-24">
+              <DownloadAppSection />
+            </section>
+
             <section id="faq" className="scroll-mt-24">
               <FaqSection />
             </section>

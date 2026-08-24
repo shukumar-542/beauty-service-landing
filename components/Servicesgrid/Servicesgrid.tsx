@@ -140,7 +140,7 @@ export default function ServicesGrid() {
                                         <div className="flex items-center gap-3">
 
                                             {/* Icon */}
-                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-pink-400 to-orange-300">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-[#FFA3FF] to-[#FFB172]">
                                                 <Icon
                                                     className="h-4 w-4 text-white"
                                                     strokeWidth={2}

@@ -40,7 +40,7 @@ const dropVariants = {
 };
 
 export default function HeroSection() {
-    const rotatingWords = ["Beautifully.", "Elegantly." , "Effortlesssly"];
+    const rotatingWords = ["Beautifully.", "Elegantly.", "Seamlessly." ];
 
     const [currentWord, setCurrentWord] = useState(0);
 
@@ -53,7 +53,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative overflow-hidden bg-[#FFF9FA]">
+        <section className="relative overflow-hidden bg-[#FFF9FA] px-6">
             <Image
                 src={heroImage}
                 alt="Hero Background"
@@ -86,12 +86,12 @@ export default function HeroSection() {
                     <div className="flex flex-col xl:flex-row xl:gap-4 overflow-hidden">
                         <motion.h2
                             variants={dropVariants}
-                            className="font-serif text-5xl text-neutral-900 xl:text-7xl"
+                            className="font-serif text-5xl text-neutral-900 md:text-7xl"
                         >
                             Services
                         </motion.h2>
                         <motion.div variants={dropVariants}>
-                            <GradientText text={"Booked"} className="text-5xl xl:text-7xl" />
+                            <GradientText text={"Booked"} className="text-5xl md:text-7xl" />
                         </motion.div>
                     </div>
 
@@ -132,12 +132,13 @@ export default function HeroSection() {
                                 </motion.div>
                             </AnimatePresence>
                         </motion.div>
+                        <p className="mt-5 text-[#746873] max-w-125">Discover brilliant beauty professionals, book instantly, and arrive feeling entirely taken care of.</p>
                     </div>
 
                     {/* Buttons */}
                     <motion.div
                         variants={dropVariants}
-                        className="mt-10 flex flex-wrap gap-4 overflow-hidden"
+                        className="mt-8 flex flex-wrap gap-4 overflow-hidden"
                     >
                         <DownloadButton
                             name="Download App"
