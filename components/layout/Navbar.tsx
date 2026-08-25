@@ -117,10 +117,9 @@ export default function Navbar() {
       className={`
         fixed inset-x-0 top-0 z-50 w-full
         transition-all duration-300
-        ${
-          isScrolled
-            ? "border-b border-border/50 bg-background/90 py-2 shadow-sm backdrop-blur-md"
-            : "border-b border-transparent bg-background/90 py-1 backdrop-blur-sm"
+        ${isScrolled
+          ? "border-b border-border/50 bg-background/90 py-2 shadow-sm backdrop-blur-md"
+          : "border-b border-transparent bg-background/90 py-1 backdrop-blur-sm"
         }
       `}
     >
@@ -150,10 +149,9 @@ export default function Navbar() {
             className={`
               relative shrink-0
               transition-all duration-300
-              ${
-                isScrolled
-                  ? "h-9 w-32 sm:h-10 sm:w-40"
-                  : "h-12 w-36 sm:h-14 sm:w-40 lg:h-16 lg:w-44"
+              ${isScrolled
+                ? "h-9 w-32 sm:h-10 sm:w-40"
+                : "h-12 w-36 sm:h-14 sm:w-40 lg:h-16 lg:w-44"
               }
             `}
           >
@@ -194,10 +192,9 @@ export default function Navbar() {
                   text-sm
                   font-medium
                   transition-colors
-                  ${
-                    active === link.label
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
+                  ${active === link.label
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                   }
                 `}
               >
@@ -232,7 +229,14 @@ export default function Navbar() {
         ========================== */}
 
         <div className="hidden shrink-0 lg:block">
-          <DownloadButton name="Download App" />
+          <DownloadButton name="Download App" onClick={() => {
+            setIsMenuOpen(false);
+
+            document.getElementById("SneakPeak")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }} />
         </div>
 
         {/* =========================
@@ -321,10 +325,9 @@ export default function Navbar() {
                       text-sm
                       font-medium
                       transition-colors
-                      ${
-                        active === link.label
-                          ? "bg-muted text-foreground"
-                          : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                      ${active === link.label
+                        ? "bg-muted text-foreground"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
                       }
                     `}
                   >
@@ -340,6 +343,14 @@ export default function Navbar() {
 
             <div className="mt-5 px-6">
               <Button
+                onClick={() => {
+                  setIsMenuOpen(false);
+
+                  document.getElementById("SneakPeak")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }}
                 className="
                   group
                   h-11

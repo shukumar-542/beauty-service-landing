@@ -16,7 +16,7 @@ import Autoplay from "embla-carousel-autoplay";
 const testimonials = [
   {
     name: "Kaya Williams",
-    location: "Sydney, NSW; Brisbane",
+    location: "Sydney, NSW, Brisbane",
     avatar: avatar,
     rating: 5,
     review:
