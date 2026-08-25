@@ -23,8 +23,8 @@ import logo from "@/public/images/icon.png";
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-  { label: "Inspiration", href: "#inspiration" },
   { label: "Why Stunner", href: "#stunner" },
+  { label: "Inspiration", href: "#inspiration" },
   { label: "Artists", href: "#artists" },
   { label: "Sneak Peak", href: "#SneakPeak" },
   { label: "FAQ", href: "#faq" },
