@@ -152,7 +152,7 @@ export default function Navbar() {
               transition-all duration-300
               ${
                 isScrolled
-                  ? "h-9 w-32 sm:h-10 sm:w-36"
+                  ? "h-9 w-32 sm:h-10 sm:w-40"
                   : "h-12 w-36 sm:h-14 sm:w-40 lg:h-16 lg:w-44"
               }
             `}

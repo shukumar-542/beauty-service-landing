@@ -57,7 +57,7 @@ export default function StunnerStandard() {
           <TagText text={"THE STUNNER STANDARD"} />
 
           <h2 className="font-serif  leading-tight text-neutral-900 text-2xl md:text-4xl xl:text-6xl">
-            A premium app designed to make  booking Australia's best professionals easier than ever.
+            Effortless from start to finish.
           </h2>
 
           <p className="mt-6  text-[15px] leading-relaxed text-[#766975]">

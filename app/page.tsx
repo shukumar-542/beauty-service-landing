@@ -25,11 +25,12 @@ export default function Home() {
             <section id="services">
               <ServicesGrid />
             </section>
-            <section id="inspiration" className="scroll-mt-24">
-              <BeautyInspiration />
-            </section>
+           
             <section id="stunner">
               <StunnerStandard />
+            </section>
+             <section id="inspiration" className="scroll-mt-24">
+              <BeautyInspiration />
             </section>
             <section id="artists">
               <ArtistSection />

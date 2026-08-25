@@ -132,7 +132,7 @@ export default function HeroSection() {
                                 </motion.div>
                             </AnimatePresence>
                         </motion.div>
-                        <p className="mt-5 text-[#746873] text-xs md:text-sm max-w-54.75 md:max-w-125">Discover brilliant beauty professionals, book instantly, and arrive feeling entirely taken care of.</p>
+                        <p className="mt-5 text-[#746873] text-xs md:text-sm max-w-54.75 md:max-w-125">Every beauty, photography and planning service, on one effortless platform.</p>
                     </div>
 
                     {/* Buttons */}

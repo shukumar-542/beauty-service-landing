@@ -16,7 +16,7 @@ import Autoplay from "embla-carousel-autoplay";
 const testimonials = [
   {
     name: "Kaya Williams",
-    location: "Brooklyn, New York",
+    location: "Sydney, NSW; Brisbane",
     avatar: avatar,
     rating: 5,
     review:
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     name: "Priya Anand",
-    location: "Austin, Texas",
+    location: "Brisbane, QLD",
     avatar: avatar2,
     rating: 5,
     review:
@@ -32,7 +32,7 @@ const testimonials = [
   },
   {
     name: "Maren Cole",
-    location: "Portland, Oregon",
+    location: "Adelaide, SA",
     avatar: avatar,
     rating: 5,
     review:
@@ -40,7 +40,7 @@ const testimonials = [
   },
   {
     name: "Elena Cruz",
-    location: "Miami, Florida",
+    location: "Sydney, NSW",
     avatar: avatar2,
     rating: 5,
     review:

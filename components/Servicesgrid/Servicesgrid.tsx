@@ -83,12 +83,10 @@ export default function ServicesGrid() {
                            <TagText text="FIND YOUR MOMENT" />
 
                             {/* Heading Title */}
-                                <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl text-[#372D38]">
-                                    Your ultimate glow-up
-                                </h2>
+                             
                             <div className="flex flex-col xl:flex-row md:gap-4 md:mt-2">
                                 <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl text-[#372D38]">
-                                    booked in seconds  on
+                                    Elevate your look with
                                 </h2>
                                 <GradientText className="text-2xl md:text-4xl xl:text-6xl" />
                             </div>

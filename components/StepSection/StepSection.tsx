@@ -35,11 +35,9 @@ export default function StepsSection() {
         {/* Headline */}
         <div>
           <TagText text="MEET THE ARTISTS" />
-          <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl text-neutral-900 ">
-            Your next glow-up,{" "}
-          </h2>
+         
           <div className="flex flex-col xl:flex-row items-center gap-2">
-            <h2 className="font-serif  leading-tight text-neutral-900 text-2xl md:text-4xl xl:text-6xl ">booked in seconds with</h2>
+            <h2 className="font-serif  leading-tight text-neutral-900 text-2xl md:text-4xl xl:text-6xl ">Booked in seconds with</h2>
             <GradientText text={"Stunner Alert"} className="text-2xl md:text-4xl xl:text-6xl" />
           </div>
         </div>
