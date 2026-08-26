@@ -14,7 +14,7 @@ export default function PaymentsHero() {
         once={false} className="mx-auto grid container grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-10">
         {/* Left: copy */}
         <div>
-          <Image src={stripe} alt="stripe" quality={200} />
+          <Image src={stripe} alt="stripe" className=" w-26 object-contain " quality={200} />
 
           <h2 className=" text-3xl font-extrabold leading-tight text-[#372D38] sm:text-4xl">
             Payments

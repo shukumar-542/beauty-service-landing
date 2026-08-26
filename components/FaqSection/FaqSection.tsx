@@ -53,7 +53,7 @@ export default function FaqSection() {
             href="#"
             className=" group mt-8 inline-flex items-center gap-1.5 border-b border-[#3D2E38]/70 pb-1 text-[13px] font-semibold text-[#3D2E38] transition-colors hover:border-[#E0669B] hover:text-[#E0669B]"
           >
-            Visit help center
+            Contact Us
             <ArrowUpRight className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>

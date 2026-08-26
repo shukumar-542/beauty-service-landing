@@ -179,7 +179,7 @@ export default function Footer() {
             />
 
             <p className="mt-4 text-sm text-neutral-500">
-              Beauty, booked beautifully.
+              Ready, Set, Stun.
             </p>
 
             {/* Social Icons */}
