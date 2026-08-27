@@ -5,7 +5,6 @@ import TagText from "../ui/TagText";
 import appStore from "@/public/images/apple.png"
 import googleplay from "@/public/images/google.png"
 import InspiratinText from "../ui/InspiratinText";
-import { Astroid } from "lucide-react";
 
 export default function DownloadAppSection() {
     return (
@@ -83,29 +82,27 @@ export default function DownloadAppSection() {
 
                         <div className="absolute left-[-12] xl:left-[-10%] top-[5%]">
                             <InspiratinText
-                                text="Booked"
-                                icon="astroid"
+                                text="At home"
                                 delay={0}
                             />
                         </div>
 
                         <div className="absolute left-[-4%] top-[40%]">
                             <InspiratinText
-                                text="Top Rated"
-                                icon="sparkles"
+                                text="In salon"
                                 delay={1}
                             />
                         </div>
-                        <div className="absolute left-[-4%] xl:left-[-10%] top-[90%] xl:top-[80%]">
+                        <div className="absolute left-[-4%] xl:left-[-2%] top-[90%] xl:top-[80%]">
                             <InspiratinText
-                                text="Appointment confirmed"
+                                text="At hotel"
                                 // icon="sparkles"
                                 delay={1}
                             />
                         </div>
-                        <div className="absolute right-[-5%]  xl:right-[-10%] top-[90%] xl:top-[80%]">
+                        <div className="absolute right-[-5%]  xl:right-[-5%] top-[90%] xl:top-[80%]">
                             <InspiratinText
-                                text="Beauty near you"
+                                text="In office"
                                 // icon="sparkles"
                                 delay={1}
                             />
@@ -114,7 +111,7 @@ export default function DownloadAppSection() {
                             <InspiratinText
                                 text="Available today"
                                 // icon="sparkles"
-                                delay={1}
+                                delay={0}
                             />
                         </div>
                     </div>
