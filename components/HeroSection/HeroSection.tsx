@@ -27,27 +27,38 @@ const containerVariants = {
 
 // Drop Evey line from top
 const dropVariants = {
-    hidden: { opacity: 0, y: -60 },
+    hidden: { opacity: 0, y: -40 },
     visible: {
         opacity: 1,
         y: 0,
         transition: {
             type: "spring" as const,
-            damping: 5,
+            damping: 6,
             stiffness: 100,
         },
     },
 };
 
 export default function HeroSection() {
-    const rotatingWords = ["Beautifully.", "Elegantly.", "Seamlessly." ];
+    // const rotatingWords = ["Beautifully.", "Elegantly.", "Seamlessly." ];
 
-    const [currentWord, setCurrentWord] = useState(0);
+    // const [currentWord, setCurrentWord] = useState(0);
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentWord((prev) => (prev + 1) % rotatingWords.length);
+    //     }, 3500);
+
+    //     return () => clearInterval(interval);
+    // }, []);
+
+    const words = ["Ready,", "Set,", "Stun"];
+    const [activeWord, setActiveWord] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentWord((prev) => (prev + 1) % rotatingWords.length);
-        }, 3500);
+            setActiveWord((prev) => (prev + 1) % words.length);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
@@ -83,19 +94,46 @@ export default function HeroSection() {
                         <TagText text="THE EVENT PREP, REIMAGINED" />
                     </motion.div>
 
-                    <div className="flex flex-col xl:flex-row xl:gap-4 overflow-hidden">
+                    {/* <div className="flex flex-col xl:flex-row xl:gap-4 ">
                         <motion.h2
                             variants={dropVariants}
                             className="font-serif text-5xl text-neutral-900 md:text-7xl"
                         >
-                            Services
+                           Ready,
+                        </motion.h2>
+                        <motion.h2
+                            variants={dropVariants}
+                            className="font-serif text-5xl text-neutral-900 md:text-7xl"
+                        >
+                           Set,
                         </motion.h2>
                         <motion.div variants={dropVariants}>
-                            <GradientText text={"Booked"} className="text-5xl md:text-7xl" />
+                            <GradientText text={"Stun"} className="text-5xl md:text-7xl" />
                         </motion.div>
-                    </div>
+                    </div> */}
 
-                    <div className="">
+                    <motion.div
+                        variants={dropVariants}
+                        className="
+                        overflow-visible
+                        font-serif
+                        text-5xl
+                        md:text-7xl
+                        bg-linear-to-r
+                         from-[#FFA3FF]
+                         via-[#FFB172]
+                        to-[#FFA3FF]
+                         bg-size-[200%_100%]
+                        bg-clip-text
+                        text-transparent
+                        animate-gradient
+                        leading-[1.15]
+                        "
+                    >
+                        Ready, Set, Stun
+                    </motion.div>
+
+                    {/* <div className="">
                         <motion.div
                             variants={dropVariants}
                             className="flex  font-serif text-5xl text-neutral-900 sm:text-7xl"
@@ -132,8 +170,9 @@ export default function HeroSection() {
                                 </motion.div>
                             </AnimatePresence>
                         </motion.div>
-                        <p className="mt-5 text-black text-xs md:text-sm max-w-54.75 md:max-w-125">Every beauty, photography and planning service, on one effortless platform.</p>
-                    </div>
+                    </div> */}
+                    <motion.p variants={dropVariants} className="mt-5 text-black text-xs md:text-sm max-w-54.75 md:max-w-125">Every beauty, photography and planning service, on one effortless platform.</motion.p>
+
 
                     {/* Buttons */}
                     <motion.div

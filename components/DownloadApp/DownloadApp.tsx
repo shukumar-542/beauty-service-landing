@@ -99,7 +99,7 @@ export default function DownloadAppSection() {
                                 delay={1}
                             />
                         </div>
-                        <div className="absolute right-[-5%]  xl:right-[-5%] top-[90%] xl:top-[80%]">
+                        <div className="absolute right-[-5%]  xl:right-[5%] top-[50%] xl:top-[80%]">
                             <InspiratinText
                                 text="In office"
                                 delay={1}
