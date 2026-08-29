@@ -70,7 +70,7 @@ export default function HeroSection() {
                 "
             />
 
-            <div className="absolute inset-0 bg-linear-to-r from-white/55 via-white/60 to-white/5" />
+            <div className="absolute inset-0 bg-linear-to-r from-white/90 via-white/60 to-white/5" />
 
             <div className="relative flex min-h-180 md:min-h-195 container mx-auto items-center px-4  xl:px-10">
                 <motion.div
@@ -132,7 +132,7 @@ export default function HeroSection() {
                                 </motion.div>
                             </AnimatePresence>
                         </motion.div>
-                        <p className="mt-5 text-[#746873] text-xs md:text-sm max-w-54.75 md:max-w-125">Every beauty, photography and planning service, on one effortless platform.</p>
+                        <p className="mt-5 text-black text-xs md:text-sm max-w-54.75 md:max-w-125">Every beauty, photography and planning service, on one effortless platform.</p>
                     </div>
 
                     {/* Buttons */}

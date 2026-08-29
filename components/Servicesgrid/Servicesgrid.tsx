@@ -9,6 +9,9 @@ import {
     Droplet,
     Heart,
     Eye,
+    Scissors,
+    Hand,
+    Gem,
 } from "lucide-react";
 
 import img1 from "@/public/images/img1.jpg";
@@ -16,7 +19,7 @@ import img2 from "@/public/images/img2.jpg";
 import img3 from "@/public/images/img3.jpg";
 import img4 from "@/public/images/img4.webp";
 import img5 from "@/public/images/img5.jpg";
-import img6 from "@/public/images/img6.png";
+import img6 from "@/public/images/img6.jpeg";
 
 import AnimatedContent from "../ui/AnimatedContent";
 import StaggerGrid, { StaggerItem } from "../ui/StaggerGrid";
@@ -34,13 +37,13 @@ const services = [
     {
         title: "Hair Styling",
         subtitle: "Effortless, perfected",
-        icon: Sparkles,
+        icon: Scissors,
         image: img2,
     },
     {
         title: "Nail Art",
         subtitle: "Tiny works of art",
-        icon: Paintbrush,
+        icon: Hand,
         image: img3,
     },
     {
@@ -52,7 +55,7 @@ const services = [
     {
         title: "Bridal Makeup",
         subtitle: "The moment is yours",
-        icon: Heart,
+        icon: Gem,
         image: img5,
     },
     {

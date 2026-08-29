@@ -96,21 +96,18 @@ export default function DownloadAppSection() {
                         <div className="absolute left-[-4%] xl:left-[-2%] top-[90%] xl:top-[80%]">
                             <InspiratinText
                                 text="At hotel"
-                                // icon="sparkles"
                                 delay={1}
                             />
                         </div>
                         <div className="absolute right-[-5%]  xl:right-[-5%] top-[90%] xl:top-[80%]">
                             <InspiratinText
                                 text="In office"
-                                // icon="sparkles"
                                 delay={1}
                             />
                         </div>
                         <div className="absolute right-[-5%]  xl:right-[-10%] top-[-5%] xl:top-[10%]">
                             <InspiratinText
                                 text="Available today"
-                                // icon="sparkles"
                                 delay={0}
                             />
                         </div>

@@ -1,4 +1,4 @@
-import { ShieldCheck, ToggleRight, Star, CheckCheck, Clock, Heart } from "lucide-react";
+import { ShieldCheck, ToggleRight, Star, CheckCheck, Clock, Heart, CreditCard, MailOpen, UserStar, CalendarClock, CalendarCheck } from "lucide-react";
 import StaggerGrid, { StaggerItem } from "../ui/StaggerGrid";
 import AnimatedContent from "../ui/AnimatedContent";
 import TagText from "../ui/TagText";
@@ -11,31 +11,31 @@ const features = [
     description: "Every professional on our platform is carefully selected based on quality, skill and professionalism.",
   },
   {
-    icon: ToggleRight,
+    icon: CalendarClock,
     title: "Real-time booking",
     iconColor: "#C378A2",
     description: "See real-time availability and lock in exact time slots instantly.",
   },
   {
-    icon: Star,
+    icon: UserStar,
     iconColor: "#C378A2",
     title: "Real reviews",
     description: "Authentic ratings from real clients and before-and-after pictures",
   },
   {
-    icon: CheckCheck,
+    icon: CalendarCheck,
     title: "Instant confirmation",
     iconColor: "#C378A2",
     description: "No time wasted waiting for price quotes or back-and-forth messaging.",
   },
   {
-    icon: Clock,
+    icon: MailOpen,
     title: " Dedicated support",
     iconColor: "#C378A2",
     description: "Friendly, fast assistance whenever you need help with a booking.",
   },
   {
-    icon: Heart,
+    icon: CreditCard,
     title: "Safe payments",
     iconColor: "#C378A2",
     description: "Your payments are secure. Transparent pricing with no unexpected surprises.",

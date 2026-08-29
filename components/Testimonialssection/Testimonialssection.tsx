@@ -16,11 +16,11 @@ import Autoplay from "embla-carousel-autoplay";
 const testimonials = [
   {
     name: "Kaya Williams",
-    location: "Sydney, NSW, Brisbane",
+    location: "Sydney, NSW",
     avatar: avatar,
     rating: 5,
     review:
-      "I've found artists I would never have discovered otherwise. Every appointment feels like a tiny act of self-care, not another thing on my to-do list.",
+      "I love how convenient the Stunner Alert app is. Booking is so simple, payments are fast and secure, and having all services in one place is a game-changer.",
   },
   {
     name: "Priya Anand",
@@ -28,7 +28,7 @@ const testimonials = [
     avatar: avatar2,
     rating: 5,
     review:
-      "The reviews actually match my taste. I stopped guessing and started trusting every artist I book through Stunner.",
+      "The reviews actually match my taste. I stopped guessing and started trusting every artist I book through Stunner Alert.",
   },
   {
     name: "Maren Cole",
