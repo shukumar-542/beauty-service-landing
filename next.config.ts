@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   allowedDevOrigins: ['10.10.28.99'],
    images: {
-    qualities: [75, 90],
+    qualities: [75, 90 , 100],
   },
 };
 
