@@ -173,11 +173,7 @@ body {
   scrollbar-color: #ffa3ff #fff7fb;
 }
 
-/* @media (min-width: 768px) {
-    body {
-        cursor: none;
-    }
-} */
+
 
 html {
   scroll-behavior: smooth;
@@ -200,3 +196,4 @@ html {
 .animate-gradient {
   animation: gradientMove 2s ease-in-out infinite;
 }
+

@@ -1,19 +1,34 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, type LucideIcon } from "lucide-react";
+
+import {
+  ArrowUpRight,
+  Download,
+  type LucideIcon,
+} from "lucide-react";
+
 import type { ComponentProps } from "react";
+
 import { twMerge } from "tailwind-merge";
 import clsx, { type ClassValue } from "clsx";
 
 const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 type ButtonVariant = ComponentProps<typeof Button>["variant"];
+
 type ButtonSize = ComponentProps<typeof Button>["size"];
+
+const iconMap = {
+  download: Download,
+  arrowUpRight: ArrowUpRight,
+} as const;
+
+type IconName = keyof typeof iconMap;
 
 interface DownloadButtonProps {
   name?: string;
-  icon?: LucideIcon;
+  icon?: IconName;
   iconClassName?: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -27,7 +42,7 @@ interface DownloadButtonProps {
 
 export default function DownloadButton({
   name = "Download App",
-  icon: Icon = ArrowUpRight,
+  icon = "arrowUpRight",
   iconClassName,
   size = "lg",
   className,
@@ -37,6 +52,8 @@ export default function DownloadButton({
   rotateIcon = true,
   onClick,
 }: DownloadButtonProps) {
+  const Icon: LucideIcon = iconMap[icon];
+
   return (
     <div className="relative inline-flex overflow-hidden rounded-full p-0.5">
       {glow && (
@@ -58,7 +75,6 @@ export default function DownloadButton({
         variant="gradient"
         className={cn(
           "group relative cursor-pointer rounded-full px-6 py-5",
-          
           className
         )}
       >
