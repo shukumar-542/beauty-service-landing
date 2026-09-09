@@ -47,7 +47,6 @@ export function ReusableModal({
                     )}
                 </DialogHeader>
 
-                {/* লম্বা content এর জন্য scroll area, যেমন Terms & Conditions */}
                 <ScrollArea className="max-h-[60vh] pr-4">
                     <div className="text-sm text-muted-foreground leading-relaxed space-y-3">
                         {children}

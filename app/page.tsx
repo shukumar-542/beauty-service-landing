@@ -8,7 +8,6 @@ import ServicesGrid from "@/components/Servicesgrid/Servicesgrid";
 import StepSection from "@/components/StepSection/StepSection";
 import StunnerStandard from "@/components/Stunnerstandard/Stunnerstandard";
 import TestimonialsSection from "@/components/Testimonialssection/Testimonialssection";
-import TrustedBy from "@/components/Trustedby/Trustedby";
 
 
 export default function Home() {

@@ -1,4 +1,11 @@
-import { ShieldCheck, ToggleRight, Star, CheckCheck, Clock, Heart, CreditCard, MailOpen, UserStar, CalendarClock, CalendarCheck } from "lucide-react";
+import { 
+  ShieldCheck,  
+  CreditCard, 
+  MailOpen, 
+  UserStar, 
+  CalendarClock, 
+  CalendarCheck 
+} from "lucide-react";
 import StaggerGrid, { StaggerItem } from "../ui/StaggerGrid";
 import AnimatedContent from "../ui/AnimatedContent";
 import TagText from "../ui/TagText";

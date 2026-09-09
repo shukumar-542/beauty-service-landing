@@ -1,13 +1,9 @@
-"use client";
 
 import Image from "next/image";
 import {
     ArrowUpRight,
     Palette,
-    Sparkles,
-    Paintbrush,
     Droplet,
-    Heart,
     Eye,
     Scissors,
     Hand,
@@ -89,9 +85,9 @@ export default function ServicesGrid() {
                              
                             <div className="flex flex-col xl:flex-row md:gap-4 md:mt-2">
                                 <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl text-[#372D38]">
-                                    Elevate your look with
-                                </h2>
+                                Elevate your look with {" "}
                                 <GradientText className="text-2xl md:text-4xl xl:text-6xl" />
+                                </h2>
                             </div>
                         </div>
 
@@ -145,9 +141,9 @@ export default function ServicesGrid() {
 
                                             {/* Text */}
                                             <div>
-                                                <p className="text-sm  text-white">
+                                                <h3 className="text-sm  text-white">
                                                     {service.title}
-                                                </p>
+                                                </h3>
 
                                                 <p className="text-xs text-white/70">
                                                     {service.subtitle}

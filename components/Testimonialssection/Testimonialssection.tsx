@@ -51,17 +51,23 @@ const testimonials = [
 export default function TestimonialsSection() {
 
   const autoplay = useRef(
-      Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
-    );
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     if (!api) return;
-    setCurrent(api.selectedScrollSnap());
-    api.on("select", () => {
+    const onSelect = () => {
       setCurrent(api.selectedScrollSnap());
-    });
+    };
+
+    onSelect();
+    api.on("select", onSelect);
+
+    return () => {
+      api.off("select", onSelect);
+    };
   }, [api]);
 
   return (
@@ -78,7 +84,7 @@ export default function TestimonialsSection() {
 
         {/* Right: testimonial carousel */}
         <div>
-          <Carousel  plugins={[autoplay.current]} setApi={setApi} className="w-full">
+          <Carousel plugins={[autoplay.current]} setApi={setApi} className="w-full">
             <CarouselContent className="items-stretch">
               {testimonials.map((t, i) => (
                 <CarouselItem key={i} className="h-auto">

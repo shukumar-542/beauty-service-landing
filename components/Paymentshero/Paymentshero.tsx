@@ -12,13 +12,11 @@ export default function PaymentsHero() {
         duration={0.6}
         distance={30}
         once={false} className="mx-auto grid container grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-10">
-        {/* Left: copy */}
         <div>
-          {/* <Image src={stripe} alt="stripe" className=" w-32 object-contain " quality={200} />
-           */}
+         
           <Image
             src={stripe}
-            alt="stripe"
+            alt="Stripe"
             width={256}
             height={200}
             className="w-32 h-auto object-contain"
@@ -90,7 +88,7 @@ export default function PaymentsHero() {
                 </p>
               </div>
               <span className="text-xs font-semibold text-neutral-600">
-                <Image src={gpay} alt="gpay" className="h-10 w-10 object-contain" />
+                <Image src={gpay} alt="Google Pay" className="h-10 w-10 object-contain" />
               </span>
             </div>
 

@@ -9,13 +9,6 @@ interface StaggerGridProps {
 
     /** Delay between each child animation */
     staggerDelay?: number;
-
-    /** Animation duration for each item */
-    duration?: number;
-
-    /** Animation distance in pixels */
-    distance?: number;
-
     /** Animate only once */
     once?: boolean;
 }

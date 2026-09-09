@@ -20,7 +20,7 @@ export default function DownloadAppSection() {
                         </h2>
 
                         <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-[#7a6b76]">
-                            Find your squad. Save your favorites. Book Securely. Exprience it yourself.
+                            Find your squad. Save your favorites. Book securely. Experience it yourself.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-3">
@@ -34,7 +34,7 @@ export default function DownloadAppSection() {
                                     nativeButton={false}
                                     className="relative h-auto w-full items-center gap-2.5 bg-[#000000] rounded-md px-5 py-3 text-white hover:bg-[#372D38]/90 lg:w-auto"
                                 >
-                                    <Image src={appStore} alt="google" className="h-6 w-6 object-contain" />
+                                    <Image src={appStore} alt="App Store" className="h-6 w-6 object-contain" />
 
                                     <span className="text-left leading-tight">
                                         <span className="block text-[10px] text-white">
@@ -57,7 +57,7 @@ export default function DownloadAppSection() {
                                     nativeButton={false}
                                     className="relative h-auto w-full items-center gap-2.5 rounded-md bg-[#000000] px-5 py-3 text-white hover:bg-[#372D38]/90 lg:w-auto"
                                 >
-                                    <Image src={googleplay} alt="google" className="h-6 w-6 object-contain" />
+                                    <Image src={googleplay} alt="Google Play" className="h-6 w-6 object-contain" />
                                     <span className="text-left leading-tight">
                                         <span className="block text-[10px] text-white">
                                             Get it on

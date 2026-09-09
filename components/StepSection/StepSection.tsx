@@ -1,5 +1,3 @@
-"use client";
-
 import { Sparkle } from "lucide-react";
 import TagText from "../ui/TagText";
 import GradientText from "../ui/Gradienttext";
@@ -13,7 +11,7 @@ const STEPS = [
   {
     number: "02",
     title: "Choose your Pro",
-    description: "Browse portfolios, specialties, reviews, and availability. ",
+    description: "Browse portfolios, specialties, reviews, and availability.",
   },
   {
     number: "03",
@@ -23,7 +21,7 @@ const STEPS = [
   {
     number: "04",
     title: "Love the result",
-    description: "Feel confident and ready to stun the world",
+    description: "Feel confident and ready to stun the world.",
   },
 ];
 
@@ -34,7 +32,7 @@ export default function StepsSection() {
     <section className="w-full container mx-auto  px-6 py-20 ">
         {/* Headline */}
         <div>
-          <TagText text="MEET THE ARTISTS" />
+          <TagText text="HOW IT WORKS" />
          
           <div className="flex flex-col xl:flex-row items-center gap-2">
             <h2 className="font-serif  leading-tight text-neutral-900 text-2xl md:text-4xl xl:text-6xl ">Booked in seconds with</h2>

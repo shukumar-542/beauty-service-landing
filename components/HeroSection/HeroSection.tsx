@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import DownloadButton from "../DownloadButton";
 import TagText from "../ui/TagText";
 import HeroItem from "../ui/HeroItem";
@@ -12,10 +12,6 @@ const AVATARS = [
     "/images/artist2.png",
     "/images/artist3.png",
 ];
-
-
-
-
 
 export default function HeroSection() {
 
@@ -47,7 +43,7 @@ export default function HeroSection() {
                     </HeroItem>
 
                     <HeroItem>
-                        <div className="
+                        <h1 className="
                         overflow-visible
                         font-serif
                         text-5xl
@@ -61,7 +57,7 @@ export default function HeroSection() {
                         text-transparent
                         animate-gradient
                         leading-[1.15]
-                        ">Ready, Set, Stun</div>
+                        ">Ready, Set, Stun</h1>
                     </HeroItem>
 
 
@@ -87,10 +83,13 @@ export default function HeroSection() {
                                     className="absolute inset-[-300%] animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_55%,#71717a_70%,#a1a1aa_85%,transparent_100%)]"
                                     style={{ animationDuration: "8s" }}
                                 />
-                                <button className="relative flex items-center gap-2 rounded-full cursor-pointer hover:bg-neutral-50 bg-white px-7 py-4 font-medium text-gray-700 shadow transition hover:shadow-lg">
+                                <a
+                                    href="#artists"
+                                    className="relative flex items-center gap-2 rounded-full cursor-pointer hover:bg-neutral-50 bg-white px-7 py-4 font-medium text-gray-700 shadow transition hover:shadow-lg"
+                                >
                                     Explore artists
                                     <ArrowRight size={18} />
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </HeroItem>

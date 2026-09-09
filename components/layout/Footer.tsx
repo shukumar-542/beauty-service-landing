@@ -70,22 +70,6 @@ function FacebookIcon({ className }: IconProps) {
   );
 }
 
-// function LinkedinIcon({ className }: IconProps) {
-//   return (
-//     <svg
-//       viewBox="0 0 24 24"
-//       fill="currentColor"
-//       className={className}
-//       aria-hidden="true"
-//     >
-//       <path d="M6.94 6.5a1.94 1.94 0 1 1 0-3.88 1.94 1.94 0 0 1 0 3.88ZM5.1 8.75h3.68V21H5.1V8.75Zm6.36 0h3.53v1.68h.05c.49-.93 1.7-1.9 3.5-1.9 3.74 0 4.43 2.46 4.43 5.66V21h-3.68v-5.93c0-1.41-.03-3.23-1.97-3.23-1.97 0-2.27 1.54-2.27 3.13V21h-3.59V8.75Z" />
-//     </svg>
-//   );
-// }
-
-/* =========================================
-   Footer Links
-========================================= */
 
 const footerLinks: FooterColumn[] = [
   {
