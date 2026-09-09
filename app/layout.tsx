@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "Stunner Alert | Beauty, Booked Beautifully",
     template: "%s | Stunner Alert",
   },
-  description: "Discover and book beauty services with Stunner Alert. Find talented beauty artists and book your next beauty experience with ease.",
+  description: "Discover s and book beauty services with Stunner Alert. Find talented beauty artists and book your next beauty experience with ease.",
    keywords: [
     "beauty services",
     "beauty booking",
