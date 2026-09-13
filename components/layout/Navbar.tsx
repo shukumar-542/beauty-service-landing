@@ -21,13 +21,13 @@ import DownloadButton from "../DownloadButton";
 import logo from "@/public/images/icon.png";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Why Stunner", href: "#stunner" },
-  { label: "Inspiration", href: "#inspiration" },
-  { label: "Artists", href: "#artists" },
-  { label: "Sneak Peak", href: "#SneakPeak" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Home", href: "/#home", id: "#home" },
+  { label: "Services", href: "/#services", id: "#services" },
+  { label: "Why Stunner", href: "/#stunner", id: "#stunner" },
+  { label: "Inspiration", href: "/#inspiration", id: "#inspiration" },
+  { label: "Artists", href: "/#artists", id: "#artists" },
+  { label: "Sneak Peak", href: "/#SneakPeak", id: "#SneakPeak" },
+  { label: "FAQ", href: "/#faq", id: "#faq" },
 ];
 
 export default function Navbar() {
@@ -61,47 +61,45 @@ export default function Navbar() {
   // Active Section
   // =========================
 
-  useEffect(() => {
-    const sections = NAV_LINKS.map((link) =>
-      document.querySelector(link.href)
-    ).filter((section): section is Element => Boolean(section));
+useEffect(() => {
+  const sections = NAV_LINKS.map((link) =>
+    document.querySelector(link.id)
+  ).filter((section): section is Element => Boolean(section));
 
-    if (!sections.length) return;
+  if (!sections.length) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSections = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              b.intersectionRatio - a.intersectionRatio
-          );
-
-        const visibleSection = visibleSections[0];
-
-        if (!visibleSection) return;
-
-        const activeLink = NAV_LINKS.find(
-          (link) =>
-            link.href === `#${visibleSection.target.id}`
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleSections = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort(
+          (a, b) => b.intersectionRatio - a.intersectionRatio
         );
 
-        if (activeLink) {
-          setActive(activeLink.label);
-        }
-      },
-      {
-        threshold: [0.2, 0.3, 0.5, 0.7],
-        rootMargin: "-90px 0px -35% 0px",
+      const visibleSection = visibleSections[0];
+
+      if (!visibleSection) return;
+
+      const activeLink = NAV_LINKS.find(
+        (link) => link.id === `#${visibleSection.target.id}`
+      );
+
+      if (activeLink) {
+        setActive(activeLink.label);
       }
-    );
+    },
+    {
+      threshold: [0.2, 0.3, 0.5, 0.7],
+      rootMargin: "-90px 0px -35% 0px",
+    }
+  );
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
 
-    return () => observer.disconnect();
-  }, []);
+  return () => observer.disconnect();
+}, []);
 
   // =========================
   // Mobile Nav Click
@@ -138,7 +136,7 @@ export default function Navbar() {
         ========================== */}
 
         <a
-          href="#home"
+          href="/#home"
           className="relative flex shrink-0 items-center"
           onClick={() => {
             setActive("Home");

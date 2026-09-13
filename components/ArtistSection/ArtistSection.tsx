@@ -56,7 +56,7 @@ const ARTISTS = [
     image: artist1,
   },
   {
-    name: "Sofia Maren",
+    name: "Naznin Saikh",
     specialty: "Editorial Makeup",
     rating: "4.8",
     bookings: "760 bookings",
@@ -94,19 +94,13 @@ export default function ArtistSection() {
         <div className="mt-4 flex flex-col gap-6 sm:mt-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
           {/* Heading */}
           <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-baseline gap-x-1 gap-y-0">
-              <h2 className="font-serif text-3xl leading-[1.1] text-neutral-900 sm:text-4xl lg:text-5xl xl:text-6xl">
-                Handpicked experts.
-              </h2>
-
-              <h2 className="font-serif text-3xl leading-[1.1] text-neutral-900 sm:text-4xl lg:text-5xl xl:text-6xl">
+            <div className="min-w-0 flex-1">
+              <h2 className="font-serif text-3xl leading-[1.3] text-neutral-900 sm:text-4xl lg:text-5xl xl:text-6xl">
+                Handpicked experts.{" "}
                 <GradientText
                   text="Stunning"
-                  className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl"
-                />
-              </h2>
-
-              <h2 className="font-serif text-3xl leading-[1.1] text-neutral-900 sm:text-4xl lg:text-5xl xl:text-6xl">
+                  className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl pb-1"
+                />{" "}
                 results.
               </h2>
             </div>

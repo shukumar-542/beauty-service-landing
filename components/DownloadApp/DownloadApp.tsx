@@ -30,15 +30,13 @@ export default function DownloadAppSection() {
                                     style={{ animationDuration: "8s" }}
                                 />
                                 <Button
-                                    render={<a href="#" />}
-                                    nativeButton={false}
+                                    nativeButton={true}
                                     className="relative h-auto w-full items-center gap-2.5 bg-[#000000] rounded-md px-5 py-3 text-white hover:bg-[#372D38]/90 lg:w-auto"
                                 >
                                     <Image src={appStore} alt="App Store" className="h-6 w-6 object-contain" />
-
                                     <span className="text-left leading-tight">
                                         <span className="block text-[10px] text-white">
-                                            Download on the
+                                            Coming soon on
                                         </span>
                                         <span className="block text-xl font-semibold">
                                             App Store
@@ -53,14 +51,13 @@ export default function DownloadAppSection() {
                                     style={{ animationDuration: "8s" }}
                                 />
                                 <Button
-                                    render={<a href="#" />}
-                                    nativeButton={false}
+                                    nativeButton={true}
                                     className="relative h-auto w-full items-center gap-2.5 rounded-md bg-[#000000] px-5 py-3 text-white hover:bg-[#372D38]/90 lg:w-auto"
                                 >
                                     <Image src={googleplay} alt="Google Play" className="h-6 w-6 object-contain" />
                                     <span className="text-left leading-tight">
                                         <span className="block text-[10px] text-white">
-                                            Get it on
+                                            Coming soon on
                                         </span>
                                         <span className="block text-xl font-semibold">
                                             Google Play

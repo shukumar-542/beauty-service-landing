@@ -66,9 +66,11 @@ export default function BeautyInspiration() {
             <div>
               <TagText text="BEAUTY INSPIRATION" />
               <div className="flex flex-row xl:flex-row xl:items-center gap-2 xl:gap-4">
-                <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl leading-tight text-neutral-900 ">What's your</h2>
-                <GradientText text={"Vibe"} className="text-2xl md:text-4xl xl:text-6xl" />
-                <h2 className="font-serif  leading-tight text-neutral-900 text-2xl md:text-4xl xl:text-6xl">today ?</h2>
+                <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl leading-tight text-neutral-900 flex flex-row xl:items-center gap-2 xl:gap-4">
+                  What's your
+                  <GradientText text={"Vibe"} className="text-2xl md:text-4xl xl:text-6xl" />
+                  today?
+                </h2>
               </div>
             </div>
 
@@ -102,23 +104,23 @@ export default function BeautyInspiration() {
               key={i}
               distance={30}
               duration={0.6}
-               className={`relative overflow-hidden rounded-2xl bg-neutral-200 group ${img.className}`}
+              className={`relative overflow-hidden rounded-2xl bg-neutral-200 group ${img.className}`}
             >
-             
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(max-width: 640px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105 "
-                />
+
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 640px) 50vw, 25vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105 "
+              />
             </StaggerItem>
           ))}
         </StaggerGrid>
 
         {/* CTA */}
         <div className="mt-10 flex justify-center">
-          
+
           <button className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 py-3 text-sm font-medium text-neutral-800 shadow-sm transition-colors hover:bg-neutral-50">
             View all inspiration
             <ArrowUpRight className="h-4 w-4" strokeWidth={2} />

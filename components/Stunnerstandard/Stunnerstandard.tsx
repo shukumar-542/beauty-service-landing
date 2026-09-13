@@ -37,7 +37,7 @@ const features = [
   },
   {
     icon: MailOpen,
-    title: " Dedicated support",
+    title: "Dedicated support",
     iconColor: "#C378A2",
     description: "Friendly, fast assistance whenever you need help with a booking.",
   },

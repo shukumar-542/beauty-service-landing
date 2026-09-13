@@ -79,14 +79,17 @@ export default function ServicesGrid() {
 
                         {/* Heading */}
                         <div>
-                           <TagText text="FIND YOUR MOMENT" />
+                            <TagText text="FIND YOUR MOMENT" />
 
                             {/* Heading Title */}
-                             
+
                             <div className="flex flex-col xl:flex-row md:gap-4 md:mt-2">
                                 <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl text-[#372D38]">
-                                Elevate your look with {" "}
-                                <GradientText className="text-2xl md:text-4xl xl:text-6xl" />
+                                    Elevate your look with{"  "}
+                                    <GradientText
+                                        text="Beauty Experts"
+                                        className="text-2xl md:text-4xl xl:text-6xl"
+                                    />
                                 </h2>
                             </div>
                         </div>

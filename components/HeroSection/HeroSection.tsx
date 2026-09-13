@@ -58,12 +58,15 @@ export default function HeroSection() {
                         animate-gradient
                         leading-[1.15]
                         ">Ready, Set, Stun</h1>
+                        <p className="sr-only">
+                            Beauty and Photography Services in Australia
+                        </p>
                     </HeroItem>
 
 
 
                     <HeroItem>
-                        <p className="mt-5 text-black text-xs md:text-sm max-w-54.75 md:max-w-125">Every beauty, photography and planning service, on one effortless platform.</p>
+                        <p className="mt-5 text-black text-xs md:text-sm max-w-54.75 md:max-w-125">Every beauty, photography and planning service across Australia, on one effortless platform.</p>
                     </HeroItem>
 
 
@@ -107,7 +110,7 @@ export default function HeroSection() {
                                     >
                                         <Image
                                             src={avatar}
-                                            alt=""
+                                            alt="Happy Customer"
                                             width={44}
                                             height={44}
                                             className="h-full w-full object-cover"

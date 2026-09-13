@@ -19,24 +19,43 @@ const dmSerifDisplay = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-   title: {
-    default: "Stunner Alert | Beauty, Booked Beautifully",
-    template: "%s | Stunner Alert",
+
+  metadataBase: new URL("https://stunneralert.au"),
+
+  title: "Stunner Alert | Beauty & Photography Services Australia",
+  description:
+    "Discover and book beauty and photography services across Australia for brides, weddings, parties, and events. Find trusted professionals and create your perfect event look with Stunner Alert.",
+ alternates: {
+    canonical: "/",
   },
-  description: "Discover s and book beauty services with Stunner Alert. Find talented beauty artists and book your next beauty experience with ease.",
-   keywords: [
-    "beauty services",
-    "beauty booking",
-    "beauty artists",
-    "beauty salon",
-    "makeup artist",
-    "hair styling",
-    "nail art",
-    "lash extensions",
-    "Stunner Alert",
-  ],
   icons: {
     icon: "/favicon.png",
+  },
+
+  openGraph: {
+    title: "Stunner Alert | Beauty & Photography Services Australia",
+    description:
+      "Discover and book beauty and photography services across Australia for brides, weddings, parties, and events.",
+    type: "website",
+    locale: "en_AU",
+    siteName: "Stunner Alert",
+
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Stunner Alert - Beauty and Photography Services Australia",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Stunner Alert | Beauty & Photography Services Australia",
+    description:
+      "Discover and book beauty and photography services across Australia for brides, weddings, parties, and events.",
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -45,6 +64,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+   const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Stunner Alert",
+    image: "https://stunneralert.au/images/og-image.png",
+    "@id": "https://stunneralert.au",
+    url: "https://stunneralert.au",
+    description:
+      "Beauty and photography services across Australia for brides, weddings, parties, and events.",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AU",
+    },
+    areaServed: "AU",
+    priceRange: "$$",
+  };
   return (
     <html
       lang="en"
@@ -60,6 +95,11 @@ export default function RootLayout({
         className="min-h-full flex flex-col"
         suppressHydrationWarning
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         <Navbar />
 
         <CursorDot />
