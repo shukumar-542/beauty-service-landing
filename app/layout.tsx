@@ -19,17 +19,29 @@ const dmSerifDisplay = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-
-  metadataBase: new URL("https://stunneralert.au"),
+  metadataBase: new URL("https://stunneralert.com.au"),
 
   title: "Stunner Alert | Beauty & Photography Services Australia",
   description:
-    "Discover and book beauty and photography services across Australia for brides, weddings, parties, and events. Find trusted professionals and create your perfect event look with Stunner Alert.",
- alternates: {
+    "Book trusted beauty and photography professionals across Australia for weddings, parties, and events with Stunner Alert.",
+
+  alternates: {
     canonical: "/",
   },
+
   icons: {
     icon: "/favicon.png",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   openGraph: {
@@ -58,7 +70,6 @@ export const metadata: Metadata = {
     images: ["/images/og-image.png"],
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
