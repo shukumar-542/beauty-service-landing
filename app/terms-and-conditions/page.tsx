@@ -178,19 +178,18 @@ const sections = [
       "Nothing in this section prevents STUNNER ALERT from using or disclosing information that is not Confidential Information, including information that has been lawfully de-identified or aggregated so that it cannot reasonably be used to identify you, subject to our Privacy Policy and applicable law.",
     ],
   },
-  {
-    id: "privacy",
-    title: "16. Privacy",
-    paragraphs: [
-      "We collect and handle personal information in connection with your Account, your use of the Platform and Platform Services, and Bookings made through the Platform.",
-      "The personal information we collect may include your name, contact details, Account information, service locations, booking history, location information, photographs or other information you provide through the Platform, together with technical, usage and analytics information collected through your use of the Platform. Payment information may be collected and processed by Stripe or another payment provider used in connection with the Platform.",
-      "We may use and disclose personal information to: create, maintain and administer your Account; operate, maintain and improve the Platform and Platform Services; facilitate and administer Bookings between you and Professionals; provide the relevant Professional with information reasonably required in connection with a Booking or the Professional Services; facilitate payments and payment processing; communicate with you about your Account, Bookings and use of the Platform; detect, investigate and prevent fraud, misuse, security incidents or other unlawful activity; send marketing or promotional communications where permitted by law and in accordance with any applicable consent or communication preferences; and otherwise use or disclose personal information for the purposes described in our Privacy Policy.",
-      "We may disclose personal information to Professionals and third-party service providers where reasonably necessary to operate the Platform, provide the Platform Services, facilitate Bookings or payments, or otherwise carry out the purposes described in our Privacy Policy.",
-      "Some third-party service providers or their subprocessors may store, process or access personal information outside Australia. Further information about overseas disclosures and the locations involved, where applicable, is set out in our Privacy Policy.",
-      "Our Privacy Policy contains further information about how we collect, use, disclose, store and protect personal information and how you may request access to or correction of your personal information or make a privacy complaint.",
-      "We will handle personal information in accordance with our Privacy Policy and applicable law. Nothing in these Terms constitutes blanket consent to current or future privacy practices or excludes, restricts or modifies any privacy right or protection that cannot lawfully be excluded, restricted or modified.",
-    ],
-  },
+ {
+  id: "privacy",
+  title: "16. Privacy",
+  paragraphs: [
+    "We collect and handle personal information in connection with your Account, your use of the Platform and Platform Services, and Bookings made through the Platform.",
+    "The personal information we collect may include your name, contact details, Account information, service locations, booking history, location information, photographs or other information you provide through the Platform, together with technical, usage and analytics information collected through your use of the Platform. Payment information may be collected and processed by Stripe or another payment provider used in connection with the Platform.",
+    "We may use and disclose personal information to: create, maintain and administer your Account; operate, maintain and improve the Platform and Platform Services; facilitate and administer Bookings between you and Professionals; provide the relevant Professional with information reasonably required in connection with a Booking or the Professional Services; facilitate payments and payment processing; communicate with you about your Account, Bookings and use of the Platform; detect, investigate and prevent fraud, misuse, security incidents or other unlawful activity; send marketing or promotional communications where permitted by law and in accordance with any applicable consent or communication preferences; and otherwise use or disclose personal information for the purposes described in our Privacy Policy.",
+    "We may disclose personal information to Professionals and third-party service providers where reasonably necessary to operate the Platform, provide the Platform Services, facilitate Bookings or payments, or otherwise carry out the purposes described in our Privacy Policy.",
+    "Some third-party service providers or their subprocessors may store, process or access personal information outside Australia. Further information about overseas disclosures and the locations involved, where applicable, is set out in our Privacy Policy.",
+    "We will handle personal information in accordance with our Privacy Policy and applicable law. Nothing in these Terms constitutes blanket consent to current or future privacy practices or excludes, restricts or modifies any privacy right or protection that cannot lawfully be excluded, restricted or modified.",
+  ],
+},
   {
     id: "liability",
     title: "17. Liability",
@@ -372,17 +371,33 @@ export default function TermsPage() {
       {/* Main sections */}
       <div className="space-y-12">
         {sections.map((section) => (
-          <section key={section.id} id={section.id} className="scroll-mt-24">
-            <h2 className="font-serif text-xl md:text-2xl text-[#372D38] mb-4">
-              {section.title}
-            </h2>
-            <div className="space-y-4 text-[15px] leading-relaxed text-[#533F4E]">
-              {section.paragraphs.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-          </section>
-        ))}
+  <section key={section.id} id={section.id} className="scroll-mt-24">
+    <h2 className="font-serif text-xl md:text-2xl text-[#372D38] mb-4">
+      {section.title}
+    </h2>
+    <div className="space-y-4 text-[15px] leading-relaxed text-[#533F4E]">
+      {section.paragraphs.map((paragraph, i) => (
+        <p key={i}>{paragraph}</p>
+      ))}
+
+      {section.id === "privacy" && (
+        <p>
+          Our Privacy Policy, available at{" "}
+          <a
+            href="/privacy-policy"
+            className="underline hover:text-[#E0669B]"
+          >
+            stunneralert.com.au/privacy-policy
+          </a>
+          , contains further information about how we collect, use,
+          disclose, store and protect personal information and how you may
+          request access to or correction of your personal information or
+          make a privacy complaint.
+        </p>
+      )}
+    </div>
+  </section>
+))}
 
         {/* Definitions table */}
         <section id="definitions" className="scroll-mt-24">

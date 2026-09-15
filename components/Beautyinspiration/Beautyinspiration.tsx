@@ -119,13 +119,13 @@ export default function BeautyInspiration() {
         </StaggerGrid>
 
         {/* CTA */}
-        <div className="mt-10 flex justify-center">
+        {/* <div className="mt-10 flex justify-center">
 
           <button className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 py-3 text-sm font-medium text-neutral-800 shadow-sm transition-colors hover:bg-neutral-50">
             View all inspiration
             <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
           </button>
-        </div>
+        </div> */}
       </div>
     </section >
   );
