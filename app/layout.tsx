@@ -79,9 +79,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Stunner Alert",
-    image: "https://stunneralert.au/images/og-image.png",
-    "@id": "https://stunneralert.au",
-    url: "https://stunneralert.au",
+    image: "https://stunneralert.com.au/images/og-image.png",
+    "@id": "https://stunneralert.com.au",
+    url: "https://stunneralert.com.au",
     description:
       "Beauty and photography services across Australia for brides, weddings, parties, and events.",
     address: {
