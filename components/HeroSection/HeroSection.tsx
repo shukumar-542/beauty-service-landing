@@ -98,7 +98,7 @@ export default function HeroSection() {
                     </HeroItem>
 
                     {/* Users */}
-                    <HeroItem>
+                    {/* <HeroItem>
                         <div
                             className="mt-10 flex items-center gap-4 overflow-hidden"
                         >
@@ -121,10 +121,10 @@ export default function HeroSection() {
 
                             <div>
                                 <h4 className="font-bold text-[#342A39]">20,000+</h4>
-                                <p className="text-sm text-gray-500">beauty lovers and counting</p>
+                                <p className="text-sm text-gray-500">stunners and counting.</p>
                             </div>
                         </div>
-                    </HeroItem>
+                    </HeroItem> */}
                 </HeroAnimation>
             </div>
         </section>

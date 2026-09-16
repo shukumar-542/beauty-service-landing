@@ -17,7 +17,7 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-6 py-20 ">
       <p className="text-xs uppercase tracking-wide text-[#8B7A85] mb-2">
-        Stunner Alert
+        Welcome to Stunner Alert!
       </p>
 
       <h1 className="font-serif text-3xl md:text-5xl text-[#372D38] mb-8">
@@ -26,68 +26,27 @@ export default function AboutPage() {
 
       <div className="space-y-6 text-[15px] leading-relaxed text-[#533F4E]">
         <p>
-          Stunner Alert makes beauty and photography booking simple,
-          convenient, and beautifully organised. We're an online marketplace
-          built for brides, weddings, parties, and every special moment in
-          between — connecting you with trusted, independent professionals
-          across Australia.
+          At Stunner Alert, we believe that planning your next big moment should be just as exciting as the event itself. Whether you are walking down the aisle, hosting a milestone celebration, or capturing memories to last a lifetime, we are here to bring your vision to life.
         </p>
 
         <p>
-          Our platform helps you discover beauty services and connect with
-          professionals in a simple and seamless way. Browse portfolios,
-          compare specialties, read genuine reviews, and book with confidence
-          — all in one place, without the endless back-and-forth messaging
-          that booking used to involve.
+          We have built a vibrant online marketplace that connects you directly with a handpicked community of talented, independent Professionals. From flawless hair and makeup artists and visionary photographers and videographers to creative cake artists and seamless event organisers, the perfect team for your event is just a click away. 
+        </p>
+
+       
+        <p>
+          Think of us as your ultimate event co-pilot. Through our platform, you can effortlessly browse professional portfolios, chat directly with creators, and securely manage your bookings and payments all in one place. We handle the logistics so you can focus on what truly matters—celebrating in style. 
         </p>
 
         <h2 className="font-serif text-xl md:text-2xl text-[#372D38] pt-4">
-          Our Mission
+          Grow Your Business With Us  
         </h2>
         <p>
-          We believe booking a beauty or photography service should feel
-          effortless, personal, and enjoyable. Every professional on our
-          platform is independently reviewed for quality, skill, and
-          professionalism, so you can focus on how you want to look and feel
-          — not on the logistics of finding someone you can trust.
+          Calling all independent pros and creative talents—we want you! Are you a talented event professional looking to reach more clients? We are always looking for passionate creators to join our community. When you list your services with us, you gain access to an easy-to-use booking and payment-facilitation platform built to streamline your business. Let us handle the admin and booking logistics so you can focus on showcasing your craft and doing what you love. 
         </p>
-
-        <h2 className="font-serif text-xl md:text-2xl text-[#372D38] pt-4">
-          What Makes Us Different
-        </h2>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <span className="font-semibold text-[#372D38]">
-              Verified professionals
-            </span>{" "}
-            — every artist and photographer on Stunner Alert goes through a
-            review process before joining the platform.
-          </li>
-          <li>
-            <span className="font-semibold text-[#372D38]">
-              Real-time booking
-            </span>{" "}
-            — see live availability and lock in your exact time slot
-            instantly, no waiting on quotes.
-          </li>
-          <li>
-            <span className="font-semibold text-[#372D38]">
-              Secure payments
-            </span>{" "}
-            — all payments are processed securely through Stripe, with
-            transparent pricing and no hidden surprises.
-          </li>
-          <li>
-            <span className="font-semibold text-[#372D38]">
-              Genuine reviews
-            </span>{" "}
-            — authentic ratings and before-and-after photos from real
-            clients, so you know what to expect.
-          </li>
-        </ul>
 
         <p className="pt-4 font-semibold text-[#372D38]">
-          Beauty, booked beautifully.
+          Let's make every event stunning. 
         </p>
       </div>
 

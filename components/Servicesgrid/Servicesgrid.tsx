@@ -3,19 +3,19 @@ import Image from "next/image";
 import {
     ArrowUpRight,
     Palette,
-    Droplet,
+    Video,
     Eye,
     Scissors,
     Hand,
     Gem,
 } from "lucide-react";
 
-import img1 from "@/public/images/img1.jpg";
-import img2 from "@/public/images/img2.jpg";
-import img3 from "@/public/images/img3.jpg";
-import img4 from "@/public/images/img4.webp";
+import img1 from "@/public/images/img1.png";
+import img2 from "@/public/images/img2.png";
+import img3 from "@/public/images/img3.png";
+import img4 from "@/public/images/img4.jpg";
 import img5 from "@/public/images/img5.jpg";
-import img6 from "@/public/images/img6.jpeg";
+import img6 from "@/public/images/img6.png";
 
 import AnimatedContent from "../ui/AnimatedContent";
 import StaggerGrid, { StaggerItem } from "../ui/StaggerGrid";
@@ -37,26 +37,26 @@ const services = [
         image: img2,
     },
     {
-        title: "Nail Art",
+        title: "Event Organisers",
         subtitle: "Tiny works of art",
         icon: Hand,
         image: img3,
     },
     {
-        title: "Skincare",
-        subtitle: "Your glow, considered",
-        icon: Droplet,
+        title: "Photography",
+        subtitle: "Moments worth remembering",
+        icon: Video,
         image: img4,
     },
     {
-        title: "Bridal Makeup",
+        title: "Bridal Services",
         subtitle: "The moment is yours",
         icon: Gem,
         image: img5,
     },
     {
-        title: "Lash Extensions",
-        subtitle: "A softer kind of drama",
+        title: "Cake Artists",
+        subtitle: "Sweet moments, made special",
         icon: Eye,
         image: img6,
     },

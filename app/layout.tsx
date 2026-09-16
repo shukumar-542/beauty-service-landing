@@ -113,7 +113,7 @@ export default function RootLayout({
 
         <Navbar />
 
-        <CursorDot />
+        {/* <CursorDot /> */}
 
         <main className="flex-1">
           {children}
