@@ -16,7 +16,10 @@ import {
 
 import artist1 from "@/public/images/artist1.png";
 import artist2 from "@/public/images/artist2.png";
-import artist3 from "@/public/images/artist3.png";
+import artist3 from "@/public/images/cake_artist_1.png";
+import artist4 from "@/public/images/photographer_1.png";
+import artist5 from "@/public/images/photographer_2.png";
+import artist6 from "@/public/images/beauty_artist_2.png";
 
 import GradientText from "../ui/Gradienttext";
 import ExploreButton from "../ui/ExploreButton";
@@ -32,7 +35,7 @@ const ARTISTS = [
     image: artist1,
   },
   {
-    name: "Maya Okafor",
+    name: "Maya Thompson",
     specialty: "Natural Hair Specialist",
     rating: "5.0",
     bookings: "980 bookings",
@@ -40,35 +43,35 @@ const ARTISTS = [
     image: artist2,
   },
   {
-    name: "Sofia Maren",
-    specialty: "Editorial Makeup",
+    name: "Flynn Anderson",
+    specialty: "Professional Photography",
     rating: "4.8",
     bookings: "760 bookings",
     price: "$85",
-    image: artist3,
+    image: artist5,
   },
   {
-    name: "Sofia Maren",
-    specialty: "Editorial Makeup",
-    rating: "4.8",
-    bookings: "760 bookings",
-    price: "$85",
-    image: artist1,
-  },
-  {
-    name: "Naznin Saikh",
-    specialty: "Editorial Makeup",
-    rating: "4.8",
-    bookings: "760 bookings",
-    price: "$85",
-    image: artist2,
-  },
-  {
-    name: "Amara Lewis",
-    specialty: "Bridal & Soft Glam",
+    name: "Emily Parker",
+    specialty: "Professional Photography",
     rating: "4.9",
-    bookings: "1.2k bookings",
-    price: "$85",
+    bookings: "1.1k bookings",
+    price: "$120",
+    image: artist4,
+  },
+  {
+    name: "Chloe Williams",
+    specialty: "Beauty & Makeup Artist",
+    rating: "5.0",
+    bookings: "890 bookings",
+    price: "$90",
+    image: artist6,
+  },
+  {
+    name: "Isla Anderson",
+    specialty: "Custom Cake Artist",
+    rating: "4.9",
+    bookings: "720 bookings",
+    price: "$95",
     image: artist3,
   },
 ];
