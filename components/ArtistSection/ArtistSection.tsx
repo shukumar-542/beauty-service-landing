@@ -43,6 +43,14 @@ const ARTISTS = [
     image: artist2,
   },
   {
+    name: "Isla Anderson",
+    specialty: "Custom Cake Artist",
+    rating: "4.9",
+    bookings: "720 bookings",
+    price: "$95",
+    image: artist3,
+  },
+  {
     name: "Flynn Anderson",
     specialty: "Professional Photography",
     rating: "4.8",
@@ -66,14 +74,7 @@ const ARTISTS = [
     price: "$90",
     image: artist6,
   },
-  {
-    name: "Isla Anderson",
-    specialty: "Custom Cake Artist",
-    rating: "4.9",
-    bookings: "720 bookings",
-    price: "$95",
-    image: artist3,
-  },
+  
 ];
 
 export default function ArtistSection() {
