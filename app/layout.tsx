@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import CursorDot from "@/components/CursorDot";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import EmailCTA from "@/components/EmailCTA/EmailCTA";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -120,6 +121,7 @@ export default function RootLayout({
         </main>
 
         <Footer />
+        <EmailCTA/>
       </body>
     </html>
   );
