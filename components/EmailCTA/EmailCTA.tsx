@@ -25,7 +25,6 @@ export default function EmailCTA() {
     setIsSuccess(true);
     setEmail("");
 
-    // Success message কিছুক্ষণ পর আবার form দেখাবে
     setTimeout(() => {
       setIsSuccess(false);
     }, 3000);
@@ -59,12 +58,13 @@ export default function EmailCTA() {
           <div className="mb-3 flex items-start justify-between">
             <div>
               <h3 className="font-semibold text-gray-900">
-                Be First to Know
+                Be the First to Know
               </h3>
 
               <p className="my-1 text-xs leading-5 text-gray-500">
-                Join the exclusive waitlist and be among the first to
-                experience Stunner Alert.
+                {/* Join the exclusive waitlist and be among the first to
+                experience Stunner Alert. */}
+                Join the exclusive waitlist and be among the first 100 to secure a special promo voucher?
               </p>
             </div>
 

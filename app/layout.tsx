@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -19,10 +20,12 @@ const dmSerifDisplay = DM_Serif_Display({
   weight: "400",
 });
 
+const GA_MEASUREMENT_ID = "G-LGEZZ1DX43";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://stunneralert.com.au"),
 
-  title: "Stunner Alert | Beauty & Photography Services Australia",
+  title: "Stunner Alert | Makeup, Cake & Photography in Australia",
   description:
     "Book trusted beauty and photography professionals across Australia for weddings, parties, and events with Stunner Alert.",
 
@@ -46,9 +49,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Stunner Alert | Beauty & Photography Services Australia",
+    title: "Stunner Alert | Makeup, Cake & Photography in Australia",
     description:
-      "Discover and book beauty and photography services across Australia for brides, weddings, parties, and events.",
+      "Discover and book makeup artists, cake artists, and photographers across Australia for weddings, parties, and events.",
     type: "website",
     locale: "en_AU",
     siteName: "Stunner Alert",
@@ -65,18 +68,19 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Stunner Alert | Beauty & Photography Services Australia",
+    title: "Stunner Alert | Makeup, Cake & Photography in Australia",
     description:
-      "Discover and book beauty and photography services across Australia for brides, weddings, parties, and events.",
+      "Discover and book makeup artists, cake artists, and photographers across Australia for weddings, parties, and events.",
     images: ["/images/og-image.png"],
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-   const jsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Stunner Alert",
@@ -92,6 +96,7 @@ export default function RootLayout({
     areaServed: "AU",
     priceRange: "$$",
   };
+
   return (
     <html
       lang="en"
@@ -103,25 +108,34 @@ export default function RootLayout({
         "font-sans"
       )}
     >
-      <body
-        className="min-h-full flex flex-col"
-        suppressHydrationWarning
-      >
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+
         <Navbar />
 
         {/* <CursorDot /> */}
 
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
 
         <Footer />
-        <EmailCTA/>
+        <EmailCTA />
       </body>
     </html>
   );

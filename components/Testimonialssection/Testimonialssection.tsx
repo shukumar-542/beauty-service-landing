@@ -115,7 +115,7 @@ export default function TestimonialsSection() {
                           {Array.from({ length: t.rating }).map((_, si) => (
                             <Star
                               key={si}
-                              className="h-3.5 w-3.5 fill-[#D875A9] text-[#D875A9]"
+                              className="h-3.5 w-3.5 fill-[#FFA3FF] text-[#FFA3FF]"
                             />
                           ))}
                         </div>

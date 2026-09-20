@@ -64,7 +64,7 @@ export default function BeautyInspiration() {
         >
           <div className="mb-8 flex flex-col gap-6 lg:mb-10 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <TagText text="BEAUTY INSPIRATION" />
+              <TagText text="Inspiration Board" />
               <div className="flex flex-row xl:flex-row xl:items-center gap-2 xl:gap-4">
                 <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl leading-tight text-neutral-900 flex flex-row xl:items-center gap-2 xl:gap-4">
                   What's your

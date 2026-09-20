@@ -15,7 +15,7 @@ const features = [
     icon: ShieldCheck,
     iconColor: "#1A5A52",
     title: "Verified professionals",
-    description: "Every professional on our platform is carefully selected based on quality, skill and professionalism.",
+    description: "Every professional on our platform is ID verified and carefully selected based on quality, skill and experience",
   },
   {
     icon: CalendarClock,
@@ -68,7 +68,7 @@ export default function StunnerStandard() {
           </h2>
 
           <p className="mt-6  text-[15px] leading-relaxed text-[#766975]">
-            Booking beauty and photography used to mean endless messages, hidden pricing and uncertainty. Stunner Alert brings Australia's finest talent together onto one seamless platform. Built on transparency, strict screening, and instant booking, we give you total confidence that you'll look and feel like a Stunner every single time.
+            Booking professional services used to mean endless messages, hidden pricing and uncertainty. Stunner Alert brings Australia's finest talent together onto one seamless platform. Built on transparency, strict screening, and instant booking, we give you total confidence that you'll look and feel like a Stunner every single time.
           </p>
         </AnimatedContent>
 

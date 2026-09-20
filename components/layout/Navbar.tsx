@@ -23,9 +23,9 @@ import logo from "@/public/images/icon.png";
 const NAV_LINKS = [
   { label: "Home", href: "/#home", id: "#home" },
   { label: "Services", href: "/#services", id: "#services" },
-  { label: "Why Stunner", href: "/#stunner", id: "#stunner" },
+  { label: "Why Us", href: "/#stunner", id: "#stunner" },
   { label: "Inspiration", href: "/#inspiration", id: "#inspiration" },
-  { label: "Artists", href: "/#artists", id: "#artists" },
+  { label: "Professionals", href: "/#artists", id: "#artists" },
   { label: "Sneak Peak", href: "/#SneakPeak", id: "#SneakPeak" },
   { label: "FAQ", href: "/#faq", id: "#faq" },
 ];

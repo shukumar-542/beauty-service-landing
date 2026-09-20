@@ -35,7 +35,7 @@ const ARTISTS = [
     image: artist1,
   },
   {
-    name: "Maya Thompson",
+    name: "Priya Anand",
     specialty: "Natural Hair Specialist",
     rating: "5.0",
     bookings: "980 bookings",
@@ -93,7 +93,7 @@ export default function ArtistSection() {
             Header
         ========================== */}
 
-        <TagText text="MEET THE ARTISTS" />
+        <TagText text="Meet the Professionals and Discover all pros" />
 
         <div className="mt-4 flex flex-col gap-6 sm:mt-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
           {/* Heading */}
@@ -169,7 +169,7 @@ export default function ArtistSection() {
                     </div>
 
                     <div className="artists-body flex shrink-0 items-center gap-1 text-[12px] font-semibold text-[#3D2E38] sm:text-[13px]">
-                      <Star className="size-3 fill-[#E0669B] text-[#E0669B] sm:size-3.5" />
+                      <Star className="size-3 fill-[#FFA3FF] text-[#FFA3FF] sm:size-3.5" />
                       {artist.rating}
                     </div>
                   </div>
@@ -202,9 +202,9 @@ export default function ArtistSection() {
           ========================== */}
 
           <div className="mt-6 flex items-center justify-center gap-3 sm:mt-8 sm:justify-end">
-            <CarouselPrevious className="static size-9 translate-y-0 border-[#3D2E38]/15 text-[#3D2E38] hover:bg-[#E0669B] hover:text-white sm:size-10" />
+            <CarouselPrevious className="static size-9 translate-y-0 border-[#3D2E38]/15 text-[#3D2E38] hover:bg-[#CA9BF7] hover:text-white sm:size-10" />
 
-            <CarouselNext className="static size-9 translate-y-0 border-[#3D2E38]/15 text-[#3D2E38] hover:bg-[#E0669B] hover:text-white sm:size-10" />
+            <CarouselNext className="static size-9 translate-y-0 border-[#3D2E38]/15 text-[#3D2E38] hover:bg-[#CA9BF7] hover:text-white sm:size-10" />
           </div>
         </Carousel>
       </div>

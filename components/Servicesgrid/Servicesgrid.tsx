@@ -4,10 +4,10 @@ import {
     ArrowUpRight,
     Palette,
     Video,
-    Eye,
     Scissors,
-    Hand,
     Gem,
+    Calendar,
+    Cake,
 } from "lucide-react";
 
 import img1 from "@/public/images/img1.png";
@@ -39,7 +39,7 @@ const services = [
     {
         title: "Event Organisers",
         subtitle: "Tiny works of art",
-        icon: Hand,
+        icon: Calendar,
         image: img3,
     },
     {
@@ -57,7 +57,7 @@ const services = [
     {
         title: "Cake Artists",
         subtitle: "Sweet moments, made special",
-        icon: Eye,
+        icon: Cake,
         image: img6,
     },
 ];
