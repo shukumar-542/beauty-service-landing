@@ -4,7 +4,6 @@ import { DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-import CursorDot from "@/components/CursorDot";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import EmailCTA from "@/components/EmailCTA/EmailCTA";

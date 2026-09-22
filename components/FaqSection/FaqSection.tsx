@@ -8,22 +8,22 @@ const FAQS = [
   {
     question: "How do I book an appointment?",
     answer:
-      "Choose a service, find an artist whose work you love, then select a time that fits. You will receive confirmation instantly in the app.",
+      "You may request or make a Booking via the app by selecting a Professional, the relevant Professional Services and the other booking details requested through the Platform. Before submitting a Booking, you must review the Professional Services selected, the scheduled date, time and location, the Total Booking Price and any other material Booking information displayed through the Platform. A Booking is confirmed when confirmation is displayed or otherwise communicated to you through the Platform and any payment required at the time of confirmation has been successfully processed",
   },
   {
     question: "When am I charged?",
     answer:
-      "You are charged after your appointment is confirmed by the artist, not before.",
+      "An Initial Payment equal to 20% of the Total Booking Price will be charged when the Booking is confirmed. The Balance Payment, being the remaining 80% of the Total Booking Price, will be charged approximately 24 hours before the scheduled commencement time of the Professional Services and will be held or processed through the applicable Stripe Connect payment arrangements pending payout or release in accordance with those arrangements.",
   },
   {
     question: "What if I need to reschedule?",
     answer:
-      "You can reschedule anytime up to 24 hours before your appointment directly from the app.",
+      "You may request to reschedule a Booking through the app. Any rescheduling of the Professional Services is subject to the availability and agreement of the relevant Professional and is not effective until the rescheduled Booking is confirmed.",
   },
   {
-    question: "How are artists verified?",
+    question: "How are professionals verified?",
     answer:
-      "Every artist goes through a manual review of their portfolio, credentials, and client reviews before joining the platform.",
+      "Every professional is verified by their identity, business, qualifications or continuing eligibility to use the Platform, which may include government-issued photographic identification, a photograph or selfie showing them with that identification, qualifications, licences, registrations, hygiene certificates, insurance documents, business details and any relevant business website or professional social media account.",
   },
 ];
 

@@ -14,12 +14,12 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 
-import artist1 from "@/public/images/artist1.png";
-import artist2 from "@/public/images/artist2.png";
-import artist3 from "@/public/images/cake_artist_1.png";
-import artist4 from "@/public/images/photographer_1.png";
-import artist5 from "@/public/images/photographer_2.png";
-import artist6 from "@/public/images/beauty_artist_2.png";
+import artist1 from "@/public/images/artist11.jpg";
+import artist2 from "@/public/images/artist33.jpg";
+import artist3 from "@/public/images/cake_artist_1.jpg";
+import artist4 from "@/public/images/event.jpg";
+import artist5 from "@/public/images/photographer_2.jpg";
+import artist6 from "@/public/images/beauty_artist_22.jpg";
 
 import GradientText from "../ui/Gradienttext";
 import ExploreButton from "../ui/ExploreButton";
@@ -60,7 +60,7 @@ const ARTISTS = [
   },
   {
     name: "Emily Parker",
-    specialty: "Professional Photography",
+    specialty: "Event Planner & Coordinator",
     rating: "4.9",
     bookings: "1.1k bookings",
     price: "$120",
@@ -150,10 +150,10 @@ export default function ArtistSection() {
                     />
 
                     {/* Verified Badge */}
-                    <span className="artists-body absolute left-2.5 top-2.5 inline-flex items-center gap-1 rounded-full bg-white/90 px-2 py-1 text-[10px] font-semibold text-[#7B5370] backdrop-blur sm:left-3 sm:top-3 sm:px-2.5 sm:py-1 sm:text-[11px]">
+                    {/* <span className="artists-body absolute left-2.5 top-2.5 inline-flex items-center gap-1 rounded-full bg-white/90 px-2 py-1 text-[10px] font-semibold text-[#7B5370] backdrop-blur sm:left-3 sm:top-3 sm:px-2.5 sm:py-1 sm:text-[11px]">
                       <ShieldCheck className="size-3 sm:size-3.5 text-[#1A5A52]" />
                       Verified
-                    </span>
+                    </span> */}
                   </div>
 
                   {/* Name + Rating */}
@@ -168,20 +168,20 @@ export default function ArtistSection() {
                       </p>
                     </div>
 
-                    <div className="artists-body flex shrink-0 items-center gap-1 text-[12px] font-semibold text-[#3D2E38] sm:text-[13px]">
+                    {/* <div className="artists-body flex shrink-0 items-center gap-1 text-[12px] font-semibold text-[#3D2E38] sm:text-[13px]">
                       <Star className="size-3 fill-[#FFA3FF] text-[#FFA3FF] sm:size-3.5" />
                       {artist.rating}
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Footer */}
-                  <div className="mt-3 flex flex-col gap-3 border-t border-[#3D2E38]/8 px-1 pt-3 sm:mt-4 sm:pt-4 lg:flex-row lg:items-center lg:justify-between lg:gap-2">
-                    <div className="text-[11px] text-[#8B7A85] sm:text-[12px]">
+                  <div className="mt-3 flex flex-col gap-3 border-t border-[#3D2E38]/8 px-1 pt-3 sm:mt-4 sm:pt-4 lg:flex-row lg:items-center lg:justify-end lg:gap-2">
+                    {/* <div className="text-[11px] text-[#8B7A85] sm:text-[12px]">
                       {artist.bookings}{" "}
                       <span className="font-semibold text-[#3D2E38]">
                         From {artist.price}
                       </span>
-                    </div>
+                    </div> */}
 
                     <button
                       type="button"

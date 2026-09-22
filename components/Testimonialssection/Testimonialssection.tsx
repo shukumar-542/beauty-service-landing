@@ -9,8 +9,10 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import avatar from "@/public/images/artist1.png";
-import avatar2 from "@/public/images/artist2.png";
+import avatar from "@/public/images/rating1.jpg";
+import avatar2 from "@/public/images/rating2.jpg";
+import avatar3 from "@/public/images/rating3.jpg";
+import avatar4 from "@/public/images/rating4.jpg";
 import TagText from "../ui/TagText";
 import Autoplay from "embla-carousel-autoplay";
 const testimonials = [
@@ -33,7 +35,7 @@ const testimonials = [
   {
     name: "Maren Cole",
     location: "Adelaide, SA",
-    avatar: avatar,
+    avatar: avatar3,
     rating: 5,
     review:
       "Secure payments and instant confirmation mean I never have to double check anything. It just works, every time.",
@@ -41,7 +43,7 @@ const testimonials = [
   {
     name: "Elena Cruz",
     location: "Sydney, NSW",
-    avatar: avatar2,
+    avatar: avatar4,
     rating: 5,
     review:
       "From flexible scheduling to verified professionals, it removed all the friction from finding someone I actually trust.",
@@ -130,9 +132,9 @@ export default function TestimonialsSection() {
                       <button
                         onClick={() => api?.scrollPrev()}
                         aria-label="Previous testimonial"
-                        className="flex h-7 w-7 items-center justify-center rounded-full border border-neutral-200 text-neutral-500 transition-colors hover:bg-neutral-50"
+                        className="flex h-7 w-7 bg-[#FFA3FF] items-center justify-center rounded-full border border-neutral-200 text-neutral-500 transition-colors"
                       >
-                        <ChevronLeft className="h-3.5 w-3.5" />
+                        <ChevronLeft className="h-3.5 w-3.5 text-white" />
                       </button>
 
                       <span className="text-xs tabular-nums text-neutral-400">
@@ -143,9 +145,9 @@ export default function TestimonialsSection() {
                       <button
                         onClick={() => api?.scrollNext()}
                         aria-label="Next testimonial"
-                        className="flex h-7 w-7 items-center justify-center rounded-full border border-neutral-200 text-neutral-500 transition-colors hover:bg-neutral-50"
+                        className="flex h-7 w-7 bg-[#FFA3FF] items-center justify-center rounded-full border border-neutral-200 text-neutral-500 transition-colors"
                       >
-                        <ChevronRight className="h-3.5 w-3.5" />
+                        <ChevronRight className="h-3.5 w-3.5 text-white" />
                       </button>
                     </div>
                   </div>

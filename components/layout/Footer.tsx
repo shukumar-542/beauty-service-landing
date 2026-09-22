@@ -65,8 +65,8 @@ const footerLinks: FooterColumn[] = [
   {
     heading: "Community",
     links: [
-      { label: "Customer stories", href: "/#customer" },
-      { label: "Beauty inspiration", href: "/#inspiration" },
+      { label: "Grow your Business", href: "/grow-business" },
+      // { label: "Beauty inspiration", href: "/#inspiration" },
     ],
   },
 ];
