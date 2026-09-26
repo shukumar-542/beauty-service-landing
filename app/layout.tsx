@@ -24,7 +24,7 @@ const GA_MEASUREMENT_ID = "G-LGEZZ1DX43";
 export const metadata: Metadata = {
   metadataBase: new URL("https://stunneralert.com.au"),
 
-  title: "Stunner Alert | Makeup, Cake & Photography in Australia",
+  title: "Stunner Alert | Makeup, events, Cake, Photography & more in Australia",
   description:
     "Book trusted beauty and photography professionals across Australia for weddings, parties, and events with Stunner Alert.",
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Stunner Alert | Makeup, Cake & Photography in Australia",
+    title: "Stunner Alert | Makeup, events, Cake, Photography & more in Australia",
     description:
       "Discover and book makeup artists, cake artists, and photographers across Australia for weddings, parties, and events.",
     type: "website",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Stunner Alert | Makeup, Cake & Photography in Australia",
+    title: "Stunner Alert | Makeup, events, Cake, Photography & more in Australia",
     description:
       "Discover and book makeup artists, cake artists, and photographers across Australia for weddings, parties, and events.",
     images: ["/images/og-image.png"],

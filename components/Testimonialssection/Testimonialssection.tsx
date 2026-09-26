@@ -17,36 +17,36 @@ import TagText from "../ui/TagText";
 import Autoplay from "embla-carousel-autoplay";
 const testimonials = [
   {
-    name: "Kaya Williams",
+    name: "Sophie Bennett",
     location: "Sydney, NSW",
     avatar: avatar,
     rating: 5,
     review:
-      "I love how convenient the Stunner Alert app is. Booking is so simple, payments are fast and secure, and having all services in one place is a game-changer.",
+      "I joined the Stunner Alert waitlist because having makeup, photography, events, and cake services all in one place sounds exactly like what I need. I can't wait for the launch!",
   },
   {
-    name: "Priya Anand",
+    name: "Chloe Williams",
     location: "Brisbane, QLD",
     avatar: avatar2,
     rating: 5,
     review:
-      "The reviews actually match my taste. I stopped guessing and started trusting every artist I book through Stunner Alert.",
+      "Stunner Alert looks like such a convenient way to discover talented professionals. I'm excited to explore makeup artists, photographers, cake artists, and event services when it launches.",
   },
   {
-    name: "Maren Cole",
+    name: "Matilda Collins",
     location: "Adelaide, SA",
     avatar: avatar3,
     rating: 5,
     review:
-      "Secure payments and instant confirmation mean I never have to double check anything. It just works, every time.",
+      "I added my name to the waitlist because Stunner Alert brings so many event services together. Having makeup, photography, cakes, and event professionals in one place will make planning so much easier.",
   },
   {
-    name: "Elena Cruz",
-    location: "Sydney, NSW",
+    name: "Emma Taylor",
+    location: "Melbourne, VIC",
     avatar: avatar4,
     rating: 5,
     review:
-      "From flexible scheduling to verified professionals, it removed all the friction from finding someone I actually trust.",
+      "As a professional, I'm excited to be part of Stunner Alert from the beginning. It's a great opportunity to connect with people looking for makeup, photography, cake, and event services.",
   },
 ];
 
@@ -113,18 +113,18 @@ export default function TestimonialsSection() {
                           </div>
                         </div>
 
-                        <div className="flex gap-0.5">
+                        {/* <div className="flex gap-0.5">
                           {Array.from({ length: t.rating }).map((_, si) => (
                             <Star
                               key={si}
                               className="h-3.5 w-3.5 fill-[#FFA3FF] text-[#FFA3FF]"
                             />
                           ))}
-                        </div>
+                        </div> */}
                       </div>
 
                       <p className="mt-6 text-[15px] leading-relaxed text-[#513A4C]">
-                        &ldquo; {t.review} &rdquo;
+                         {t.review}
                       </p>
                     </div>
 
