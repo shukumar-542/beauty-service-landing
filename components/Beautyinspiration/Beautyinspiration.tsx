@@ -13,7 +13,7 @@ import GradientText from "../ui/Gradienttext";
 import AnimatedContent from "../ui/AnimatedContent";
 import StaggerGrid, { StaggerItem } from "../ui/StaggerGrid";
 
-const filters = ["All", "Wedding", "Natural", "Luxury glam", "Party", "Editorial"];
+const filters = ["All", "Makeup", "Events",  "Photography" , "Cake"];
 
 const images = [
   {

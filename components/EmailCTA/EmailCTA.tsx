@@ -64,7 +64,7 @@ export default function EmailCTA() {
               <p className="my-1 text-xs leading-5 text-gray-500">
                 {/* Join the exclusive waitlist and be among the first to
                 experience Stunner Alert. */}
-                Join the exclusive waitlist and be among the first 100 to secure a special promo voucher?
+                Join the exclusive waitlist and be among the first 100 to secure a special promo voucher
               </p>
             </div>
 

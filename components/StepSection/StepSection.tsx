@@ -29,19 +29,19 @@ export default function StepsSection() {
 
   
   return (
-    <section className="w-full container mx-auto  px-6 py-20 ">
+    <section className="w-full container mx-auto  px-6  md:py-20 ">
         {/* Headline */}
         <div>
           <TagText text="HOW IT WORKS" />
          
-          <div className="flex flex-col xl:flex-row items-center gap-2">
+          <div className="flex flex-col xl:flex-row xl:items-center gap-2">
             <h2 className="font-serif  leading-tight text-neutral-900 text-2xl md:text-4xl xl:text-6xl ">Booked in seconds with</h2>
             <GradientText text={"Stunner Alert"} className="text-2xl md:text-4xl xl:text-6xl" />
           </div>
         </div>
 
         {/* Steps */}
-        <div className="mt-20 grid grid-cols-1 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 md:mt-20 grid grid-cols-1 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step, i) => (
             <div key={i} className="relative ">
               {/* Number */}

@@ -20,10 +20,15 @@ type FooterColumn = {
   links: FooterLink[];
 };
 
-function XIcon({ className }: IconProps) {
+function TikTokIcon({ className }: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M18.9 2H22l-7.6 8.68L23.2 22h-6.9l-5.4-6.6L4.7 22H1.6l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2Zm-1.2 18h1.9L7.4 4H5.4l12.3 16Z" />
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.98V2h-3.72v13.56a2.92 2.92 0 1 1-2-2.77V9.03a6.66 6.66 0 1 0 5.72 6.57V8.83a8.56 8.56 0 0 0 5.01 1.61V6.73a4.84 4.84 0 0 1-1.24-.04Z" />
     </svg>
   );
 }
@@ -66,6 +71,7 @@ const footerLinks: FooterColumn[] = [
     heading: "Community",
     links: [
       { label: "Grow your Business", href: "/grow-business" },
+      { label: "Exclusive Pre-Launch Opportunity", href: "/prelaunch-opportunity" },
       // { label: "Beauty inspiration", href: "/#inspiration" },
     ],
   },
@@ -74,7 +80,7 @@ const footerLinks: FooterColumn[] = [
 const socials = [
   { Icon: FacebookIcon, label: "Facebook", href: "#" },
   { Icon: InstagramIcon, label: "Instagram", href: "#" },
-  { Icon: XIcon, label: "X (Twitter)", href: "#" },
+  { Icon: TikTokIcon, label: "TikTok", href: "#" },
 ];
 
 export default function Footer() {

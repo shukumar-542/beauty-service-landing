@@ -20,7 +20,7 @@ export default function DownloadAppSection() {
                         </h2>
 
                         <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-[#7a6b76]">
-                            Find your squad. Save your favorites. Book securely. Experience it yourself.
+                            Find your squad. Save your favourite. Book securely. Experience it yourself.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-3">

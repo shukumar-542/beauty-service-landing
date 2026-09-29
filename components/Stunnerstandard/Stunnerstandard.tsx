@@ -13,7 +13,7 @@ import TagText from "../ui/TagText";
 const features = [
   {
     icon: ShieldCheck,
-    iconColor: "#1A5A52",
+    iconColor: "#C378A2",
     title: "Verified professionals",
     description: "Every professional on our platform is ID verified and carefully selected based on quality, skill and experience",
   },
