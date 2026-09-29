@@ -22,7 +22,7 @@ const testimonials = [
     avatar: avatar,
     rating: 5,
     review:
-      "I joined the Stunner Alert waitlist because having makeup, photography, events, and cake services all in one place sounds exactly like what I need. I can't wait for the launch!",
+      "I joined the Stunner Alert waitlist because having all beauty and event services in one place sounds exactly like what I need. I can't wait for the launch!",
   },
   {
     name: "Chloe Williams",
@@ -30,7 +30,7 @@ const testimonials = [
     avatar: avatar2,
     rating: 5,
     review:
-      "Stunner Alert looks like such a convenient way to discover talented professionals. I'm excited to explore makeup artists, photographers, cake artists, and event services when it launches.",
+      "Stunner Alert looks like such a convenient way to discover talented professionals. I'm excited to explore everything the platform has to offer when it launches.",
   },
   {
     name: "Matilda Collins",
@@ -38,7 +38,7 @@ const testimonials = [
     avatar: avatar3,
     rating: 5,
     review:
-      "I added my name to the waitlist because Stunner Alert brings so many event services together. Having makeup, photography, cakes, and event professionals in one place will make planning so much easier.",
+      "I added my name to the waitlist because having every service I need to plan my big day in one place will make the whole experience so much easier.",
   },
   {
     name: "Emma Taylor",
@@ -46,7 +46,7 @@ const testimonials = [
     avatar: avatar4,
     rating: 5,
     review:
-      "As a professional, I'm excited to be part of Stunner Alert from the beginning. It's a great opportunity to connect with people looking for makeup, photography, cake, and event services.",
+      "As a professional, I'm excited to be part of Stunner Alert from the beginning. It feels like a great opportunity to connect with new clients and grow my business.",
   },
 ];
 
