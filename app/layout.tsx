@@ -19,7 +19,6 @@ const dmSerifDisplay = DM_Serif_Display({
   weight: "400",
 });
 
-const GA_MEASUREMENT_ID = "G-LGEZZ1DX43";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://stunneralert.com.au"),
@@ -108,6 +107,7 @@ export default function RootLayout({
       )}
     >
       <head>
+        <meta name="google-site-verification" content="crs8eVx6X6uYzm6mhQI_FhjbMgQISSK2sfES5ScxCQ0" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

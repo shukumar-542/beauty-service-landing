@@ -1,30 +1,22 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-
 import {
+  ArrowRight,
   ArrowUpRight,
   Download,
   type LucideIcon,
 } from "lucide-react";
-
 import type { ComponentProps } from "react";
-
 import { twMerge } from "tailwind-merge";
 import clsx, { type ClassValue } from "clsx";
 
 const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 type ButtonVariant = ComponentProps<typeof Button>["variant"];
-
 type ButtonSize = ComponentProps<typeof Button>["size"];
 
-const iconMap = {
-  download: Download,
-  arrowUpRight: ArrowUpRight,
-} as const;
-
-type IconName = keyof typeof iconMap;
+type IconName = "download" | "arrowUpRight" | "arrowRight";
 
 interface DownloadButtonProps {
   name?: string;
@@ -44,6 +36,7 @@ export default function DownloadButton({
   name = "Download App",
   icon = "arrowUpRight",
   iconClassName,
+  variant = "gradient",
   size = "lg",
   className,
   glow = true,
@@ -52,7 +45,15 @@ export default function DownloadButton({
   rotateIcon = true,
   onClick,
 }: DownloadButtonProps) {
-  const Icon: LucideIcon = iconMap[icon];
+  let Icon: LucideIcon = ArrowUpRight;
+
+  if (icon === "download") {
+    Icon = Download;
+  } else if (icon === "arrowRight") {
+    Icon = ArrowRight;
+  } else if (icon === "arrowUpRight") {
+    Icon = ArrowUpRight;
+  }
 
   return (
     <div className="relative inline-flex overflow-hidden rounded-full p-0.5">
@@ -64,7 +65,9 @@ export default function DownloadButton({
             "bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_55%,#f472b6_70%,#fdba74_85%,transparent_100%)]",
             glowClassName
           )}
-          style={{ animationDuration: glowDuration }}
+          style={{
+            animationDuration: glowDuration,
+          }}
         />
       )}
 
@@ -72,7 +75,7 @@ export default function DownloadButton({
         type="button"
         onClick={onClick}
         size={size}
-        variant="gradient"
+        variant={variant}
         className={cn(
           "group relative cursor-pointer rounded-full px-6 py-5",
           className
