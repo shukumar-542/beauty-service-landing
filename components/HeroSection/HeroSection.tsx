@@ -46,8 +46,8 @@ export default function HeroSection() {
               className="
                 overflow-visible
                 font-serif
-                text-5xl
-                md:text-7xl
+                text-2xl
+                md:text-5xl
                 bg-linear-to-r
                 from-[#FFA3FF]
                 via-[#FFB172]
@@ -59,18 +59,15 @@ export default function HeroSection() {
                 leading-[1.15]
               "
             >
-              Ready, Set, Stun
+              Book Makeup Artists,  <br />Hair Stylists, Photographers<br /> &  Event Organisers  in Australia
             </h1>
 
-            <p className="sr-only">
-              Beauty and Photography Services in Australia
-            </p>
+           
           </HeroItem>
 
           <HeroItem>
             <p className="mt-5 max-w-54.75 text-xs text-black md:max-w-125 md:text-sm">
-              Every beauty, photography and planning service across Australia,
-              on one effortless platform.
+             Find and book makeup artists, hair stylists, photographers, cake artists and event organisers for weddings, parties and every occasion in Australia
             </p>
           </HeroItem>
 
