@@ -10,6 +10,7 @@ const slides = [
   "/images/04.jpg",
   "/images/05.jpg",
 ];
+
 export default function HeroSlideshow({
   interval = 3000,
 }: {
@@ -26,7 +27,7 @@ export default function HeroSlideshow({
   }, [interval]);
 
   return (
-    <div className="absolute inset-0 md:hidden">
+    <div className="absolute inset-0 md:hidden bg-black">
       {slides.map((src, index) => (
         <Image
           key={src}
