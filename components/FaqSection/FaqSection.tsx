@@ -45,9 +45,12 @@ export default function FaqSection() {
             <span >answered.</span>
           </h2>
 
-          <p className=" mt-6 max-w-75 text-[15px] leading-relaxed text-[#8B7A85]">
-            Still curious? Our friendly support team is only a message away.
+          <p className=" mt-6  text-[15px] leading-relaxed text-[#8B7A85]">
+            Answers about booking makeup artists, hair stylists, photographers, and other specialists, including payments, rescheduling, and verification
           </p>
+          {/* <p className=" mt-6 max-w-75 text-[15px] leading-relaxed text-[#8B7A85]">
+            Still curious? Our friendly support team is only a message away.
+          </p> */}
 
           <a
             href="#"

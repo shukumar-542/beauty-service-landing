@@ -62,7 +62,7 @@ export default function BeautyInspiration() {
           distance={20}
           once={false}
         >
-          <div className="mb-8 flex flex-col gap-6 lg:mb-10 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mb-5 flex flex-col gap-6 lg:mb-8 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <TagText text="Inspiration Board" />
               <div className="flex flex-row xl:flex-row xl:items-center gap-2 xl:gap-4">
@@ -72,6 +72,9 @@ export default function BeautyInspiration() {
                   today?
                 </h2>
               </div>
+              <p className="text-gray-600 mt-2 text-xs md:text-sm">
+                Get ideas for your next look, celebration, or photoshoot. Filter by makeup, events, photography, or cake, then find a specialist to bring it to life.
+              </p>
             </div>
 
             {/* Filter pills */}

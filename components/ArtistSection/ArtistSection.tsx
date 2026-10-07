@@ -87,7 +87,7 @@ export default function ArtistSection() {
   );
 
   return (
-    <section className="w-full overflow-hidden bg-[#FFF9F8] py-16 sm:py-20 lg:py-24">
+    <section className="w-full overflow-hidden bg-[#FFF9F8] py-16 sm:py-20 lg:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* =========================
             Header
@@ -95,7 +95,7 @@ export default function ArtistSection() {
 
         <TagText text="Meet the Professionals and Discover all pros" />
 
-        <div className="mt-4 flex flex-col gap-6 sm:mt-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
           {/* Heading */}
           <div className="min-w-0 flex-1">
             <div className="min-w-0 flex-1">
@@ -107,6 +107,9 @@ export default function ArtistSection() {
                 />{" "}
                 results.
               </h2>
+              <p className="text-gray-600 mt-2 text-xs md:text-sm">
+                Compare makeup artists, hair stylists, photographers, cake artists, and event planners by specialty, portfolio, and availability, then book your favourite.
+              </p>
             </div>
           </div>
 

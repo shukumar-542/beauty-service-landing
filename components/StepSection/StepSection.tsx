@@ -29,7 +29,7 @@ export default function StepsSection() {
 
   
   return (
-    <section className="w-full container mx-auto  px-6  md:py-20 ">
+    <section className="w-full container mx-auto  px-6  md:py-16 ">
         {/* Headline */}
         <div>
           <TagText text="HOW IT WORKS" />
@@ -38,6 +38,9 @@ export default function StepsSection() {
             <h2 className="font-serif  leading-tight text-neutral-900 text-2xl md:text-4xl xl:text-6xl ">Booked in seconds with</h2>
             <GradientText text={"Stunner Alert"} className="text-2xl md:text-4xl xl:text-6xl" />
           </div>
+          <p className="text-gray-600 mt-2 text-xs md:text-sm">
+            From makeup and hair to photography, cakes and events, booking an expert takes just four simple steps.
+          </p>
         </div>
 
         {/* Steps */}

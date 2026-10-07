@@ -75,7 +75,7 @@ export default function ServicesGrid() {
                     distance={30}
                     once={false}
                 >
-                    <div className="mb-8 flex flex-col gap-6 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
+                    <div className="mb-5 flex flex-col gap-6 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
 
                         {/* Heading */}
                         <div>
@@ -92,6 +92,9 @@ export default function ServicesGrid() {
                                     />
                                 </h2>
                             </div>
+                            <p className="text-gray-600 mt-3 text-xs md:text-sm">
+                                Browse makeup, hair styling, bridal, photography, cake and event services, and choose the specialist who fits your occasion.
+                            </p>
                         </div>
 
                         {/* Explore link */}
