@@ -58,16 +58,16 @@ export default function HeroSection() {
             >
               Book Makeup Artists,
               Hair Stylists, Photographers
-              <br /> & Event Organisers in Australia
+               & Event Organisers in Australia
             </h1>
           </HeroItem>
 
           <HeroItem>
             <p
-              className="
+              className=" 
           mt-5
           mx-auto
-          max-w-54.75
+          max-w-full
           text-center
           text-xs
           text-gray-200
