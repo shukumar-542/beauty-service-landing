@@ -29,7 +29,7 @@ export default function HeroSection() {
 
       <div className="absolute inset-0 bg-linear-240 from-black/70 via-black/70 to-black/70" />
 
-      <div className="relative flex min-h-svh md:min-h-195 container mx-auto items-center justify-center px-2 xl:px-10">
+      <div className="relative flex min-h-svh md:min-h-screen container mx-auto items-center justify-center px-2 xl:px-10">
         <HeroAnimation>
           <HeroItem>
             <div className="flex flex-col items-center text-center">
