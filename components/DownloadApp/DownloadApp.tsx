@@ -20,7 +20,7 @@ export default function DownloadAppSection() {
                         </h2>
 
                         <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-[#7a6b76]">
-                            From makeup and hair to photography, cakes and events, booking an expert takes just four simple steps.
+                            Find, save, and book makeup, hair, photography, cake, and event specialists in one app, launching soon on the App Store and Google Play.
                         </p>
                         {/* <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-[#7a6b76]">
                             Find your squad. Save your favourite. Book securely. Experience it yourself.

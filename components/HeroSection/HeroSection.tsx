@@ -1,15 +1,14 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 
 import DownloadButton from "../DownloadButton";
 import TagText from "../ui/TagText";
 import HeroItem from "../ui/HeroItem";
 import HeroAnimation from "../ui/HeroAnimation";
 import HeroSlideshow from "../HeroSlideshow/HeroSlideshow";
+import WaitlistTrigger from "../ui/WaitlistTrigger";
+import OpenWaitlistButton from "../OpenWaitlistButton";
 
 const heroImage = "/images/herobg.jpg";
-
-
 
 export default function HeroSection() {
   return (
@@ -40,40 +39,39 @@ export default function HeroSection() {
           <HeroItem>
             <h1
               className="
-          overflow-visible
-          text-center
-          font-serif
-          text-2xl
-          md:text-5xl
-          bg-linear-to-r
-          from-[#FFA3FF]
-          via-[#FFB172]
-          to-[#FFA3FF]
-          bg-size-[200%_100%]
-          bg-clip-text
-          text-transparent
-          animate-gradient
-          leading-[1.15]
-        "
+                overflow-visible
+                text-center
+                font-serif
+                text-2xl
+                md:text-5xl
+                bg-linear-to-r
+                from-[#FFA3FF]
+                via-[#FFB172]
+                to-[#FFA3FF]
+                bg-size-[200%_100%]
+                bg-clip-text
+                text-transparent
+                animate-gradient
+                leading-[1.15]
+              "
             >
-              Book Makeup Artists,
-              Hair Stylists, Photographers
-               & Event Organisers in Australia
+              Book Makeup Artists, Hair Stylists, Photographers &amp; Event
+              Organisers in Australia
             </h1>
           </HeroItem>
 
           <HeroItem>
             <p
-              className=" 
-          mt-5
-          mx-auto
-          max-w-full
-          text-center
-          text-xs
-          text-gray-200
-          md:max-w-125
-          md:text-sm
-        "
+              className="
+                mt-5
+                mx-auto
+                max-w-full
+                text-center
+                text-xs
+                text-gray-200
+                md:max-w-125
+                md:text-sm
+              "
             >
               Find and book makeup artists, hair stylists, photographers, cake
               artists and event organisers for weddings, parties and every
@@ -83,45 +81,16 @@ export default function HeroSection() {
 
           <HeroItem>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 overflow-hidden">
-              <DownloadButton
-                name="Pre-Register as a Professional"
-                className="px-4 py-7"
-                icon="arrowRight"
-                rotateIcon={false}
-              />
-
-              <div className="relative inline-flex overflow-hidden rounded-full p-0.5">
-                <span
-                  className="
-              absolute inset-[-300%]
-              animate-spin
-              bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_55%,#71717a_70%,#a1a1aa_85%,transparent_100%)]
-            "
-                  style={{ animationDuration: "8s" }}
+              <WaitlistTrigger type="professional">
+                <DownloadButton
+                  name="Pre-Register as a Professional"
+                  className="px-4 py-7"
+                  icon="arrowRight"
+                  rotateIcon={false}
                 />
+              </WaitlistTrigger>
 
-                <a
-                  className="
-              relative flex items-center gap-2
-              cursor-pointer
-              rounded-full
-              bg-white
-              px-7 py-4
-              font-medium
-              text-gray-700
-              shadow
-              transition
-              hover:bg-neutral-50
-              hover:shadow-lg
-            "
-                >
-                  <span className="text-sm font-semibold">
-                    Pre-Register as a Customer
-                  </span>
-
-                  <ArrowRight size={18} />
-                </a>
-              </div>
+              <OpenWaitlistButton />
             </div>
           </HeroItem>
         </HeroAnimation>
