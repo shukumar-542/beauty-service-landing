@@ -40,7 +40,7 @@ export default function InspirationText({
       }}
     >
       <div className="flex items-center justify-center gap-2 rounded-full bg-white px-2 xl:px-6 py-1 xl:py-3 shadow-2xl">
-        <h1 className="text-xs">{text}</h1>
+        <h2 className="text-xs">{text}</h2>
 
         {Icon && (
           <Icon

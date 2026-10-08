@@ -7,9 +7,9 @@ export default function page() {
         Welcome to Stunner Alert!
       </p>
 
-      <h1 className="font-serif text-3xl md:text-5xl text-[#372D38] mb-8">
+      <h2 className="font-serif text-3xl md:text-5xl text-[#372D38] mb-8">
         Grow Your Business With Us
-      </h1>
+      </h2>
 
       <div className="space-y-6 text-[15px] leading-relaxed text-[#533F4E]">
         <p>

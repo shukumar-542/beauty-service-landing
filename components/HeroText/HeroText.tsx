@@ -7,7 +7,7 @@ const words = text.split(" ");
 
 export default function HeroText() {
   return (
-    <h1 className="font-serif text-5xl">
+    <h6 className="font-serif text-5xl">
       {words.map((w, i) => (
         <motion.span
           key={i}
@@ -28,6 +28,6 @@ export default function HeroText() {
           {w}
         </motion.span>
       ))}
-    </h1>
+    </h6>
   );
 }

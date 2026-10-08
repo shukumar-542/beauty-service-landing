@@ -215,9 +215,9 @@ export default function PrivacyPolicyPage() {
         Stunner Alert
       </p>
 
-      <h1 className="font-serif text-3xl md:text-5xl text-[#372D38] mb-6">
+      <h2 className="font-serif text-3xl md:text-5xl text-[#372D38] mb-6">
         Privacy Policy
-      </h1>
+      </h2>
 
       <p className="text-sm text-[#8B7A85] mb-8">
         Last updated on 6th September, 2026.

@@ -294,9 +294,9 @@ export default function TermsPage() {
     <div className="container mx-auto px-6 py-20 ">
       
 
-      <h1 className="font-serif text-3xl md:text-5xl text-[#372D38] mb-6">
+      <h2 className="font-serif text-3xl md:text-5xl text-[#372D38] mb-6">
         Web App Terms and Conditions — Customer
-      </h1>
+      </h2>
 
       <div className="space-y-4 text-[15px] leading-relaxed text-[#533F4E] mb-10">
         <p>
