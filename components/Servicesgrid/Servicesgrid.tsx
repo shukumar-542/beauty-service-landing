@@ -87,7 +87,7 @@ export default function ServicesGrid() {
                                 <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl text-[#372D38]">
                                     Elevate your look with{"  "}
                                     <GradientText
-                                        text="Beauty Experts"
+                                        text="Professional Experts"
                                         className="text-2xl md:text-4xl xl:text-6xl"
                                     />
                                 </h2>
