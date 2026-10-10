@@ -20,6 +20,7 @@ type IconName = "download" | "arrowUpRight" | "arrowRight";
 
 interface DownloadButtonProps {
   name?: string;
+  subtitle?: string
   icon?: IconName;
   iconClassName?: string;
   variant?: ButtonVariant;
@@ -43,6 +44,7 @@ export default function DownloadButton({
   glowClassName,
   glowDuration = "8s",
   rotateIcon = true,
+  subtitle,
   onClick,
 }: DownloadButtonProps) {
   let Icon: LucideIcon = ArrowUpRight;
@@ -77,12 +79,19 @@ export default function DownloadButton({
         size={size}
         variant={variant}
         className={cn(
-          "group relative cursor-pointer rounded-full px-6 py-5",
+          "group relative cursor-pointer  rounded-full px-6 py-6",
           className
         )}
       >
-        <span>{name}</span>
+        <span className="flex flex-col items-center leading-tight">
+          <span>{name}</span>
 
+          {subtitle && (
+            <span className="text-[10px] font-medium  opacity-80">
+              {subtitle}
+            </span>
+          )}
+        </span>
         <Icon
           aria-hidden="true"
           className={cn(

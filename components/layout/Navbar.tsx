@@ -61,45 +61,45 @@ export default function Navbar() {
   // Active Section
   // =========================
 
-useEffect(() => {
-  const sections = NAV_LINKS.map((link) =>
-    document.querySelector(link.id)
-  ).filter((section): section is Element => Boolean(section));
+  useEffect(() => {
+    const sections = NAV_LINKS.map((link) =>
+      document.querySelector(link.id)
+    ).filter((section): section is Element => Boolean(section));
 
-  if (!sections.length) return;
+    if (!sections.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visibleSections = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort(
-          (a, b) => b.intersectionRatio - a.intersectionRatio
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort(
+            (a, b) => b.intersectionRatio - a.intersectionRatio
+          );
+
+        const visibleSection = visibleSections[0];
+
+        if (!visibleSection) return;
+
+        const activeLink = NAV_LINKS.find(
+          (link) => link.id === `#${visibleSection.target.id}`
         );
 
-      const visibleSection = visibleSections[0];
-
-      if (!visibleSection) return;
-
-      const activeLink = NAV_LINKS.find(
-        (link) => link.id === `#${visibleSection.target.id}`
-      );
-
-      if (activeLink) {
-        setActive(activeLink.label);
+        if (activeLink) {
+          setActive(activeLink.label);
+        }
+      },
+      {
+        threshold: [0.2, 0.3, 0.5, 0.7],
+        rootMargin: "-90px 0px -35% 0px",
       }
-    },
-    {
-      threshold: [0.2, 0.3, 0.5, 0.7],
-      rootMargin: "-90px 0px -35% 0px",
-    }
-  );
+    );
 
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   // =========================
   // Mobile Nav Click
@@ -227,14 +227,17 @@ useEffect(() => {
         ========================== */}
 
         <div className="hidden shrink-0 lg:block">
-          <DownloadButton name="Download App" onClick={() => {
-            setIsMenuOpen(false);
+          <DownloadButton name="Download App"
+            subtitle="Coming Soon"
+          // onClick={() => {
+          //   setIsMenuOpen(false);
+          //   document.getElementById("SneakPeak")?.scrollIntoView({
+          //     behavior: "smooth",
+          //     block: "start",
+          //   });
+          // }} 
 
-            document.getElementById("SneakPeak")?.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }} />
+          />
         </div>
 
         {/* =========================
@@ -341,14 +344,7 @@ useEffect(() => {
 
             <div className="mt-5 px-6">
               <Button
-                onClick={() => {
-                  setIsMenuOpen(false);
 
-                  document.getElementById("SneakPeak")?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }}
                 className="
                   group
                   h-11
@@ -367,7 +363,14 @@ useEffect(() => {
                   hover:to-[#FFB172]
                 "
               >
-                Download App
+                <span className="flex flex-col items-center leading-tight">
+                  <span>Donload App</span>
+
+                  
+                    <span className="text-[10px] font-medium  opacity-80">
+                      Coming Soon
+                    </span>
+                </span>
 
                 <ArrowUpRight
                   className="
