@@ -21,7 +21,8 @@ import DownloadButton from "../DownloadButton";
 import logo from "@/public/images/icon.png";
 
 const NAV_LINKS = [
-  { label: "Home", href: "/#home", id: "#home" },
+  // Home er href "/" (no #home) jate URL e hash na ashe
+  { label: "Home", href: "/", id: "#home" },
   { label: "Services", href: "/#services", id: "#services" },
   { label: "Why Us", href: "/#stunner", id: "#stunner" },
   { label: "Inspiration", href: "/#inspiration", id: "#inspiration" },
@@ -102,6 +103,23 @@ export default function Navbar() {
   }, []);
 
   // =========================
+  // Home Click (no #home in URL)
+  // =========================
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    setActive("Home");
+    setIsMenuOpen(false);
+
+    // Jodi already homepage e thaki: smooth scroll to top, URL clean rakho
+    if (window.location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.history.replaceState(null, "", "/");
+    }
+    // Onno page e thakle normal "/" navigation hobe
+  };
+
+  // =========================
   // Mobile Nav Click
   // =========================
 
@@ -136,12 +154,9 @@ export default function Navbar() {
         ========================== */}
 
         <a
-          href="/#home"
+          href="/"
           className="relative flex shrink-0 items-center"
-          onClick={() => {
-            setActive("Home");
-            setIsMenuOpen(false);
-          }}
+          onClick={handleHomeClick}
         >
           <div
             className={`
@@ -182,7 +197,13 @@ export default function Navbar() {
             <li key={link.label}>
               <a
                 href={link.href}
-                onClick={() => setActive(link.label)}
+                onClick={(e) => {
+                  if (link.label === "Home") {
+                    handleHomeClick(e);
+                  } else {
+                    setActive(link.label);
+                  }
+                }}
                 className={`
                   relative
                   whitespace-nowrap
@@ -227,16 +248,9 @@ export default function Navbar() {
         ========================== */}
 
         <div className="hidden shrink-0 lg:block">
-          <DownloadButton name="Download App"
+          <DownloadButton
+            name="Download App"
             subtitle="Coming Soon"
-          // onClick={() => {
-          //   setIsMenuOpen(false);
-          //   document.getElementById("SneakPeak")?.scrollIntoView({
-          //     behavior: "smooth",
-          //     block: "start",
-          //   });
-          // }} 
-
           />
         </div>
 
@@ -285,12 +299,9 @@ export default function Navbar() {
 
             <div className="border-b border-border/50 px-6 pb-5 pt-4">
               <a
-                href="#home"
+                href="/"
                 className="inline-flex"
-                onClick={() => {
-                  setActive("Home");
-                  setIsMenuOpen(false);
-                }}
+                onClick={handleHomeClick}
               >
                 <div className="relative h-12 w-36">
                   <Image
@@ -313,9 +324,13 @@ export default function Navbar() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    onClick={() =>
-                      handleMobileNavClick(link.label)
-                    }
+                    onClick={(e) => {
+                      if (link.label === "Home") {
+                        handleHomeClick(e);
+                      } else {
+                        handleMobileNavClick(link.label);
+                      }
+                    }}
                     className={`
                       flex
                       w-full
@@ -344,7 +359,6 @@ export default function Navbar() {
 
             <div className="mt-5 px-6">
               <Button
-
                 className="
                   group
                   h-11
@@ -364,12 +378,11 @@ export default function Navbar() {
                 "
               >
                 <span className="flex flex-col items-center leading-tight">
-                  <span>Donload App</span>
+                  <span>Download App</span>
 
-                  
-                    <span className="text-[10px] font-medium  opacity-80">
-                      Coming Soon
-                    </span>
+                  <span className="text-[10px] font-medium opacity-80">
+                    Coming Soon
+                  </span>
                 </span>
 
                 <ArrowUpRight
