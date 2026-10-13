@@ -5,6 +5,15 @@ import { useEffect, useRef, useState } from "react";
 import { Check, Loader2, Mail, MapPin, Send, X } from "lucide-react";
 import { OPEN_EMAIL_CTA, type WaitlistType } from "@/app/lib/events";
 
+const WAITLIST_API_URL =
+  process.env.NEXT_PUBLIC_WAITLIST_API_URL ??
+  "https://backend.stunneralert.com.au/api/v1/waitlist";
+
+const ROLE_MAP: Record<WaitlistType, string> = {
+  customer: "customer",
+  professional: "artist",
+};
+
 export default function EmailCTA() {
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState("");
@@ -12,9 +21,9 @@ export default function EmailCTA() {
   const [userType, setUserType] = useState<WaitlistType>("customer");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Hero (ba onno jaygar) button theke open korar listener
   useEffect(() => {
     const handleOpen = (e: Event) => {
       const type = (e as CustomEvent<{ type?: WaitlistType }>).detail?.type;
@@ -26,7 +35,6 @@ export default function EmailCTA() {
     return () => window.removeEventListener(OPEN_EMAIL_CTA, handleOpen);
   }, []);
 
-  // Open hole input e focus
   useEffect(() => {
     if (isOpen && !isSuccess) {
       const t = setTimeout(() => inputRef.current?.focus(), 50);
@@ -41,19 +49,52 @@ export default function EmailCTA() {
 
     setIsLoading(true);
     setIsSuccess(false);
+    setError(null);
 
-    // TODO: real API call e { email, type: userType, location } pathao
-    console.log({ email, type: userType, location: location.trim() });
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const res = await fetch(WAITLIST_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          role: ROLE_MAP[userType],
+          address: location.trim(),
+        }),
+      });
 
-    setIsLoading(false);
-    setIsSuccess(true);
-    setEmail("");
-    setLocation("");
+      const data = await res.json().catch(() => null);
 
-    setTimeout(() => {
-      setIsSuccess(false);
-    }, 3000);
+      if (!res.ok) {
+        const message =
+          data?.message ||
+          data?.error ||
+          (res.status === 409
+            ? "This email is already on the waitlist."
+            : "Something went wrong. Please try again.");
+        throw new Error(message);
+      }
+
+      setIsSuccess(true);
+      setEmail("");
+      setLocation("");
+
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 3000);
+    } catch (err) {
+      setError(
+        err instanceof TypeError
+          ? "Network error. Please check your connection and try again."
+          : err instanceof Error
+            ? err.message
+            : "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const inputClass = `
@@ -179,7 +220,10 @@ export default function EmailCTA() {
                   type="email"
                   placeholder="Enter your email address"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (error) setError(null);
+                  }}
                   required
                   disabled={isLoading}
                   className={inputClass}
@@ -194,13 +238,25 @@ export default function EmailCTA() {
                     type="text"
                     placeholder="Your location (e.g. Sydney, NSW)"
                     value={location}
-                    onChange={(e) => setLocation(e.target.value)}
+                    onChange={(e) => {
+                      setLocation(e.target.value);
+                      if (error) setError(null);
+                    }}
                     required
                     disabled={isLoading}
                     autoComplete="address-level2"
                     className={`${inputClass} pl-9`}
                   />
                 </div>
+
+                {error && (
+                  <p
+                    role="alert"
+                    className="rounded-lg bg-red-50 px-3 py-2 text-xs text-red-600"
+                  >
+                    {error}
+                  </p>
+                )}
 
                 <button
                   type="submit"
