@@ -67,7 +67,7 @@ export default function EmailCTA() {
 
       const data = await res.json().catch(() => null);
 
-      if (!res.ok) {
+            if (!res.ok) {
         const message =
           data?.message ||
           data?.error ||
@@ -76,6 +76,14 @@ export default function EmailCTA() {
             : "Something went wrong. Please try again.");
         throw new Error(message);
       }
+
+      // GTM / dataLayer event
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "waitlist_submission_success",
+        form_name: "Join Waitlist",
+        user_type: userType,
+      });
 
       setIsSuccess(true);
       setEmail("");

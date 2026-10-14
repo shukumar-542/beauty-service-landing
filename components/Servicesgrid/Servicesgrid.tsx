@@ -85,11 +85,12 @@ export default function ServicesGrid() {
 
                             <div className="flex flex-col xl:flex-row md:gap-4 md:mt-2">
                                 <h2 className="font-serif text-2xl md:text-4xl xl:text-6xl text-[#372D38]">
-                                    Elevate your look with{"  "}
+                                    Make Every  {"  "}
                                     <GradientText
-                                        text="Professionals"
+                                        text="Moment"
                                         className="text-2xl md:text-4xl xl:text-6xl"
-                                    />
+                                    />{" "}
+                                    Count
                                 </h2>
                             </div>
                             <p className="text-gray-600 mt-3 text-xs md:text-sm">
