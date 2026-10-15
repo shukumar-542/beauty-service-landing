@@ -37,7 +37,7 @@ const services = [
         image: img2,
     },
     {
-        title: "Event Organisers",
+        title: "Event Planning",
         subtitle: "Tiny works of art",
         icon: Calendar,
         image: img3,
@@ -55,7 +55,7 @@ const services = [
         image: img5,
     },
     {
-        title: "Cake Artists",
+        title: "Cakes",
         subtitle: "Sweet moments, made special",
         icon: Cake,
         image: img6,
