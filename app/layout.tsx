@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/images/og-image-v2.png",
         width: 1200,
         height: 630,
         alt: "Stunner Alert - Beauty and Photography Services Australia",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "Stunner Alert | Makeup, events, Cake, Photography & more in Australia",
     description:
       "Discover and book makeup artists, cake artists, and photographers across Australia for weddings, parties, and events.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image-v2.png"],
   },
 };
 
@@ -82,7 +82,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Stunner Alert",
-    image: "https://stunneralert.com.au/images/og-image.png",
+    image: "https://stunneralert.com.au/images/og-image-v2.png",
     "@id": "https://stunneralert.com.au",
     url: "https://stunneralert.com.au",
     description:
